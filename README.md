@@ -4,7 +4,7 @@
 
 **在线浏览 → https://xiaowang018.github.io/agent-landscape/**
 
-收录 **87 个仓库 / 14 个赛道 / 累计 465.7 万星标**。每个项目都标注了中文定位、适用人群、上手门槛和维护状态，而不是只丢一个 star 数排名。
+收录 **106 个仓库 / 14 个赛道 / 累计 699.7 万星标**。每个项目都标注了中文定位、适用人群、上手门槛和维护状态，而不是只丢一个 star 数排名。页面末尾另设「科研前沿」区块，收录 12 篇 2025–2026 年会改变 Agent 系统设计与评测结论的论文与基准（不计入上面的仓库统计）。
 
 ---
 
@@ -12,18 +12,18 @@
 
 | 赛道 | 说明 | 数量 |
 | --- | --- | :--: |
-| 编排框架 / SDK | 搭 Agent 的底层骨架 | 16 |
-| 编码 Agent | 写代码、改仓库、跑测试 | 14 |
-| 低代码平台 / 工作流 | 拖拽或节点式搭建，少写代码 | 6 |
+| 编排框架 / SDK | 搭 Agent 的底层骨架 | 18 |
+| 编码 Agent | 写代码、改仓库、跑测试 | 21 |
+| 低代码平台 / 工作流 | 拖拽或节点式搭建，少写代码 | 7 |
 | 浏览器操作 | 让 Agent 自己上网 | 5 |
-| 通用自主 Agent | 给个目标自己拆解执行 | 6 |
-| 多智能体协作 | 多个角色分工配合 | 4 |
+| 通用自主 Agent | 给个目标自己拆解执行 | 9 |
+| 多智能体协作 | 多个角色分工配合 | 6 |
 | 桌面 / 电脑操作 | 看屏幕、动鼠标、控本机 | 6 |
 | 语音 Agent | 能听会说的实时对话 | 2 |
-| 知识库 / RAG | 把私域文档变成 Agent 的上下文 | 6 |
-| 深度研究 / 检索 | 自动调研并产出报告 | 5 |
-| 记忆层 | 跨会话记住人和事 | 5 |
-| 工具协议 / MCP | 给 Agent 装手脚的标准接口 | 7 |
+| 知识库 / RAG | 把私域文档变成 Agent 的上下文 | 7 |
+| 深度研究 / 检索 | 自动调研并产出报告 | 6 |
+| 记忆层 | 跨会话记住人和事 | 6 |
+| 工具协议 / MCP | 给 Agent 装手脚的标准接口 | 8 |
 | Agent 可观测 / 评测 | 看得见它干了什么、跑得好不好 | 4 |
 | Agent 基础设施 | 沙箱、运行时等底座 | 1 |
 
@@ -31,18 +31,19 @@
 
 | # | 项目 | 星标 | 语言 | 许可证 |
 | :-: | --- | --: | --- | --- |
-| 1 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 265,675 | Python | MIT |
-| 2 | [anomalyco/opencode](https://github.com/anomalyco/opencode) | 228,818 | TypeScript | MIT |
-| 3 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | 211,913 | TypeScript | NOASSERTION |
-| 4 | [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 188,155 | Python | NOASSERTION |
-| 5 | [langgenius/dify](https://github.com/langgenius/dify) | 161,747 | Python | NOASSERTION |
-| 6 | [langflow-ai/langflow](https://github.com/langflow-ai/langflow) | 156,881 | Python | MIT |
-| 7 | [anthropics/claude-code](https://github.com/anthropics/claude-code) | 156,801 | TypeScript | 闭源分发 |
-| 8 | [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | 149,959 | Python | MIT |
+| 1 | [morluto/rea](https://github.com/morluto/rea) | 475,682 | TypeScript | MIT |
+| 2 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 395,121 | TypeScript | MIT |
+| 3 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 309,604 | JavaScript | MIT |
+| 4 | [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | 286,111 | TypeScript | MIT |
+| 5 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 265,675 | Python | MIT |
+| 6 | [anomalyco/opencode](https://github.com/anomalyco/opencode) | 228,818 | TypeScript | MIT |
+| 7 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | 211,913 | TypeScript | Sustainable Use |
+| 8 | [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 188,155 | Python | Polyform + MIT |
 
-一个值得注意的现象：**前八里已经没有「纯框架」的位置了。** 第一梯队是两类东西——装完就能自己干活的成品 Agent（Hermes 26.6 万、OpenCode 22.9 万），和拖拽就能上线的可视化平台（n8n、Dify、Langflow）。框架退到了第二梯队：真正被大量使用的入口，是"不用自己写代码就能跑起来"的东西，框架更多是给要做深度定制的团队准备的。
+一个比上次更极端的现象：**前八名里有六个是「成品 Agent / Harness」，没有一个传统意义上的框架。** 榜首 rea 用 Agent 做逆向工程拿到 47.6 万星，OpenClaw、Hermes 这类「装完就能常驻干活」的个人 Agent 运行时包揽第二和第五；n8n 是前八里唯一的可视化平台，LangChain 这种框架鼻祖已跌出前八。入口已经彻底从「自己搭」变成「装完直接用」。
 
-另一个变化是重心在往「怎么让它可靠」挪：这次扩表新增了 **Agent 可观测 / 评测** 和 **语音 Agent** 两个赛道——Langfuse、DeepEval 这类工具的总星标已经超过不少框架，说明大家开始关心「它跑得对不对、稳不稳」，而不只是「能不能跑」。
+另一个增量来自博主们的 2026 盘点：DeepSeek 官方的 Harness、用自己订阅跑编码舰队的 Orca、100 行代码的 mini-swe-agent、统管各家 CLI Agent 的 cc-switch 都是这轮补进来的新面孔。同时页面末尾新增「科研前沿」一节——评测基准正在从静态分数转向轨迹与环境级验证（AgentGym2、EvoClaw），记忆研究从「能不能记住」转向「何时该遗忘」（Memora），Agentic RL 的瓶颈从算法转向环境与 verifier（ToolVerse）。
+
 
 ---
 
@@ -70,7 +71,7 @@
 ```
 agent-landscape/
 ├── index.html    # 单文件页面，无外部依赖，双击即可在本地打开
-└── data.json     # 数据快照（87 条），字段与页面一致
+└── data.json     # 数据快照（106 条），字段与页面一致
 ```
 
 `index.html` 里没有 CDN、没有构建步骤、没有网络请求，断网也能正常筛选。
