@@ -4,7 +4,7 @@
 
 **在线浏览 → https://xiaowang018.github.io/agent-landscape/**
 
-收录 **59 个仓库 / 12 个赛道 / 累计 348 万星标**。每个项目都标注了中文定位、适用人群、上手门槛和维护状态，而不是只丢一个 star 数排名。
+收录 **60 个仓库 / 12 个赛道 / 累计 374.8 万星标**。每个项目都标注了中文定位、适用人群、上手门槛和维护状态，而不是只丢一个 star 数排名。
 
 ---
 
@@ -16,7 +16,7 @@
 | 编码 Agent | 写代码、改仓库、跑测试 | 11 |
 | 低代码平台 / 工作流 | 拖拽或节点式搭建，少写代码 | 6 |
 | 浏览器操作 | 让 Agent 自己上网 | 5 |
-| 通用自主 Agent | 给个目标自己拆解执行 | 4 |
+| 通用自主 Agent | 给个目标自己拆解执行 | 5 |
 | 多智能体协作 | 多个角色分工配合 | 4 |
 | 桌面 / 电脑操作 | 看屏幕、动鼠标、控本机 | 4 |
 | 知识库 / RAG | 把私域文档变成 Agent 的上下文 | 4 |
@@ -29,16 +29,18 @@
 
 | # | 项目 | 星标 | 语言 | 许可证 |
 | :-: | --- | --: | --- | --- |
-| 1 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | 211,913 | TypeScript | Sustainable Use |
-| 2 | [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 188,155 | Python | Polyform + MIT |
-| 3 | [langgenius/dify](https://github.com/langgenius/dify) | 161,747 | Python | Apache-2.0 附加条款 |
-| 4 | [langflow-ai/langflow](https://github.com/langflow-ai/langflow) | 156,881 | Python | MIT |
-| 5 | [anthropics/claude-code](https://github.com/anthropics/claude-code) | 156,801 | TypeScript | 闭源分发 |
-| 6 | [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | 149,959 | Python | MIT |
-| 7 | [openai/codex](https://github.com/openai/codex) | 136,236 | Rust | Apache-2.0 |
-| 8 | [browser-use/browser-use](https://github.com/browser-use/browser-use) | 121,845 | Python | MIT |
+| 1 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 265,675 | Python | MIT |
+| 2 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | 211,913 | TypeScript | Sustainable Use |
+| 3 | [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 188,155 | Python | Polyform + MIT |
+| 4 | [langgenius/dify](https://github.com/langgenius/dify) | 161,747 | Python | Apache-2.0 附加条款 |
+| 5 | [langflow-ai/langflow](https://github.com/langflow-ai/langflow) | 156,881 | Python | MIT |
+| 6 | [anthropics/claude-code](https://github.com/anthropics/claude-code) | 156,801 | TypeScript | 闭源分发 |
+| 7 | [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | 149,959 | Python | MIT |
+| 8 | [openai/codex](https://github.com/openai/codex) | 136,236 | Rust | Apache-2.0 |
 
 一个值得注意的现象：**前五名里有三个是可视化平台（n8n、Dify、Langflow），而不是需要自己写代码的框架。** 真正被大量使用的入口，是"装上就能连业务系统"的东西；框架更多是给要做深度定制的团队准备的。
+
+另一个现象：榜首的 **hermes-agent** 既不是框架也不是可视化平台，而是一个装完就能在自己机器上常驻干活的成品 Agent——它靠"自主沉淀技能 + 跨会话记忆"在一年多时间里冲到 26 万星，正好印证了入口正在从"搭 Agent 的工具"往"直接能用的 Agent"迁移。
 
 ---
 
@@ -66,7 +68,7 @@
 ```
 agent-landscape/
 ├── index.html    # 单文件页面，无外部依赖，双击即可在本地打开
-└── data.json     # 数据快照（59 条），字段与页面一致
+└── data.json     # 数据快照（60 条），字段与页面一致
 ```
 
 `index.html` 里没有 CDN、没有构建步骤、没有网络请求，断网也能正常筛选。
