@@ -879,6 +879,27 @@
   "open_issues": 62
  },
  {
+  "full_name": "NousResearch/hermes-agent",
+  "url": "https://github.com/NousResearch/hermes-agent",
+  "homepage": "https://hermes-agent.nousresearch.com",
+  "desc": "The agent that grows with you",
+  "stars": 265675,
+  "forks": 60134,
+  "lang": "Python",
+  "license": "MIT",
+  "topics": [
+   "ai-agent",
+   "hermes-agent",
+   "llm",
+   "nous-research",
+   "skills"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2025-07",
+  "archived": false,
+  "open_issues": 54379
+ },
+ {
   "full_name": "openai/codex",
   "url": "https://github.com/openai/codex",
   "homepage": "",
