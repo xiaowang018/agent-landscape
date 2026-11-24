@@ -1,0 +1,1091 @@
+{
+ "affaan-m/ecc": {
+  "name": "affaan-m/ECC",
+  "cat": "framework",
+  "pitch": "主打性能优化的 Agent Harness",
+  "aud": "追求 harness 效率和可观测性的",
+  "note": "把 skills、记忆、安全、开发流程打包成一套优化过的运行骨架；概念多，需要读文档。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "langchain-ai/langchain": {
+  "name": "langchain-ai/langchain",
+  "cat": "framework",
+  "pitch": "LLM 应用开发的事实标准底座",
+  "aud": "需要海量第三方集成的团队",
+  "note": "生态最大、更新最勤，代价是抽象层厚、版本变动快，别指望一行不改跑一年。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "microsoft/autogen": {
+  "name": "microsoft/autogen",
+  "cat": "framework",
+  "pitch": "多 Agent 对话协作的元老",
+  "aud": "做多角色协作、研究型实验",
+  "note": "v0.4 起重写为事件驱动内核（Actor 模型），与旧教程差异大，注意版本。",
+  "diff": "中",
+  "lic": "CC-BY-4.0"
+ },
+ "crewaiinc/crewai": {
+  "name": "crewAIInc/crewAI",
+  "cat": "framework",
+  "pitch": "角色 + 任务派活式多 Agent 协作",
+  "aud": "想快速搭一个「AI 小团队」",
+  "note": "概念最贴近人类团队分工，上手最快；复杂状态流转不如 LangGraph 灵活。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "run-llama/llama_index": {
+  "name": "run-llama/llama_index",
+  "cat": "framework",
+  "pitch": "以数据/RAG 为核心的 Agent 框架",
+  "aud": "文档密集、检索密集的场景",
+  "note": "索引与检索能力是它的看家本事，事件驱动工作流也补齐了。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "langchain-ai/langgraph": {
+  "name": "langchain-ai/langgraph",
+  "cat": "framework",
+  "pitch": "用「图」编排有状态、可中断恢复的 Agent",
+  "aud": "要做长流程/人审/断点续跑的产品",
+  "note": "LangChain 团队目前最推荐的 Agent 主线，状态机思路清晰，学习曲线中偏上。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "agno-agi/agno": {
+  "name": "agno-agi/agno",
+  "cat": "framework",
+  "pitch": "轻量高性能多模态 Agent 框架",
+  "aud": "追求启动快、代码少",
+  "note": "前身 phidata，自带记忆/知识/工具/多模态，跑分和体感都轻。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "langchain-ai/deepagents": {
+  "name": "langchain-ai/deepagents",
+  "cat": "framework",
+  "pitch": "LangChain 的开箱即用长任务 Harness",
+  "aud": "需要规划、文件访问和子 Agent 的应用",
+  "note": "内置规划、文件系统、子 Agent 等长任务能力；比 LangGraph 抽象更高，先确认默认行为和工具权限。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "openai/openai-agents-python": {
+  "name": "openai/openai-agents-python",
+  "cat": "framework",
+  "pitch": "OpenAI 官方 Agents SDK",
+  "aud": "用 OpenAI 模型、要 handoff/护栏/追踪",
+  "note": "handoff、guardrail、tracing 三件套开箱即用，模型无关但原生适配最好。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "huggingface/smolagents": {
+  "name": "huggingface/smolagents",
+  "cat": "framework",
+  "pitch": "核心代码极少的 code-agent",
+  "aud": "想读懂 Agent 内部原理",
+  "note": "官方宣称核心约千行，写代码当动作，适合拿来拆解学习。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "mastra-ai/mastra": {
+  "name": "mastra-ai/mastra",
+  "cat": "framework",
+  "pitch": "TypeScript 原生的 Agent 框架，工作流 / RAG / 评测一体",
+  "aud": "用 TS 做产品的团队",
+  "note": "Gatsby 团队出品，agent + workflow + eval 装在一个包里，JS 生态少见的完整方案。",
+  "diff": "中",
+  "lic": "MIT+企业版"
+ },
+ "microsoft/semantic-kernel": {
+  "name": "microsoft/semantic-kernel",
+  "cat": "framework",
+  "pitch": "微软企业级 SDK，.NET / Python / Java 三语",
+  "aud": ".NET 技术栈或企业内网落地",
+  "note": "与 Azure/AI Foundry 打通最顺，纯 Python 团队用它会觉得偏重。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "deepset-ai/haystack": {
+  "name": "deepset-ai/haystack",
+  "cat": "framework",
+  "pitch": "生产级 RAG 与 Agent 管道编排",
+  "aud": "企业搜索、需要严格可控的检索链",
+  "note": "管道式设计比 LangChain 更显式，调试友好，社区规模小一些。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "google/adk-python": {
+  "name": "google/adk-python",
+  "cat": "framework",
+  "pitch": "Google 的 Agent Development Kit",
+  "aud": "Gemini / GCP 生态",
+  "note": "配套 A2A 协议与部署工具链，云上落地路径完整。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "pydantic/pydantic-ai": {
+  "name": "pydantic/pydantic-ai",
+  "cat": "framework",
+  "pitch": "类型安全的 Agent 框架",
+  "aud": "重度 Python 类型标注、要可维护性",
+  "note": "Pydantic 团队出品，结构化输出与依赖注入做得最扎实，工程感强。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "qwenlm/qwen-agent": {
+  "name": "QwenLM/Qwen-Agent",
+  "cat": "framework",
+  "pitch": "通义千问官方的 Agent 框架",
+  "aud": "用 Qwen 系模型做工具调用",
+  "note": "函数调用、代码解释器、RAG、MCP 都有现成实现，和 Qwen 模型配合最紧。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "voltagent/voltagent": {
+  "name": "VoltAgent/voltagent",
+  "cat": "framework",
+  "pitch": "带可视化调试台的 TypeScript Agent 平台",
+  "aud": "想要开箱就有 trace 的 TS 团队",
+  "note": "框架 + Console 一体，跑起来就能看每条执行轨迹；生态比 Mastra 小一圈。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "strands-agents/harness-sdk": {
+  "name": "strands-agents/harness-sdk",
+  "cat": "framework",
+  "pitch": "AWS 的 model-driven Agent SDK",
+  "aud": "要在 AWS 上落生产的团队",
+  "note": "Python / TypeScript 双语言，把「让模型自己决定调什么工具」当第一性原理；Bedrock 集成是加分项。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "anthropics/claude-agent-sdk-python": {
+  "name": "anthropics/claude-agent-sdk-python",
+  "cat": "framework",
+  "pitch": "把 Claude Code 工具循环嵌进自己的应用",
+  "aud": "要用 Python 集成 Claude Code 能力的开发者",
+  "note": "官方 Python SDK，提供 Agent loop、工具与权限控制；不是通用多模型框架，依赖 Claude 生态。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "cloudflare/agents": {
+  "name": "cloudflare/agents",
+  "cat": "framework",
+  "pitch": "Cloudflare 官方的 Agent 运行时 SDK",
+  "aud": "在 Cloudflare 生态内做部署的",
+  "note": "Durable Objects 打底，Agent 天然长驻且按量计费；离开 CF 生态就没意义。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "modelscope/ms-agent": {
+  "name": "modelscope/ms-agent",
+  "cat": "framework",
+  "pitch": "魔搭的轻量 Agent 框架",
+  "aud": "在中文模型生态里做 Agent 的",
+  "note": "代码生成、深度研究、Agentic RL 几条线都有可跑示例，和 ModelScope 模型库贴得紧；文档与社区以中文为主。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "n8n-io/n8n": {
+  "name": "n8n-io/n8n",
+  "cat": "platform",
+  "pitch": "节点式自动化，内建 AI Agent 节点",
+  "aud": "已有系统集成多、要串业务流程",
+  "note": "本质是自动化平台长出 Agent 能力，接 400+ 服务，比纯 Agent 框架更适合「干活」。",
+  "diff": "易",
+  "lic": "Sustainable Use"
+ },
+ "langgenius/dify": {
+  "name": "langgenius/dify",
+  "cat": "platform",
+  "pitch": "可视化搭 LLM 应用 + 私有化部署",
+  "aud": "团队要快速上线内部 AI 应用",
+  "note": "目前最均衡的开源平台：工作流、知识库、Agent、观测都有，中文文档友好。",
+  "diff": "易",
+  "lic": "Apache-2.0+"
+ },
+ "langflow-ai/langflow": {
+  "name": "langflow-ai/langflow",
+  "cat": "platform",
+  "pitch": "可视化编排并一键导出 API/MCP",
+  "aud": "低代码原型转生产接口",
+  "note": "导出即可当服务用，前端体验比 Flowise 更现代。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "flowiseai/flowise": {
+  "name": "FlowiseAI/Flowise",
+  "cat": "platform",
+  "pitch": "拖拽式编排 LangChain 流程",
+  "aud": "非程序员快速验证想法",
+  "note": "上手门槛最低的一档，复杂逻辑会很快撞到可视化天花板。",
+  "diff": "易",
+  "lic": "Apache-2.0+"
+ },
+ "simstudioai/sim": {
+  "name": "simstudioai/sim",
+  "cat": "platform",
+  "pitch": "协作式 Agent 工作流画布",
+  "aud": "要拖拽 + 部署 + 监控一体的",
+  "note": "可视化编排后可直接部署并监控，比 Langflow 更偏「产品态」；Apache-2.0，干净。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "activepieces/activepieces": {
+  "name": "activepieces/activepieces",
+  "cat": "platform",
+  "pitch": "开源自托管版 Zapier，带 AI 能力",
+  "aud": "预算敏感、要私有部署的自动化",
+  "note": "定位偏 iPaaS，Agent 只是其中一块拼图。",
+  "diff": "易",
+  "lic": "MIT+企业版"
+ },
+ "coze-dev/coze-studio": {
+  "name": "coze-dev/coze-studio",
+  "cat": "platform",
+  "pitch": "字节 Coze 开源版：可视化搭 Agent 与应用",
+  "aud": "要自部署一套低代码 Agent 平台",
+  "note": "插件/工作流/知识库/发布渠道齐全，中文生态最完整的一档；组件多，Docker 编排需要点耐心。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "morluto/rea": {
+  "name": "morluto/rea",
+  "cat": "coding",
+  "pitch": "用 Agent 做逆向工程，从应用行为到原生二进制",
+  "aud": "安全研究、逆向分析人员",
+  "note": "全榜单星标第一（47.6 万），定位很窄但热度惊人；逆向场景落地前先看合规边界。",
+  "diff": "难",
+  "lic": "MIT"
+ },
+ "deepseek-ai/deepseek-harness": {
+  "name": "deepseek-ai/deepseek-harness",
+  "cat": "coding",
+  "pitch": "DeepSeek 的 Agent Harness：一切皆插件",
+  "aud": "想深度定制工作流的进阶用户",
+  "note": "官方 harness，把工具、技能、记忆全部插件化；迭代很快，文档追不上代码。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "anomalyco/opencode": {
+  "name": "anomalyco/opencode",
+  "cat": "coding",
+  "pitch": "开源终端编码 Agent 里最热的那个",
+  "aud": "想摆脱闭源 CLI 限制的开发者",
+  "note": "MIT、模型 provider 无关，随便换；star 已超过大多数闭源对手，代价是接口变得快。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "anthropics/claude-code": {
+  "name": "anthropics/claude-code",
+  "cat": "coding",
+  "pitch": "终端里的编码 Agent 标杆",
+  "aud": "日常写代码、重构、跑测试",
+  "note": "本项目仓库主要放文档与 issue，闭源分发但当前综合体验最强。",
+  "diff": "易",
+  "lic": "闭源分发"
+ },
+ "farion1231/cc-switch": {
+  "name": "farion1231/cc-switch",
+  "cat": "coding",
+  "pitch": "一个桌面面板统管各家终端编码 Agent",
+  "aud": "同时用多个 CLI Agent 的人",
+  "note": "Claude Code、Codex、OpenCode、DeepSeek Harness 的账号与会话统一入口；本身不写代码，是调度台。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "openai/codex": {
+  "name": "openai/codex",
+  "cat": "coding",
+  "pitch": "OpenAI 官方终端编码 Agent",
+  "aud": "已订阅 ChatGPT 的开发者",
+  "note": "Rust 实现，沙箱与审批机制完善，与 GPT 系模型配合最紧。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "stablyai/orca": {
+  "name": "stablyai/orca",
+  "cat": "coding",
+  "pitch": "用自己的订阅跑一支编码 Agent 舰队",
+  "aud": "想并行跑多个编码 Agent 的团队",
+  "note": "复用你已有的各家 CLI 订阅，把任务分给一群 bot 并行干；调度强，单任务质量取决于底下用的那个 Agent。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "google-gemini/gemini-cli": {
+  "name": "google-gemini/gemini-cli",
+  "cat": "coding",
+  "pitch": "Gemini 官方终端 Agent，免费额度大",
+  "aud": "想低成本上手终端 Agent",
+  "note": "百万级上下文是优势，适合读大仓库。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "openhands/openhands": {
+  "name": "OpenHands/OpenHands",
+  "cat": "coding",
+  "pitch": "能独立完成开发任务的开源软件工程 Agent",
+  "aud": "想要 Claude Code 的开源替代",
+  "note": "跑在沙箱里改仓库、执行命令、跑测试，SWE-bench 系表现靠前的开源代表。",
+  "diff": "难",
+  "lic": "MIT"
+ },
+ "cline/cline": {
+  "name": "cline/cline",
+  "cat": "coding",
+  "pitch": "VS Code 里能读文件、跑命令的自主编码 Agent",
+  "aud": "VS Code 用户、要可视化审批每一步",
+  "note": "插件形态渗透率高，配合各家 API Key 灵活。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "aaif-goose/goose": {
+  "name": "aaif-goose/goose",
+  "cat": "coding",
+  "pitch": "本地运行、可扩展的 on-machine Agent",
+  "aud": "要在自己机器上跑自动化任务",
+  "note": "Block 开源，扩展机制成熟，偏「本地自动化」而非纯编码。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "antonosika/gpt-engineer": {
+  "name": "AntonOsika/gpt-engineer",
+  "cat": "coding",
+  "pitch": "自然语言直接生成整份代码库",
+  "aud": "快速搭脚手架、理解 codegen 思路",
+  "note": "早期明星项目，思路影响深远，如今迭代缓慢。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "aider-ai/aider": {
+  "name": "Aider-AI/aider",
+  "cat": "coding",
+  "pitch": "Git 原生的命令行结对编程",
+  "aud": "习惯终端的资深开发者",
+  "note": "每次改动自动提交、可回滚，模型可自由切换，稳。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "continuedev/continue": {
+  "name": "continuedev/continue",
+  "cat": "coding",
+  "pitch": "可定制的 IDE 内助手 + Agent 模式",
+  "aud": "要接自有模型/内网模型",
+  "note": "自定义模型与上下文提供方最灵活，适合企业内网。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "qwenlm/qwen-code": {
+  "name": "QwenLM/qwen-code",
+  "cat": "coding",
+  "pitch": "通义千问官方的终端编码 Agent",
+  "aud": "想用国内模型跑终端 Agent 的团队",
+  "note": "Gemini CLI 血统改造而来，Qwen 模型上下文给得大方，国内网络友好。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "charmbracelet/crush": {
+  "name": "charmbracelet/crush",
+  "cat": "coding",
+  "pitch": "Go 写的终端编码 Agent，TUI 手感最好",
+  "aud": "喜欢轻量单文件 TUI 的人",
+  "note": "Charm 团队出品，界面延续 bubbletea 那套审美；插件生态小，胜在体验。",
+  "diff": "易",
+  "lic": "FSL-1.1-MIT"
+ },
+ "eyaltoledano/claude-task-master": {
+  "name": "eyaltoledano/claude-task-master",
+  "cat": "coding",
+  "pitch": "塞进 Cursor / Claude Code 的任务拆解系统",
+  "aud": "在 IDE 里做长需求的",
+  "note": "把 PRD 拆成任务 DAG 再交给编码 Agent 逐条执行；近半年更新放缓，注意版本兼容。",
+  "diff": "易",
+  "lic": "NOASSERTION"
+ },
+ "kilo-org/kilocode": {
+  "name": "Kilo-Org/kilocode",
+  "cat": "coding",
+  "pitch": "VS Code 里的一体化 agentic 工程平台",
+  "aud": "IDE 党，想要编排 + 计划模式",
+  "note": "Cline 系血统加强版，带编排与计划模式；被 Anaconda 收编后企业味更重。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "roocodeinc/roo-code": {
+  "name": "RooCodeInc/Roo-Code",
+  "cat": "coding",
+  "pitch": "Cline 分支，按「架构/编码/调试」切模式",
+  "aud": "喜欢角色化 prompt 的开发者",
+  "note": "多模式设计让不同任务用不同系统提示，社区活跃。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "swe-agent/swe-agent": {
+  "name": "SWE-agent/SWE-agent",
+  "cat": "coding",
+  "pitch": "学术界的软件工程 Agent 基准实现",
+  "aud": "做 benchmark、发论文",
+  "note": "Agent-Computer Interface 概念的发源地，产品化不是它的目标。",
+  "diff": "难",
+  "lic": "MIT"
+ },
+ "swe-agent/mini-swe-agent": {
+  "name": "SWE-agent/mini-swe-agent",
+  "cat": "coding",
+  "pitch": "100 行代码的极简编码 Agent",
+  "aud": "想读源码搞懂 Agent 循环的",
+  "note": "SWE-agent 团队官方推荐新用户从它上手；能跑 SWE-bench，源码一个下午读完。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "openclaw/openclaw": {
+  "name": "openclaw/openclaw",
+  "cat": "auto",
+  "pitch": "自称「真正干活的 AI」的个人 Agent 运行时",
+  "aud": "想要跨平台常驻个人 Agent 的",
+  "note": "星标全榜第二（39.5 万）：local-first 网关 + 20 多个消息渠道；与 Hermes 正面竞争，生态在快速互卷。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "nousresearch/hermes-agent": {
+  "name": "NousResearch/hermes-agent",
+  "cat": "auto",
+  "pitch": "会自己长技能、跨会话记住你的自主 Agent",
+  "aud": "想让 Agent 常驻终端或 IM 里长期干活",
+  "note": "自主沉淀并迭代 skills、持久记忆、子 Agent 与 cron 定时；热度第一，但开放 issue 积压很多。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "significant-gravitas/autogpt": {
+  "name": "Significant-Gravitas/AutoGPT",
+  "cat": "auto",
+  "pitch": "引爆「自主 Agent」概念的鼻祖",
+  "aud": "了解 Agent 演进史、做自动化原型",
+  "note": "已转型为 Agent 构建平台，历史上星数极高但实际使用率不如当年。",
+  "diff": "中",
+  "lic": "Polyform+MIT"
+ },
+ "foundationagents/openmanus": {
+  "name": "FoundationAgents/OpenManus",
+  "cat": "auto",
+  "pitch": "开源版通用 Agent（Manus 复刻）",
+  "aud": "想自建一个通用任务 Agent",
+  "note": "社区热度高、迭代快，工程完整度仍在追赶，适合折腾不适合直接交付。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "hkuds/nanobot": {
+  "name": "HKUDS/nanobot",
+  "cat": "auto",
+  "pitch": "轻量个人 Agent，装完就能干活",
+  "aud": "想在自己机器上养个常驻小 Agent",
+  "note": "港大 HKUDS 出品，主打小而全：工具、记忆、定时任务都有；工程完整度还追不上 Hermes。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "reworkd/agentgpt": {
+  "name": "reworkd/AgentGPT",
+  "cat": "auto",
+  "pitch": "浏览器里配置目标、自动拆解执行",
+  "aud": "演示与入门体验",
+  "note": "老牌教学型项目，维护节奏放缓。",
+  "diff": "易",
+  "lic": "GPL-3.0"
+ },
+ "fosowl/agenticseek": {
+  "name": "Fosowl/agenticSeek",
+  "cat": "auto",
+  "pitch": "完全本地跑的 Manus 平替",
+  "aud": "不想让数据出本机的",
+  "note": "全本地模型方案，隐私优先；上限取决于你本地模型，别拿它和云端旗舰比效果。",
+  "diff": "中",
+  "lic": "GPL-3.0"
+ },
+ "agent0ai/agent-zero": {
+  "name": "agent0ai/agent-zero",
+  "cat": "auto",
+  "pitch": "自带 Web UI / 终端 / 记忆的通用 Agent",
+  "aud": "想开箱看到一个「会用电脑」的 Agent",
+  "note": "架构清晰、可玩性强，生产化需要自己做隔离与权限。",
+  "diff": "中",
+  "lic": "MIT（自述）"
+ },
+ "openbmb/pilotdeck": {
+  "name": "OpenBMB/PilotDeck",
+  "cat": "auto",
+  "pitch": "OpenBMB 的任务导向 Agent 工作台",
+  "aud": "要工作区级隔离 + 记忆演化的",
+  "note": "以 WorkSpace 为单位隔离上下文与记忆，定位偏生产力平台；AGPL-3.0，商用注意条款。",
+  "diff": "中",
+  "lic": "AGPL-3.0"
+ },
+ "ruvnet/ruflo": {
+  "name": "ruvnet/ruflo",
+  "cat": "multi",
+  "pitch": "多 Agent 蜂群编排的老牌 harness",
+  "aud": "玩多 Agent 蜂群拓扑的",
+  "note": "自称 the original agent harness，拓扑玩法多；是编排玩具还是生产工具社区有争议，落地前自己压测。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "foundationagents/metagpt": {
+  "name": "FoundationAgents/MetaGPT",
+  "cat": "multi",
+  "pitch": "一句话生成一个「软件公司」的角色分工",
+  "aud": "研究多智能体协作、原型生成",
+  "note": "国内团队出品，SOP 化协作思路影响了很多后续项目。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "agentscope-ai/agentscope": {
+  "name": "agentscope-ai/agentscope",
+  "cat": "multi",
+  "pitch": "阿里 ModelScope 的多智能体平台",
+  "aud": "多智能体编排、分布式部署",
+  "note": "强调消息传递与容错，中文文档友好，最初为规模化多 Agent 仿真而设计。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "openbmb/chatdev": {
+  "name": "OpenBMB/ChatDev",
+  "cat": "multi",
+  "pitch": "虚拟软件公司多角色协作开发",
+  "aud": "研究型项目、教学演示",
+  "note": "论文配套实现，效果依赖模型强弱，工程化程度一般。",
+  "diff": "难",
+  "lic": "Apache-2.0"
+ },
+ "camel-ai/camel": {
+  "name": "camel-ai/camel",
+  "cat": "multi",
+  "pitch": "多智能体社会模拟与合成数据生成",
+  "aud": "科研、造 Agent 训练数据",
+  "note": "学术向，抽象度高，不适合直接做业务产品。",
+  "diff": "难",
+  "lic": "Apache-2.0"
+ },
+ "ag2ai/ag2": {
+  "name": "ag2ai/ag2",
+  "cat": "multi",
+  "pitch": "AutoGen 社区分叉出来的 AgentOS",
+  "aud": "原来用 AutoGen、想留在社区版的",
+  "note": "微软官方转向 Agent Framework 后由社区接手；存量 AutoGen 项目迁移要看官方迁移指南。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "browser-use/browser-use": {
+  "name": "browser-use/browser-use",
+  "cat": "browser",
+  "pitch": "让 Agent 像人一样操作浏览器",
+  "aud": "网页流程自动化、爬取与填表",
+  "note": "接入成本最低的浏览器 Agent 库，与 Playwright 生态兼容。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "microsoft/playwright-mcp": {
+  "name": "microsoft/playwright-mcp",
+  "cat": "browser",
+  "pitch": "给 Agent 一套标准浏览器手脚（MCP）",
+  "aud": "已有 Agent、想加浏览器能力",
+  "note": "官方维护、稳定性好，天然适配 MCP 客户端。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "browserbase/stagehand": {
+  "name": "browserbase/stagehand",
+  "cat": "browser",
+  "pitch": "把网页变成可编程 API 的浏览器 Agent",
+  "aud": "前端团队做稳定可复跑的网页自动化",
+  "note": "在 Playwright 上加自然语言动作与缓存，重复执行比纯 LLM 方案稳得多。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "skyvern-ai/skyvern": {
+  "name": "Skyvern-AI/skyvern",
+  "cat": "browser",
+  "pitch": "视觉 + LLM 的浏览器工作流自动化",
+  "aud": "企业 RPA 替代、批量表单流程",
+  "note": "偏成品服务（含 UI），对页面改版鲁棒性比选择器方案好。",
+  "diff": "中",
+  "lic": "AGPL-3.0"
+ },
+ "nanobrowser/nanobrowser": {
+  "name": "nanobrowser/nanobrowser",
+  "cat": "browser",
+  "pitch": "Chrome 扩展里的多 Agent 浏览器助手",
+  "aud": "不想部署服务、装了就用的场景",
+  "note": "纯前端运行、自带 Key，体验轻，能力受扩展沙箱限制。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "steel-dev/steel-browser": {
+  "name": "steel-dev/steel-browser",
+  "cat": "browser",
+  "pitch": "可自托管的浏览器 API，专给 Agent 用",
+  "aud": "不想把浏览器会话交给云服务的",
+  "note": "会话、代理、文件上传、指纹伪装都封装好，起个容器就能给 Agent 调；主要成本是自己运维 Chrome 集群。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "openinterpreter/openinterpreter": {
+  "name": "openinterpreter/openinterpreter",
+  "cat": "desktop",
+  "pitch": "自然语言驱动本机执行代码与操作",
+  "aud": "本地批处理、文件与数据处理",
+  "note": "权限极大，务必在受控环境使用；项目节奏已放缓。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "bytedance/ui-tars-desktop": {
+  "name": "bytedance/UI-TARS-desktop",
+  "cat": "desktop",
+  "pitch": "字节 GUI Agent，直接看屏幕点鼠标",
+  "aud": "桌面软件自动化、跨应用流程",
+  "note": "纯视觉路线，不依赖 DOM，桌面场景比浏览器方案更通用。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "microsoft/omniparser": {
+  "name": "microsoft/OmniParser",
+  "cat": "desktop",
+  "pitch": "把屏幕截图解析成可点元素的视觉解析器",
+  "aud": "自建 GUI Agent、需要屏幕理解的",
+  "note": "纯视觉路线的基础件，通常配 VLM 一起用；它不是成品 Agent，是给 Agent 装眼睛。",
+  "diff": "难",
+  "lic": "CC-BY-4.0"
+ },
+ "web-infra-dev/midscene": {
+  "name": "web-infra-dev/midscene",
+  "cat": "desktop",
+  "pitch": "自然语言驱动的 UI 自动化",
+  "aud": "前端团队做 E2E 与 AI 自动化",
+  "note": "国内团队出品，中文文档好，与 Playwright/Puppeteer 结合紧。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "simular-ai/agent-s": {
+  "name": "simular-ai/Agent-S",
+  "cat": "desktop",
+  "pitch": "开源 computer-use Agent 的 SOTA 实现",
+  "aud": "研究电脑操作 Agent 上限的",
+  "note": "论文同源实现，benchmark 成绩在开源里属最好一档；跑通要配模型、配环境。",
+  "diff": "难",
+  "lic": "Apache-2.0"
+ },
+ "microsoft/magentic-ui": {
+  "name": "microsoft/magentic-ui",
+  "cat": "desktop",
+  "pitch": "人机协同的「浏览器 + 本地文件」Agent",
+  "aud": "研究 human-in-the-loop 的交互设计",
+  "note": "微软研究院出品（MagenticLite），强调每一步可接管、可纠正，偏研究原型而非生产工具。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "pipecat-ai/pipecat": {
+  "name": "pipecat-ai/pipecat",
+  "cat": "voice",
+  "pitch": "实时语音 Agent 的管线框架",
+  "aud": "做语音对话产品的",
+  "note": "把 STT / LLM / TTS 串成实时管线，延迟可控；各家模型要自己接。",
+  "diff": "中",
+  "lic": "BSD-2-Clause"
+ },
+ "livekit/agents": {
+  "name": "livekit/agents",
+  "cat": "voice",
+  "pitch": "LiveKit 的实时语音 Agent 框架",
+  "aud": "已有 LiveKit 音视频链路的",
+  "note": "WebRTC 底子扎实，打断与回声处理成熟；脱离 LiveKit 生态收益变小。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "ten-framework/ten-framework": {
+  "name": "TEN-framework/ten-framework",
+  "cat": "voice",
+  "pitch": "实时多模态对话 Agent 框架（原 TEN Agent）",
+  "aud": "要做低延迟语音、数字人的",
+  "note": "把音频流、视觉、LLM、TTS 编排成一张图，主打实时打断；Apache-2.0 带附加条款，商用前把 LICENSE 读一遍。",
+  "diff": "难",
+  "lic": "Apache-2.0 附加条款"
+ },
+ "panniantong/agent-reach": {
+  "name": "Panniantong/Agent-Reach",
+  "cat": "research",
+  "pitch": "给 Agent 装上「看全网」的眼睛",
+  "aud": "做舆情、调研类 Agent 的",
+  "note": "Twitter / Reddit / YouTube / GitHub / B站 的读取与搜索统一接口；数据源可用性随平台政策波动。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "bytedance/deer-flow": {
+  "name": "bytedance/deer-flow",
+  "cat": "research",
+  "pitch": "字节 Deep Research 框架，带人机协同",
+  "aud": "深度研究报告流水线",
+  "note": "可插拔搜索/爬虫/报告模块，中文场景适配较好。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "stanford-oval/storm": {
+  "name": "stanford-oval/storm",
+  "cat": "research",
+  "pitch": "像写维基百科一样生成有据长文",
+  "aud": "长报告、综述类内容生产",
+  "note": "斯坦福出品，先做大纲再分节检索，结构感强。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "assafelovic/gpt-researcher": {
+  "name": "assafelovic/gpt-researcher",
+  "cat": "research",
+  "pitch": "自动多源检索并产出带引用的调研报告",
+  "aud": "行研、竞品、技术调研自动化",
+  "note": "上手快、产出可用度高，深度依赖模型与搜索源质量。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "microsoft/rd-agent": {
+  "name": "microsoft/RD-Agent",
+  "cat": "research",
+  "pitch": "微软的研发自动化 Agent",
+  "aud": "想自动化实验 / 调参流程的",
+  "note": "把「提假设 - 写代码 - 跑实验 - 复盘」做成闭环，场景偏数据科学；接入成本高。",
+  "diff": "难",
+  "lic": "MIT"
+ },
+ "langchain-ai/open_deep_research": {
+  "name": "langchain-ai/open_deep_research",
+  "cat": "research",
+  "pitch": "LangChain 官方的开源深度研究实现",
+  "aud": "要二次开发研究型 Agent 的",
+  "note": "基于 LangGraph，结构清晰好改；近期更新放缓。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "graphify-labs/graphify": {
+  "name": "Graphify-Labs/graphify",
+  "cat": "knowledge",
+  "pitch": "把整个代码库变成可查询的知识图谱",
+  "aud": "给 Agent 建结构化代码上下文的",
+  "note": "代码 + 文档 + SQL schema + 配置 + PDF 一起建图，查询接口面向 Agent 设计；大仓库建图耗时要有心理准备。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "infiniflow/ragflow": {
+  "name": "infiniflow/ragflow",
+  "cat": "knowledge",
+  "pitch": "深度文档理解的 RAG 引擎",
+  "aud": "中文文档、复杂版式解析",
+  "note": "表格/扫描件解析是强项，自带 UI，国内落地案例多。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "mintplex-labs/anything-llm": {
+  "name": "Mintplex-Labs/anything-llm",
+  "cat": "knowledge",
+  "pitch": "开箱即用的私有 ChatGPT + 文档库",
+  "aud": "个人/小团队自建知识助手",
+  "note": "部署十分钟级，够用、克制，别指望复杂编排。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "hkuds/lightrag": {
+  "name": "HKUDS/LightRAG",
+  "cat": "knowledge",
+  "pitch": "轻量图增强 RAG",
+  "aud": "要图谱式检索但不想上重型方案",
+  "note": "用图结构补足向量检索的关系盲区，成本比 GraphRAG 低。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "khoj-ai/khoj": {
+  "name": "khoj-ai/khoj",
+  "cat": "knowledge",
+  "pitch": "自托管的个人第二大脑",
+  "aud": "想自建个人知识助手",
+  "note": "文档 / 邮件 / 网页都能进来，支持本地模型；近几个月没提交，节奏慢下来了。",
+  "diff": "易",
+  "lic": "AGPL-3.0"
+ },
+ "tencent/weknora": {
+  "name": "Tencent/WeKnora",
+  "cat": "knowledge",
+  "pitch": "腾讯开源的文档理解与检索知识平台",
+  "aud": "要把一堆 PDF / Word 变成可问答知识库的",
+  "note": "文档解析 → 分块 → 多路召回 → 带引证回答的完整链路，Go 写的中台不是玩具；MIT，但第三方组件另有条款。",
+  "diff": "中",
+  "lic": "MIT+第三方条款"
+ },
+ "microsoft/graphrag": {
+  "name": "microsoft/graphrag",
+  "cat": "knowledge",
+  "pitch": "知识图谱式 RAG（GraphRAG）",
+  "aud": "全局性问题、跨文档关系推理",
+  "note": "建图成本高（token 消耗大），适合高价值语料。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "onyx-dot-app/onyx": {
+  "name": "onyx-dot-app/onyx",
+  "cat": "knowledge",
+  "pitch": "企业级知识问答平台（原 Danswer）",
+  "aud": "企业内网知识库 + 问答",
+  "note": "连接器多、权限体系完整，适合内部部署；部署组件偏重。",
+  "diff": "中",
+  "lic": "MIT+企业版"
+ },
+ "mem0ai/mem0": {
+  "name": "mem0ai/mem0",
+  "cat": "memory",
+  "pitch": "给 Agent 外挂长期记忆层",
+  "aud": "多轮个性化、跨会话记忆",
+  "note": "托管与自托管都支持，是记忆层里落地最广的一个。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "mempalace/mempalace": {
+  "name": "MemPalace/mempalace",
+  "cat": "memory",
+  "pitch": "自称基准成绩最好的开源记忆系统",
+  "aud": "对记忆质量有量化要求的",
+  "note": "拿 benchmark 说话、提供多种后端；「best-benchmarked」是自评，建议自己复现再信。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "topoteretes/cognee": {
+  "name": "topoteretes/cognee",
+  "cat": "memory",
+  "pitch": "把文档变成 Agent 的图谱记忆",
+  "aud": "需要长程记忆 + 知识图谱的",
+  "note": "ETL 式建图，记忆可查可改；偏工程化，配置项不少。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "getzep/graphiti": {
+  "name": "getzep/graphiti",
+  "cat": "memory",
+  "pitch": "给 Agent 建带时间轴的实时知识图谱",
+  "aud": "需要「谁在什么时候改了什么」的记忆",
+  "note": "Zep 的记忆引擎：实体关系 + 时间有效性，能回答「这条现在还有效吗」，而不只是「说过什么」；Graphiti 是引擎，Zep 是托管服务。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "supermemoryai/supermemory": {
+  "name": "supermemoryai/supermemory",
+  "cat": "memory",
+  "pitch": "高速记忆 / 上下文引擎，带托管 API",
+  "aud": "要现成记忆 API 的产品团队",
+  "note": "以服务形态提供，接入省事；自托管版本比 SaaS 弱。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "letta-ai/letta": {
+  "name": "letta-ai/letta",
+  "cat": "memory",
+  "pitch": "有状态 Agent 服务，自管理记忆（原 MemGPT）",
+  "aud": "需要长期人格与记忆的 Agent",
+  "note": "把记忆当操作系统管，思路漂亮，资源开销偏高。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "memtensor/memos": {
+  "name": "MemTensor/MemOS",
+  "cat": "memory",
+  "pitch": "给 Agent 用的「记忆操作系统」",
+  "aud": "想在记忆层做研究或定制的",
+  "note": "上海交大团队，记忆调度与生命周期管理做得细；偏学术，落地要自己接。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "modelcontextprotocol/servers": {
+  "name": "modelcontextprotocol/servers",
+  "cat": "protocol",
+  "pitch": "MCP 官方参考服务器合集",
+  "aud": "要给 Agent 接工具、接数据源",
+  "note": "MCP 已成事实标准，这里是官方示范实现与最佳实践来源。",
+  "diff": "中",
+  "lic": "见仓库"
+ },
+ "upstash/context7": {
+  "name": "upstash/context7",
+  "cat": "protocol",
+  "pitch": "给 Agent 喂最新文档的 MCP 服务",
+  "aud": "受不了模型知识过期的",
+  "note": "按库名拉版本化文档，接进 Cursor / Claude Code 就能用；索引依赖第三方托管。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "chromedevtools/chrome-devtools-mcp": {
+  "name": "ChromeDevTools/chrome-devtools-mcp",
+  "cat": "protocol",
+  "pitch": "让 Agent 直接操控 Chrome DevTools",
+  "aud": "要让 Agent 查性能、网络、控制台的",
+  "note": "官方维护，比纯 DOM 操作多一层运行时视角，调前端问题很顺手。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "github/github-mcp-server": {
+  "name": "github/github-mcp-server",
+  "cat": "protocol",
+  "pitch": "GitHub 官方 MCP Server",
+  "aud": "让 Agent 管 issue / PR / 代码搜索",
+  "note": "官方出品，权限跟着 token 走；GitHub Enterprise 要额外配置。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "composiohq/composio": {
+  "name": "ComposioHQ/composio",
+  "cat": "protocol",
+  "pitch": "1000+ 工具集成的 Agent 工具中台",
+  "aud": "想让 Agent 接通 SaaS 生态的",
+  "note": "托管工具市场 + 鉴权托管，省掉自己接 OAuth；代价是依赖其云端服务。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "prefecthq/fastmcp": {
+  "name": "PrefectHQ/fastmcp",
+  "cat": "protocol",
+  "pitch": "用几行 Python 写一个 MCP Server",
+  "aud": "要把内部系统暴露给 Agent",
+  "note": "装饰器风格，是目前写 MCP 服务最省心的库。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "a2aproject/a2a": {
+  "name": "a2aproject/A2A",
+  "cat": "protocol",
+  "pitch": "Google 发起、现归 Linux 基金会的 Agent 间通信协议",
+  "aud": "要跨厂商、跨组织串 Agent 的",
+  "note": "补上 MCP 没管的那一半：Agent 之间怎么互相发现、怎么委派任务、怎么流式回传进度；仓库以规范为主，代码是参考实现。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "modelcontextprotocol/python-sdk": {
+  "name": "modelcontextprotocol/python-sdk",
+  "cat": "protocol",
+  "pitch": "自己写 MCP Server 的官方 Python SDK",
+  "aud": "要把内部系统接给 Agent 的",
+  "note": "协议本体最权威的实现，配 FastMCP 更省事；只管协议层，不含 Agent 逻辑。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "mcp-use/mcp-use": {
+  "name": "mcp-use/mcp-use",
+  "cat": "protocol",
+  "pitch": "全栈 MCP 框架：MCP App 和 Server 一起做",
+  "aud": "要做带界面的 MCP App 的",
+  "note": "把 MCP Server 和前端 UI 打包成一个工程，适合做可交互工具；公开案例还不多。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "langfuse/langfuse": {
+  "name": "langfuse/langfuse",
+  "cat": "eval",
+  "pitch": "Agent 观测与评测的老牌平台",
+  "aud": "要给 Agent 上 trace 和评测的",
+  "note": "自托管友好，trace / 数据集 / 评分一体；功能多，上手要花点时间。",
+  "diff": "中",
+  "lic": "MIT+企业版"
+ },
+ "promptfoo/promptfoo": {
+  "name": "promptfoo/promptfoo",
+  "cat": "eval",
+  "pitch": "把提示词、Agent、RAG 的测试写成配置跑进 CI",
+  "aud": "要让评测进 CI 的团队",
+  "note": "YAML 声明式断言 + 红队扫描，比手写脚本做回归省事；偏「测试框架」而非「观测平台」，和 Langfuse 是互补关系。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "confident-ai/deepeval": {
+  "name": "confident-ai/deepeval",
+  "cat": "eval",
+  "pitch": "给 LLM / Agent 写单测的评测框架",
+  "aud": "想把评测塞进 CI 的",
+  "note": "pytest 风格，常用指标开箱即用；复杂多轮场景得自己写 evaluator。",
+  "diff": "易",
+  "lic": "Apache-2.0"
+ },
+ "arize-ai/phoenix": {
+  "name": "Arize-ai/phoenix",
+  "cat": "eval",
+  "pitch": "Arize 的观测与评测面板",
+  "aud": "做 RAG / Agent 调优对比的",
+  "note": "本地起一个就能看 trace 和实验对比；云版功能更全。",
+  "diff": "中",
+  "lic": "Elastic-2.0"
+ },
+ "agentops-ai/agentops": {
+  "name": "AgentOps-AI/agentops",
+  "cat": "eval",
+  "pitch": "几行代码接入的 Agent 监控 SDK",
+  "aud": "想低成本先看到运行轨迹的",
+  "note": "接入最快的一档，深度不如 Langfuse；近半年更新变慢。",
+  "diff": "易",
+  "lic": "MIT"
+ },
+ "ukgovernmentbeis/inspect_ai": {
+  "name": "UKGovernmentBEIS/inspect_ai",
+  "cat": "eval",
+  "pitch": "英国 AI 安全研究所的评测框架",
+  "aud": "要做可复现、可审计评测的",
+  "note": "把评测写成可版本化的任务集，自带沙箱与完整日志，政府与合规场景常用；不如商业平台顺手，但结果可复现。",
+  "diff": "中",
+  "lic": "MIT"
+ },
+ "verl-project/verl": {
+  "name": "verl-project/verl",
+  "cat": "rl",
+  "pitch": "Agentic RL 训练的主流底座（HybridFlow）",
+  "aud": "要自己训 Agent 策略的算法团队",
+  "note": "单控制器 + 多角色并行的 RL 后训练框架，社区里绝大多数 Agentic RL 复现都从它起步；门槛不在 API 而在分布式训练本身。",
+  "diff": "难",
+  "lic": "Apache-2.0"
+ },
+ "openpipe/art": {
+  "name": "OpenPipe/ART",
+  "cat": "rl",
+  "pitch": "Agent 强化训练器：把多步任务训成可训练样本",
+  "aud": "想用便宜小模型顶掉固定流程的",
+  "note": "GRPO + 可训练的工具调用循环，主打「小模型 + RL」在窄任务上追平大模型；真正的成本在造训练数据，不在训练。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ },
+ "thudm/slime": {
+  "name": "THUDM/slime",
+  "cat": "rl",
+  "pitch": "清华的 RL Scaling 训练框架",
+  "aud": "做长轨迹 Agentic RL 实验的研究者",
+  "note": "面向超长轨迹与多轮工具调用的 RL：rollout 交给 SGLang、训练交给 Megatron；文档偏论文风格，得肯读代码。",
+  "diff": "难",
+  "lic": "Apache-2.0"
+ },
+ "openenv/openenv": {
+  "name": "openenv/OpenEnv",
+  "cat": "rl",
+  "pitch": "给 RL 后训练用的环境接口标准",
+  "aud": "希望训练环境可互换的",
+  "note": "把环境抽象成统一的 reset/step/reward 接口，换环境不用改训练代码；非常早期，生态还没成型。",
+  "diff": "中",
+  "lic": "BSD-3-Clause"
+ },
+ "primeintellect-ai/prime-rl": {
+  "name": "PrimeIntellect-ai/prime-rl",
+  "cat": "rl",
+  "pitch": "去中心化算力上的 Agentic RL 训练栈",
+  "aud": "想跨机器拼算力训 Agent 的",
+  "note": "异步 RL + 分布式 rollout，主打把闲置算力接进来一起训；运维复杂度明显高于单机方案。",
+  "diff": "难",
+  "lic": "Apache-2.0"
+ },
+ "e2b-dev/e2b": {
+  "name": "e2b-dev/E2B",
+  "cat": "infra",
+  "pitch": "给 Agent 用的安全云沙箱",
+  "aud": "要执行 AI 生成代码的产品",
+  "note": "Firecracker 微虚机隔离，是编码类 Agent 的基础设施刚需。",
+  "diff": "中",
+  "lic": "Apache-2.0"
+ }
+}
