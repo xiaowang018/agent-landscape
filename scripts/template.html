@@ -37,8 +37,8 @@ h1 em{font-style:normal;color:var(--accent)}
 #q:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 select{padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:#fff;font-size:13.5px;
   font-family:inherit;color:var(--ink2);cursor:pointer;outline:none}
-.chips{display:flex;gap:7px;flex-wrap:wrap;padding:12px 24px 4px;max-width:1240px;margin:0 auto}
-.chip{border:1px solid var(--line);background:#fff;color:var(--ink2);font-size:13px;padding:6px 12px;
+.chips{display:flex;gap:6px;flex-wrap:wrap;padding:10px 24px 4px;max-width:1240px;margin:0 auto}
+.chip{border:1px solid var(--line);background:#fff;color:var(--ink2);font-size:12.5px;padding:5px 10px;
   border-radius:999px;cursor:pointer;font-family:inherit;transition:.15s;display:inline-flex;gap:6px;align-items:center}
 .chip:hover{border-color:#c9cfe0;color:var(--ink)}
 .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -160,7 +160,7 @@ footer p+p{margin-top:7px}
 <header>
   <div class="kicker">GitHub Agent Landscape · {{DATE}}</div>
   <h1>GitHub 上的 Agent 项目，<em>一张图看懂</em></h1>
-  <p class="lede">从底层编排框架到能自己写代码、开浏览器、做深度调研的成品 Agent，{{N_REPOS}} 个项目按 {{N_TRACKS}} 个赛道归类。星数、语言、许可证、维护状态取自 GitHub 官方 API，中文定位与选型建议为人工标注。</p>
+  <p class="lede">从底层编排框架到能自己写代码、开浏览器、做深度调研的成品 Agent，再到动手前该读的那几份教程，{{N_REPOS}} 个项目按 {{N_TRACKS}} 个赛道归类。星数、语言、许可证、维护状态取自 GitHub 官方 API，中文定位与选型建议为人工标注。</p>
   <div class="stats">
 {{STATS}}
   </div>

@@ -37,8 +37,8 @@ h1 em{font-style:normal;color:var(--accent)}
 #q:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 select{padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:#fff;font-size:13.5px;
   font-family:inherit;color:var(--ink2);cursor:pointer;outline:none}
-.chips{display:flex;gap:7px;flex-wrap:wrap;padding:12px 24px 4px;max-width:1240px;margin:0 auto}
-.chip{border:1px solid var(--line);background:#fff;color:var(--ink2);font-size:13px;padding:6px 12px;
+.chips{display:flex;gap:6px;flex-wrap:wrap;padding:10px 24px 4px;max-width:1240px;margin:0 auto}
+.chip{border:1px solid var(--line);background:#fff;color:var(--ink2);font-size:12.5px;padding:5px 10px;
   border-radius:999px;cursor:pointer;font-family:inherit;transition:.15s;display:inline-flex;gap:6px;align-items:center}
 .chip:hover{border-color:#c9cfe0;color:var(--ink)}
 .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -138,7 +138,7 @@ footer p+p{margin-top:7px}
 <div class="toolbar">
   <div class="tb-in">
     <input id="q" type="search" placeholder="搜索项目名 / 定位 / 场景，例如：浏览器、RAG、多智能体…">
-    <select id="lang"><option value="">全部语言</option><option value="Python">Python (67)</option><option value="TypeScript">TypeScript (41)</option><option value="Go">Go (4)</option><option value="JavaScript">JavaScript (4)</option><option value="Rust">Rust (3)</option><option value="Shell">Shell (3)</option><option value="C#">C# (1)</option><option value="Jupyter Notebook">Jupyter Notebook (1)</option><option value="-">- (1)</option></select>
+    <select id="lang"><option value="">全部语言</option><option value="Python">Python (71)</option><option value="TypeScript">TypeScript (41)</option><option value="JavaScript">JavaScript (5)</option><option value="Jupyter Notebook">Jupyter Notebook (5)</option><option value="Go">Go (4)</option><option value="Rust">Rust (3)</option><option value="Shell">Shell (3)</option><option value="-">- (3)</option><option value="C#">C# (1)</option><option value="MDX">MDX (1)</option></select>
     <select id="sort">
       <option value="stars">按星数排序</option>
       <option value="upd">按最近更新</option>
@@ -152,7 +152,7 @@ footer p+p{margin-top:7px}
     <button class="tgl" id="act" aria-pressed="false" title="只留 45 天内有提交的项目">只看活跃<i></i></button>
     <button id="reset">重置</button>
   </div>
-  <div class="chips"><button class="chip on" data-cat="all">全部<i>125</i></button><button class="chip" data-cat="framework">编排框架 / SDK<i>21</i></button><button class="chip" data-cat="platform">低代码平台 / 工作流<i>7</i></button><button class="chip" data-cat="coding">编码 Agent<i>21</i></button><button class="chip" data-cat="auto">通用自主 Agent<i>9</i></button><button class="chip" data-cat="multi">多智能体协作<i>6</i></button><button class="chip" data-cat="browser">浏览器操作<i>6</i></button><button class="chip" data-cat="desktop">桌面 / 电脑操作<i>6</i></button><button class="chip" data-cat="voice">语音 Agent<i>3</i></button><button class="chip" data-cat="research">深度研究 / 检索<i>6</i></button><button class="chip" data-cat="knowledge">知识库 / RAG<i>8</i></button><button class="chip" data-cat="memory">记忆层<i>7</i></button><button class="chip" data-cat="protocol">工具协议 / MCP<i>9</i></button><button class="chip" data-cat="skills">技能包 / 工作流<i>4</i></button><button class="chip" data-cat="eval">Agent 可观测 / 评测<i>6</i></button><button class="chip" data-cat="rl">Agentic RL / 训练环境<i>5</i></button><button class="chip" data-cat="infra">Agent 基础设施<i>1</i></button></div>
+  <div class="chips"><button class="chip on" data-cat="all">全部<i>137</i></button><button class="chip" data-cat="framework">编排框架 / SDK<i>21</i></button><button class="chip" data-cat="platform">低代码平台 / 工作流<i>7</i></button><button class="chip" data-cat="coding">编码 Agent<i>21</i></button><button class="chip" data-cat="auto">通用自主 Agent<i>9</i></button><button class="chip" data-cat="multi">多智能体协作<i>6</i></button><button class="chip" data-cat="browser">浏览器操作<i>6</i></button><button class="chip" data-cat="desktop">桌面 / 电脑操作<i>6</i></button><button class="chip" data-cat="voice">语音 Agent<i>3</i></button><button class="chip" data-cat="research">深度研究 / 检索<i>6</i></button><button class="chip" data-cat="knowledge">知识库 / RAG<i>8</i></button><button class="chip" data-cat="memory">记忆层<i>7</i></button><button class="chip" data-cat="protocol">工具协议 / MCP<i>9</i></button><button class="chip" data-cat="skills">技能包 / 工作流<i>4</i></button><button class="chip" data-cat="eval">Agent 可观测 / 评测<i>6</i></button><button class="chip" data-cat="rl">Agentic RL / 训练环境<i>5</i></button><button class="chip" data-cat="infra">Agent 基础设施<i>1</i></button><button class="chip" data-cat="learn">教程 / 学习资料<i>12</i></button></div>
 </div>
 <div class="count-line"><span id="cnt"></span><span class="hint">按 <kbd>/</kbd> 搜索 · <kbd>Esc</kbd> 清空</span></div>
 
@@ -160,12 +160,12 @@ footer p+p{margin-top:7px}
 <header>
   <div class="kicker">GitHub Agent Landscape · 2026-11-24</div>
   <h1>GitHub 上的 Agent 项目，<em>一张图看懂</em></h1>
-  <p class="lede">从底层编排框架到能自己写代码、开浏览器、做深度调研的成品 Agent，125 个项目按 16 个赛道归类。星数、语言、许可证、维护状态取自 GitHub 官方 API，中文定位与选型建议为人工标注。</p>
+  <p class="lede">从底层编排框架到能自己写代码、开浏览器、做深度调研的成品 Agent，再到动手前该读的那几份教程，137 个项目按 17 个赛道归类。星数、语言、许可证、维护状态取自 GitHub 官方 API，中文定位与选型建议为人工标注。</p>
   <div class="stats">
-    <div class="stat"><b>125</b><span>收录项目</span></div>
-    <div class="stat"><b>802.1万</b><span>累计星标</span></div>
-    <div class="stat"><b>16</b><span>赛道分类</span></div>
-    <div class="stat"><b>111</b><span>近 45 天有提交</span></div>
+    <div class="stat"><b>137</b><span>收录项目</span></div>
+    <div class="stat"><b>846万</b><span>累计星标</span></div>
+    <div class="stat"><b>17</b><span>赛道分类</span></div>
+    <div class="stat"><b>122</b><span>近 45 天有提交</span></div>
   </div>
 </header>
 
@@ -2934,6 +2934,267 @@ footer p+p{margin-top:7px}
         <span class="meta-item">Apache-2.0</span>
         <span class="meta-item diff">门槛 <b>中</b><span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot "></i></span></span>
         <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-23</span>
+      </div>
+    </article>
+    </div>
+  </section>
+  <section class="group" data-cat="learn">
+    <div class="group-head">
+      <h2>教程 / 学习资料</h2>
+      <span class="gsub">先读别人怎么做的，再决定自己动手</span>
+      <span class="gcount"><b class="gc-n">12</b> 个项目 · ★ <span class="gc-s">43.9万</span></span>
+    </div>
+    <div class="grid">
+    <article class="card" data-cat="learn" data-lang="Python"
+             data-name="datawhalechina/hello-agents 中文·从零构建一个智能体 想先搞懂原理再上手 《从零开始构建智能体》配套代码，从 react 循环讲到多智能体与训练，每章可跑，中文表达清楚。"
+             data-diff="易" data-act="1" data-topics="agent llm rag tutorial"
+             data-stars="87816" data-upd="2026-11-13">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/datawhalechina/hello-agents" target="_blank" rel="noopener">
+          <span class="owner">datawhalechina/</span><span class="name">hello-agents</span>
+        </a>
+        <span class="stars" title="87,816 stars">★ 8.8万</span>
+      </div>
+      <h3 class="pitch">中文·从零构建一个智能体</h3>
+      <p class="note">《从零开始构建智能体》配套代码，从 ReAct 循环讲到多智能体与训练，每章可跑，中文表达清楚。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">想先搞懂原理再上手</span></div>
+      <div class="topics"><span>⑂ Fork 1.1万</span><span>创建于 2025-09</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#3572A5"></i>Python</span>
+        <span class="meta-item">NOASSERTION</span>
+        <span class="meta-item diff">门槛 <b>易</b><span class="dots"><i class="dot on"></i><i class="dot "></i><i class="dot "></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-13</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="Jupyter Notebook"
+             data-name="microsoft/ai-agents-for-beginners 官方 18 课，按顺序走完 想要一条不迷路的入门路径 微软的 18 课，从工具调用讲到多智能体与生产落地，每课配 notebook 和课后题，英文但能直接跑。"
+             data-diff="易" data-act="1" data-topics="agentic-ai agentic-framework agentic-rag ai-agents ai-agents-framework autogen foundry foundry-local generative-ai microsoft-foundry semantic-kernel"
+             data-stars="80875" data-upd="2026-11-17">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/microsoft/ai-agents-for-beginners" target="_blank" rel="noopener">
+          <span class="owner">microsoft/</span><span class="name">ai-agents-for-beginners</span>
+        </a>
+        <span class="stars" title="80,875 stars">★ 8.1万</span>
+      </div>
+      <h3 class="pitch">官方 18 课，按顺序走完</h3>
+      <p class="note">微软的 18 课，从工具调用讲到多智能体与生产落地，每课配 notebook 和课后题，英文但能直接跑。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">想要一条不迷路的入门路径</span></div>
+      <div class="topics"><span>⑂ Fork 2.6万</span><span>创建于 2024-11</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#DA5B0B"></i>Jupyter Notebook</span>
+        <span class="meta-item">MIT</span>
+        <span class="meta-item diff">门槛 <b>易</b><span class="dots"><i class="dot on"></i><i class="dot "></i><i class="dot "></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-17</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="Python"
+             data-name="shareai-lab/learn-claude-code 手写一个迷你 claude code 想看清 agent 循环内部 核心结论是「bash 就够了」：用很少的代码复刻 agent harness 的工具循环，读完再看真实实现不容易迷路。"
+             data-diff="中" data-act="1" data-topics="agent agent-development ai-agent claude claude-code educational llm python teaching tutorial"
+             data-stars="80819" data-upd="2026-11-15">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/shareAI-lab/learn-claude-code" target="_blank" rel="noopener">
+          <span class="owner">shareAI-lab/</span><span class="name">learn-claude-code</span>
+        </a>
+        <span class="stars" title="80,819 stars">★ 8.1万</span>
+      </div>
+      <h3 class="pitch">手写一个迷你 Claude Code</h3>
+      <p class="note">核心结论是「Bash 就够了」：用很少的代码复刻 agent harness 的工具循环，读完再看真实实现不容易迷路。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">想看清 Agent 循环内部</span></div>
+      <div class="topics"><span>⑂ Fork 1.3万</span><span>创建于 2025-06</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#3572A5"></i>Python</span>
+        <span class="meta-item">MIT</span>
+        <span class="meta-item diff">门槛 <b>中</b><span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot "></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-15</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="Python"
+             data-name="hesreallyhim/awesome-claude-code claude code 生态的资源清单 已上手、想找现成配置 命令、hooks、工作流、插件按类别整理，社区提交、几乎每天更新，适合当配置灵感库而不是教程。"
+             data-diff="易" data-act="1" data-topics="agent-skills agentic-code agentic-coding ai-workflow-optimization ai-workflows anthropic anthropic-claude awesome awesome-claude-code awesome-list awesome-lists awesome-resources claude claude-code coding-agent coding-agents coding-assistant coding-assistants llm"
+             data-stars="58702" data-upd="2026-11-24">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/hesreallyhim/awesome-claude-code" target="_blank" rel="noopener">
+          <span class="owner">hesreallyhim/</span><span class="name">awesome-claude-code</span>
+        </a>
+        <span class="stars" title="58,702 stars">★ 5.9万</span>
+      </div>
+      <h3 class="pitch">Claude Code 生态的资源清单</h3>
+      <p class="note">命令、hooks、工作流、插件按类别整理，社区提交、几乎每天更新，适合当配置灵感库而不是教程。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">已上手、想找现成配置</span></div>
+      <div class="topics"><span>⑂ Fork 5k</span><span>创建于 2025-04</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#3572A5"></i>Python</span>
+        <span class="meta-item">NOASSERTION</span>
+        <span class="meta-item diff">门槛 <b>易</b><span class="dots"><i class="dot on"></i><i class="dot "></i><i class="dot "></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-24</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="Jupyter Notebook"
+             data-name="patchy631/ai-engineering-hub 从 rag 到 agent 的实战 notebook 能读代码、想直接跑通 偏工程实现的教程合集，选题跟着新框架走（rag、多智能体、本地部署），代码完整但讲解偏简。"
+             data-diff="中" data-act="1" data-topics="agents ai llms machine-learning mcp rag"
+             data-stars="42092" data-upd="2026-11-01">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/patchy631/ai-engineering-hub" target="_blank" rel="noopener">
+          <span class="owner">patchy631/</span><span class="name">ai-engineering-hub</span>
+        </a>
+        <span class="stars" title="42,092 stars">★ 4.2万</span>
+      </div>
+      <h3 class="pitch">从 RAG 到 Agent 的实战 notebook</h3>
+      <p class="note">偏工程实现的教程合集，选题跟着新框架走（RAG、多智能体、本地部署），代码完整但讲解偏简。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">能读代码、想直接跑通</span></div>
+      <div class="topics"><span>⑂ Fork 6.7k</span><span>创建于 2024-10</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#DA5B0B"></i>Jupyter Notebook</span>
+        <span class="meta-item">MIT</span>
+        <span class="meta-item diff">门槛 <b>中</b><span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot "></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-01</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="JavaScript"
+             data-name="liyupi/ai-guide 中文 ai 工具与玩法大全 刚接触、想先玩起来 资源大全加 vibe coding 入门，覆盖工具选型、提示词与部署，图文步骤多、上手快，深度有限。"
+             data-diff="易" data-act="1" data-topics="ai ai-agent artificial-intelligence chatgpt claude claude-code codex cursor deep-learning deepseek gemini generative-ai gpt llm mcp openai rag vibe-coding vibecoding vuepress"
+             data-stars="22347" data-upd="2026-11-12">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/liyupi/ai-guide" target="_blank" rel="noopener">
+          <span class="owner">liyupi/</span><span class="name">ai-guide</span>
+        </a>
+        <span class="stars" title="22,347 stars">★ 2.2万</span>
+      </div>
+      <h3 class="pitch">中文 AI 工具与玩法大全</h3>
+      <p class="note">资源大全加 Vibe Coding 入门，覆盖工具选型、提示词与部署，图文步骤多、上手快，深度有限。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">刚接触、想先玩起来</span></div>
+      <div class="topics"><span>⑂ Fork 2.4k</span><span>创建于 2025-02</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#f1e05a"></i>JavaScript</span>
+        <span class="meta-item">NOASSERTION</span>
+        <span class="meta-item diff">门槛 <b>易</b><span class="dots"><i class="dot on"></i><i class="dot "></i><i class="dot "></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-12</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="Jupyter Notebook"
+             data-name="nirdiamant/agents-towards-production 把 demo 推到生产要补什么 demo 能跑、上线就崩 按主题拆生产化环节：可观测、评估、记忆、部署与成本，每个主题给可跑 notebook，偏架构决策。"
+             data-diff="难" data-act="1" data-topics="agent agent-framework agentic-ai agents ai-agents deployment genai generative-ai langgraph llm llms mcp mlops multi-agent-systems observability production python rag tutorials"
+             data-stars="21946" data-upd="2026-11-15">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/NirDiamant/agents-towards-production" target="_blank" rel="noopener">
+          <span class="owner">NirDiamant/</span><span class="name">agents-towards-production</span>
+        </a>
+        <span class="stars" title="21,946 stars">★ 2.2万</span>
+      </div>
+      <h3 class="pitch">把 demo 推到生产要补什么</h3>
+      <p class="note">按主题拆生产化环节：可观测、评估、记忆、部署与成本，每个主题给可跑 notebook，偏架构决策。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">demo 能跑、上线就崩</span></div>
+      <div class="topics"><span>⑂ Fork 2.9k</span><span>创建于 2025-06</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#DA5B0B"></i>Jupyter Notebook</span>
+        <span class="meta-item">NOASSERTION</span>
+        <span class="meta-item diff">门槛 <b>难</b><span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-15</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="Jupyter Notebook"
+             data-name="datawhalechina/llm-universe 大模型应用开发的第一门课 还没写过 llm 应用 面向小白的教程，讲清 api 调用、prompt、rag 与评估这些前置知识，是学 agent 之前的地基。"
+             data-diff="易" data-act="1" data-topics="langchain rag"
+             data-stars="14334" data-upd="2026-11-24">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/datawhalechina/llm-universe" target="_blank" rel="noopener">
+          <span class="owner">datawhalechina/</span><span class="name">llm-universe</span>
+        </a>
+        <span class="stars" title="14,334 stars">★ 1.4万</span>
+      </div>
+      <h3 class="pitch">大模型应用开发的第一门课</h3>
+      <p class="note">面向小白的教程，讲清 API 调用、Prompt、RAG 与评估这些前置知识，是学 Agent 之前的地基。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">还没写过 LLM 应用</span></div>
+      <div class="topics"><span>⑂ Fork 1.5k</span><span>创建于 2023-10</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#DA5B0B"></i>Jupyter Notebook</span>
+        <span class="meta-item">-</span>
+        <span class="meta-item diff">门槛 <b>易</b><span class="dots"><i class="dot on"></i><i class="dot "></i><i class="dot "></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-24</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="MDX"
+             data-name="adongwanai/agentguide 中文 agent 开发的体系化路线 想要一份能按图索骥的目录 中文长文，覆盖 harness 设计、上下文工程、rag 与 mcp，观点明确，适合当主线读物配着代码看。"
+             data-diff="中" data-act="1" data-topics="agentic-rl agenticrag ai-agent claude-code crewai graphrag grpo harness interview job-hunting llm rag sft tutorial"
+             data-stars="12236" data-upd="2026-11-05">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/adongwanai/AgentGuide" target="_blank" rel="noopener">
+          <span class="owner">adongwanai/</span><span class="name">AgentGuide</span>
+        </a>
+        <span class="stars" title="12,236 stars">★ 1.2万</span>
+      </div>
+      <h3 class="pitch">中文 Agent 开发的体系化路线</h3>
+      <p class="note">中文长文，覆盖 Harness 设计、上下文工程、RAG 与 MCP，观点明确，适合当主线读物配着代码看。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">想要一份能按图索骥的目录</span></div>
+      <div class="topics"><span>⑂ Fork 1.2k</span><span>创建于 2025-11</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#94a3b8"></i>MDX</span>
+        <span class="meta-item">CC-BY-4.0</span>
+        <span class="meta-item diff">门槛 <b>中</b><span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot "></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-05</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="-"
+             data-name="wangrongsheng/awesome-llm-resources 中文 llm 资料总目录 要按方向查资料 按多模态、agent、辅助编程、训练推理分栏收资料，中文标注清楚，覆盖面最广，质量参差。"
+             data-diff="易" data-act="1" data-topics="awesome-list book course large-language-models llama llm mistral openai qwen rag retrieval-augmented-generation webui"
+             data-stars="9103" data-upd="2026-11-21">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/WangRongsheng/awesome-LLM-resources" target="_blank" rel="noopener">
+          <span class="owner">WangRongsheng/</span><span class="name">awesome-LLM-resources</span>
+        </a>
+        <span class="stars" title="9,103 stars">★ 9,103</span>
+      </div>
+      <h3 class="pitch">中文 LLM 资料总目录</h3>
+      <p class="note">按多模态、Agent、辅助编程、训练推理分栏收资料，中文标注清楚，覆盖面最广，质量参差。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">要按方向查资料</span></div>
+      <div class="topics"><span>⑂ Fork 1.1k</span><span>创建于 2024-04</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#94a3b8"></i>-</span>
+        <span class="meta-item">Apache-2.0</span>
+        <span class="meta-item diff">门槛 <b>易</b><span class="dots"><i class="dot on"></i><i class="dot "></i><i class="dot "></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-21</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="Python"
+             data-name="wethinkin/aigc-interview-book aigc / agent 岗面试题集 要投简历、准备面试 按 aigc、llm、agent、具身智能分章的面试资料，题目带参考答案，也能当知识点清单反向查漏。"
+             data-diff="中" data-act="1" data-topics="ai-agent aigc computer-vision deep-learning interview interview-preparation interview-questions interviews-solutions large-language-models machine-learning natural-language-processing openclaw stable-diffusion transformer"
+             data-stars="5303" data-upd="2026-11-23">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/WeThinkIn/AIGC-Interview-Book" target="_blank" rel="noopener">
+          <span class="owner">WeThinkIn/</span><span class="name">AIGC-Interview-Book</span>
+        </a>
+        <span class="stars" title="5,303 stars">★ 5,303</span>
+      </div>
+      <h3 class="pitch">AIGC / Agent 岗面试题集</h3>
+      <p class="note">按 AIGC、LLM、Agent、具身智能分章的面试资料，题目带参考答案，也能当知识点清单反向查漏。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">要投简历、准备面试</span></div>
+      <div class="topics"><span>⑂ Fork 503</span><span>创建于 2023-10</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#3572A5"></i>Python</span>
+        <span class="meta-item">GPL-3.0</span>
+        <span class="meta-item diff">门槛 <b>中</b><span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot "></i></span></span>
+        <span class="meta-item upd"><span class="s s-on">活跃</span>2026-11-23</span>
+      </div>
+    </article>
+    <article class="card" data-cat="learn" data-lang="-"
+             data-name="windy3f3f3f3f/how-claude-code-works 拆开看 claude code 怎么实现 读过教程、想懂工程细节 从架构、agent loop、上下文管理到工具系统逐层讲，中文，看完再读同类产品会快很多；更新偏慢。"
+             data-diff="难" data-act="0" data-topics="ai ai-agent anthropic architecture claude claude-code coding-agent deep-dive llm source-code-analysis"
+             data-stars="3849" data-upd="2026-08-17">
+      <div class="card-top">
+        <a class="repo" href="https://github.com/Windy3f3f3f3f/how-claude-code-works" target="_blank" rel="noopener">
+          <span class="owner">Windy3f3f3f3f/</span><span class="name">how-claude-code-works</span>
+        </a>
+        <span class="stars" title="3,849 stars">★ 3,849</span>
+      </div>
+      <h3 class="pitch">拆开看 Claude Code 怎么实现</h3>
+      <p class="note">从架构、agent loop、上下文管理到工具系统逐层讲，中文，看完再读同类产品会快很多；更新偏慢。</p>
+      <div class="fit"><span class="fitk">适合</span><span class="fitv">读过教程、想懂工程细节</span></div>
+      <div class="topics"><span>⑂ Fork 722</span><span>创建于 2026-03</span></div>
+      <div class="card-foot">
+        <span class="meta-item lang"><i class="ldot" style="background:#94a3b8"></i>-</span>
+        <span class="meta-item">MIT</span>
+        <span class="meta-item diff">门槛 <b>难</b><span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span></span>
+        <span class="meta-item upd"><span class="s s-mid">维护中</span>2026-08-17</span>
       </div>
     </article>
     </div>
