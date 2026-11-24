@@ -1,5 +1,27 @@
 [
  {
+  "full_name": "a2aproject/A2A",
+  "url": "https://github.com/a2aproject/A2A",
+  "homepage": "https://a2a-protocol.org/",
+  "desc": "Agent2Agent (A2A) is an open protocol enabling communication and interoperability between opaque agentic applications.",
+  "stars": 26652,
+  "forks": 2716,
+  "lang": "Shell",
+  "license": "Apache-2.0",
+  "topics": [
+   "a2a",
+   "a2a-mcp",
+   "a2a-protocol",
+   "a2a-server",
+   "agents",
+   "generative-ai"
+  ],
+  "pushed_at": "2026-11-20",
+  "created_at": "2025-03",
+  "archived": false,
+  "open_issues": 345
+ },
+ {
   "full_name": "aaif-goose/goose",
   "url": "https://github.com/aaif-goose/goose",
   "homepage": "",
@@ -756,6 +778,26 @@
   "open_issues": 462
  },
  {
+  "full_name": "getzep/graphiti",
+  "url": "https://github.com/getzep/graphiti",
+  "homepage": "https://help.getzep.com/graphiti",
+  "desc": "Build Real-Time Knowledge Graphs for AI Agents",
+  "stars": 33039,
+  "forks": 3401,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [
+   "agents",
+   "graph",
+   "llms",
+   "rag"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2024-08",
+  "archived": false,
+  "open_issues": 579
+ },
+ {
   "full_name": "github/github-mcp-server",
   "url": "https://github.com/github/github-mcp-server",
   "homepage": "",
@@ -1442,6 +1484,28 @@
   "open_issues": 18
  },
  {
+  "full_name": "modelscope/ms-agent",
+  "url": "https://github.com/modelscope/ms-agent",
+  "homepage": "https://ms-agent-en.readthedocs.io",
+  "desc": "MS-Agent: a lightweight framework to empower agentic execution of complex tasks",
+  "stars": 4431,
+  "forks": 548,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [
+   "agentic-insight",
+   "agentic-search",
+   "chat-bot",
+   "code-generation",
+   "deep-research",
+   "memory"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2023-08",
+  "archived": false,
+  "open_issues": 80
+ },
+ {
   "full_name": "morluto/rea",
   "url": "https://github.com/morluto/rea",
   "homepage": "https://rea.tools",
@@ -1640,6 +1704,21 @@
   "open_issues": 8968
  },
  {
+  "full_name": "openenv/OpenEnv",
+  "url": "https://github.com/openenv/OpenEnv",
+  "homepage": "https://huggingface.co/docs/openenv/index",
+  "desc": "An interface library for RL post training with environments. ",
+  "stars": 2883,
+  "forks": 526,
+  "lang": "Python",
+  "license": "BSD-3-Clause",
+  "topics": [],
+  "pushed_at": "2026-11-23",
+  "created_at": "2025-10",
+  "archived": false,
+  "open_issues": 87
+ },
+ {
   "full_name": "OpenHands/OpenHands",
   "url": "https://github.com/OpenHands/OpenHands",
   "homepage": "https://openhands.dev",
@@ -1675,6 +1754,28 @@
   "created_at": "2023-07",
   "archived": false,
   "open_issues": 0
+ },
+ {
+  "full_name": "OpenPipe/ART",
+  "url": "https://github.com/OpenPipe/ART",
+  "homepage": "https://art.openpipe.ai",
+  "desc": "Agent Reinforcement Trainer: train multi-step agents for real-world tasks using GRPO. Give your agents on-the-job training. Reinforcement learning for Qwen3.6, GPT-OSS, Llama, and more!",
+  "stars": 10868,
+  "forks": 1010,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [
+   "agent",
+   "agentic-ai",
+   "grpo",
+   "llms",
+   "lora",
+   "qwen"
+  ],
+  "pushed_at": "2026-11-19",
+  "created_at": "2025-03",
+  "archived": false,
+  "open_issues": 180
  },
  {
   "full_name": "Panniantong/Agent-Reach",
@@ -1734,6 +1835,43 @@
   "created_at": "2024-11",
   "archived": false,
   "open_issues": 0
+ },
+ {
+  "full_name": "PrimeIntellect-ai/prime-rl",
+  "url": "https://github.com/PrimeIntellect-ai/prime-rl",
+  "homepage": "",
+  "desc": "Agentic RL Training at Scale",
+  "stars": 2273,
+  "forks": 514,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [],
+  "pushed_at": "2026-11-24",
+  "created_at": "2025-02",
+  "archived": false,
+  "open_issues": 271
+ },
+ {
+  "full_name": "promptfoo/promptfoo",
+  "url": "https://github.com/promptfoo/promptfoo",
+  "homepage": "https://promptfoo.dev",
+  "desc": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
+  "stars": 27596,
+  "forks": 2826,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "topics": [
+   "ci",
+   "ci-cd",
+   "cicd",
+   "evaluation",
+   "evaluation-framework",
+   "llm"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2023-04",
+  "archived": false,
+  "open_issues": 1029
  },
  {
   "full_name": "pydantic/pydantic-ai",
@@ -2008,6 +2146,28 @@
   "open_issues": 121
  },
  {
+  "full_name": "steel-dev/steel-browser",
+  "url": "https://github.com/steel-dev/steel-browser",
+  "homepage": "https://steel.dev",
+  "desc": "🔥 Open Source Browser API for AI Agents & Apps. Steel Browser is a batteries-included browser sandbox that lets you automate the web without worrying about infrastructure.",
+  "stars": 8003,
+  "forks": 1018,
+  "lang": "TypeScript",
+  "license": "Apache-2.0",
+  "topics": [
+   "ai",
+   "ai-agents",
+   "ai-tools",
+   "browser-automation",
+   "browser-use",
+   "computer-use"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2024-11",
+  "archived": false,
+  "open_issues": 90
+ },
+ {
   "full_name": "strands-agents/harness-sdk",
   "url": "https://github.com/strands-agents/harness-sdk",
   "homepage": "http://strandsagents.com/",
@@ -2096,6 +2256,64 @@
   "open_issues": 221
  },
  {
+  "full_name": "TEN-framework/ten-framework",
+  "url": "https://github.com/TEN-framework/ten-framework",
+  "homepage": "https://agent.theten.ai/",
+  "desc": " Open-source framework for conversational voice AI agents",
+  "stars": 11243,
+  "forks": 1380,
+  "lang": "Python",
+  "license": "NOASSERTION",
+  "topics": [
+   "ai",
+   "multi-modal",
+   "real-time",
+   "video",
+   "voice"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2024-06",
+  "archived": false,
+  "open_issues": 270
+ },
+ {
+  "full_name": "Tencent/WeKnora",
+  "url": "https://github.com/Tencent/WeKnora",
+  "homepage": "https://weknora.weixin.qq.com",
+  "desc": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+  "stars": 38090,
+  "forks": 5330,
+  "lang": "Go",
+  "license": "NOASSERTION",
+  "topics": [
+   "agent",
+   "agentic",
+   "ai",
+   "chatbot",
+   "dsh-plugin",
+   "embeddings"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2025-07",
+  "archived": false,
+  "open_issues": 1160
+ },
+ {
+  "full_name": "THUDM/slime",
+  "url": "https://github.com/THUDM/slime",
+  "homepage": "https://thudm.github.io/slime",
+  "desc": "slime is an LLM training framework for RL Scaling.",
+  "stars": 8862,
+  "forks": 1371,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [],
+  "pushed_at": "2026-11-05",
+  "created_at": "2025-06",
+  "archived": false,
+  "open_issues": 584
+ },
+ {
   "full_name": "topoteretes/cognee",
   "url": "https://github.com/topoteretes/cognee",
   "homepage": "https://www.cognee.ai",
@@ -2118,6 +2336,21 @@
   "open_issues": 1125
  },
  {
+  "full_name": "UKGovernmentBEIS/inspect_ai",
+  "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+  "homepage": "https://inspect.aisi.org.uk/",
+  "desc": "Inspect: A framework for large language model evaluations",
+  "stars": 3321,
+  "forks": 965,
+  "lang": "Python",
+  "license": "MIT",
+  "topics": [],
+  "pushed_at": "2026-11-24",
+  "created_at": "2023-11",
+  "archived": false,
+  "open_issues": 520
+ },
+ {
   "full_name": "upstash/context7",
   "url": "https://github.com/upstash/context7",
   "homepage": "https://context7.com",
@@ -2136,6 +2369,21 @@
   "created_at": "2025-03",
   "archived": false,
   "open_issues": 54
+ },
+ {
+  "full_name": "verl-project/verl",
+  "url": "https://github.com/verl-project/verl",
+  "homepage": "https://verl-project.github.io",
+  "desc": "verl/HybridFlow: A Flexible and Efficient RL Post-Training Framework ",
+  "stars": 24325,
+  "forks": 4954,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [],
+  "pushed_at": "2026-11-23",
+  "created_at": "2024-10",
+  "archived": false,
+  "open_issues": 1543
  },
  {
   "full_name": "VoltAgent/voltagent",

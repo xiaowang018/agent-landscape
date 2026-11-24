@@ -4,7 +4,7 @@
 
 **在线浏览 → https://xiaowang018.github.io/agent-landscape/**
 
-收录 **106 个仓库 / 14 个赛道 / 累计 699.7 万星标**。每个项目都标注了中文定位、适用人群、上手门槛和维护状态，而不是只丢一个 star 数排名。页面末尾另设「科研前沿」区块，收录 12 篇 2025–2026 年会改变 Agent 系统设计与评测结论的论文与基准（不计入上面的仓库统计）。
+收录 **119 个仓库 / 15 个赛道 / 累计 719.9 万星标**。每个项目都标注了中文定位、适用人群、上手门槛和维护状态，而不是只丢一个 star 数排名。页面末尾另设「科研前沿」区块，收录 18 篇 2025–2026 年会改变 Agent 系统设计与评测结论的论文与基准（不计入上面的仓库统计）。
 
 ---
 
@@ -12,19 +12,20 @@
 
 | 赛道 | 说明 | 数量 |
 | --- | --- | :--: |
-| 编排框架 / SDK | 搭 Agent 的底层骨架 | 18 |
+| 编排框架 / SDK | 搭 Agent 的底层骨架 | 19 |
 | 编码 Agent | 写代码、改仓库、跑测试 | 21 |
 | 低代码平台 / 工作流 | 拖拽或节点式搭建，少写代码 | 7 |
-| 浏览器操作 | 让 Agent 自己上网 | 5 |
+| 浏览器操作 | 让 Agent 自己上网 | 6 |
 | 通用自主 Agent | 给个目标自己拆解执行 | 9 |
 | 多智能体协作 | 多个角色分工配合 | 6 |
 | 桌面 / 电脑操作 | 看屏幕、动鼠标、控本机 | 6 |
-| 语音 Agent | 能听会说的实时对话 | 2 |
-| 知识库 / RAG | 把私域文档变成 Agent 的上下文 | 7 |
+| 语音 Agent | 能听会说的实时对话 | 3 |
+| 知识库 / RAG | 把私域文档变成 Agent 的上下文 | 8 |
 | 深度研究 / 检索 | 自动调研并产出报告 | 6 |
-| 记忆层 | 跨会话记住人和事 | 6 |
-| 工具协议 / MCP | 给 Agent 装手脚的标准接口 | 8 |
-| Agent 可观测 / 评测 | 看得见它干了什么、跑得好不好 | 4 |
+| 记忆层 | 跨会话记住人和事 | 7 |
+| 工具协议 / MCP | 给 Agent 装手脚的标准接口 | 9 |
+| Agent 可观测 / 评测 | 看得见它干了什么、跑得好不好 | 6 |
+| Agentic RL / 训练环境 | 训练 Agent 自己的策略 | 5 |
 | Agent 基础设施 | 沙箱、运行时等底座 | 1 |
 
 星标前八（截至 2026-11-24）：
@@ -41,6 +42,10 @@
 | 8 | [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 188,155 | Python | Polyform + MIT |
 
 一个比上次更极端的现象：**前八名里有六个是「成品 Agent / Harness」，没有一个传统意义上的框架。** 榜首 rea 用 Agent 做逆向工程拿到 47.6 万星，OpenClaw、Hermes 这类「装完就能常驻干活」的个人 Agent 运行时包揽第二和第五；n8n 是前八里唯一的可视化平台，LangChain 这种框架鼻祖已跌出前八。入口已经彻底从「自己搭」变成「装完直接用」。
+
+第三个变化是「训练」这一层终于被补上了，新增赛道 **Agentic RL / 训练环境**：verl、slime、prime-rl、ART、OpenEnv。原因是这半年 arXiv 上的 Agent 研究重心明显从「怎么调提示词」挪到「怎么造可验证环境和 verifier」——SETA 造了 4,500+ 个终端环境、腾讯混元在做环境随模型一起变难、BIRD-RL 在解有状态数据环境的空间效率。选型上也多了个问题：跑通的流程要不要固化成小模型，把每次的推理钱省下来。
+
+另一个增量是把「看不见的接线」补齐了：**A2A**（Google 发起、现归 Linux 基金会的 Agent 间通信协议）补上 MCP 没管的另一半——Agent 之间怎么发现彼此、怎么委派任务；**promptfoo** 和 **inspect_ai** 让评测能进 CI、能审计；**graphiti** 把记忆从「说过什么」推进到「这条现在还有效吗」。
 
 另一个增量来自博主们的 2026 盘点：DeepSeek 官方的 Harness、用自己订阅跑编码舰队的 Orca、100 行代码的 mini-swe-agent、统管各家 CLI Agent 的 cc-switch 都是这轮补进来的新面孔。同时页面末尾新增「科研前沿」一节——评测基准正在从静态分数转向轨迹与环境级验证（AgentGym2、EvoClaw），记忆研究从「能不能记住」转向「何时该遗忘」（Memora），Agentic RL 的瓶颈从算法转向环境与 verifier（ToolVerse）。
 
@@ -71,7 +76,7 @@
 ```
 agent-landscape/
 ├── index.html    # 单文件页面，无外部依赖，双击即可在本地打开
-└── data.json     # 数据快照（106 条），字段与页面一致
+└── data.json     # 数据快照（119 条），字段与页面一致
 ```
 
 `index.html` 里没有 CDN、没有构建步骤、没有网络请求，断网也能正常筛选。
@@ -112,6 +117,7 @@ python gen.py        # 输出 index.html
    | `gpt-engineer-org/gpt-engineer` | `AntonOsika/gpt-engineer` |
    | `sst/opencode` | `anomalyco/opencode` |
    | `strands-agents/sdk-python` | `strands-agents/harness-sdk` |
+   | `volcengine/verl` | `verl-project/verl` |
 
 ---
 
