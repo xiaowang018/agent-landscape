@@ -220,6 +220,21 @@
   "open_issues": 4011
  },
  {
+  "full_name": "anthropics/claude-agent-sdk-python",
+  "url": "https://github.com/anthropics/claude-agent-sdk-python",
+  "homepage": "",
+  "desc": "",
+  "stars": 8635,
+  "forks": 1458,
+  "lang": "Python",
+  "license": "MIT",
+  "topics": [],
+  "pushed_at": "2026-11-23",
+  "created_at": "2025-06",
+  "archived": false,
+  "open_issues": 688
+ },
+ {
   "full_name": "anthropics/claude-code",
   "url": "https://github.com/anthropics/claude-code",
   "homepage": "https://code.claude.com/docs/en/overview",
@@ -1006,6 +1021,28 @@
   "created_at": "2025-03",
   "archived": false,
   "open_issues": 966
+ },
+ {
+  "full_name": "langchain-ai/deepagents",
+  "url": "https://github.com/langchain-ai/deepagents",
+  "homepage": "https://docs.langchain.com/deepagents",
+  "desc": "The batteries-included agent harness.",
+  "stars": 31543,
+  "forks": 4465,
+  "lang": "Python",
+  "license": "MIT",
+  "topics": [
+   "ai",
+   "deepagents",
+   "harness",
+   "harness-engineering",
+   "langchain",
+   "langgraph"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2025-07",
+  "archived": false,
+  "open_issues": 242
  },
  {
   "full_name": "langchain-ai/langchain",

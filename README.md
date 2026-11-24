@@ -4,7 +4,7 @@
 
 **在线浏览 → https://xiaowang018.github.io/agent-landscape/**
 
-收录 **119 个仓库 / 15 个赛道 / 累计 719.9 万星标**。每个项目都标注了中文定位、适用人群、上手门槛和维护状态，而不是只丢一个 star 数排名。页面末尾另设「科研前沿」区块，收录 18 篇 2025–2026 年会改变 Agent 系统设计与评测结论的论文与基准（不计入上面的仓库统计）。
+收录 **121 个仓库 / 15 个赛道 / 累计 723.9 万星标**。每个项目都标注了中文定位、适用人群、上手门槛和维护状态，而不是只丢一个 star 数排名。页面末尾另设「科研前沿」区块，收录 18 篇 2025–2026 年会改变 Agent 系统设计与评测结论的论文与基准（不计入上面的仓库统计）。本轮新增「Agent 学习路线」：从官方课程和框架教程入门，接着做项目，再用公开基准验证，不把课程证书或榜单分数当成工程能力。
 
 ---
 
@@ -12,7 +12,7 @@
 
 | 赛道 | 说明 | 数量 |
 | --- | --- | :--: |
-| 编排框架 / SDK | 搭 Agent 的底层骨架 | 19 |
+| 编排框架 / SDK | 搭 Agent 的底层骨架 | 21 |
 | 编码 Agent | 写代码、改仓库、跑测试 | 21 |
 | 低代码平台 / 工作流 | 拖拽或节点式搭建，少写代码 | 7 |
 | 浏览器操作 | 让 Agent 自己上网 | 6 |
@@ -52,6 +52,51 @@
 
 ---
 
+## Agent 学习路线
+
+按「先懂循环，再学编排，最后做验证」走。课程和文档链接均指向发布方或项目官方页面；课程内容、可用性与证书政策可能变化，开始前以原站为准。
+
+| 阶段 | 资料 | 适合谁 / 学什么 | 建议产出 |
+| --- | --- | --- | --- |
+| 1. 建立心智模型 | [Anthropic：Building effective agents](https://www.anthropic.com/research/building-effective-agents) | 所有人；workflow 与 agent 的边界、提示词链/路由/并行/编排器-工作者/评估器-优化器 | 把一个任务分别画成固定流程和 Agent loop，说明为何选其一 |
+| 2. 动手做第一个 Agent | [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/en/unit1/introduction) | 初学者；Think → Act → Observe、工具、smolagents，并发布到 Spaces | 做一个能调用工具并对结果做检查的 Agent |
+| 3. 理解状态与控制流 | [DeepLearning.AI：AI Agents in LangGraph](https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/) · [LangGraph 官方 quickstart](https://docs.langchain.com/oss/python/langgraph/quickstart) | 有 Python 基础；从手写循环迁移到图、持久化、streaming、人类介入 | 做一个可暂停、恢复、人工批准的长任务 |
+| 4. 横向比较开发栈 | [OpenAI Agents SDK 指南](https://developers.openai.com/api/docs/guides/agents) · [Google ADK 文档](https://google.github.io/adk-docs/) · [Microsoft Agent Framework 概览](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview) | 已能写简单 Agent；比较工具调用、handoff、workflow、session 与观测 | 用同一小任务做两个实现，记录状态/错误处理差异 |
+| 5. 评估与可靠性 | [SWE-bench leaderboard](https://www.swebench.com/) · [OSWorld](https://os-world.github.io/) · [WebArena](https://webarena.dev/) · [τ-bench](https://github.com/sierra-research/tau-bench) | 想验证真实任务能力；按编码、桌面、浏览器、工具交互选基准 | 为自己的任务写外部 checker、失败分类和回归集 |
+
+### 学习时优先做的项目
+
+- **最小工具 Agent**：不用框架先写一轮 observe → decide → act，给工具加 schema、超时、错误返回和步数上限；确认脚本能解决的部分就别交给模型。
+- **带恢复的研究 Agent**：用 LangGraph 或 Microsoft Agent Framework 做搜索、引用收集、草稿、事实检查；加持久状态和人工审批，模拟进程中断后继续运行。
+- **小型编码 Agent**：挑一个小型开源仓库，让 Agent 修一个 issue；测试必须由 Agent 之外的命令运行，统计成功率、重试数、耗时和 token 成本。
+- **基准复现**：先跑 SWE-bench Verified 的单个样例或 OSWorld 的一个任务，保存环境版本、模型、提示、工具、完整轨迹。榜单数字只在配置可比时参考。
+
+不建议一开始就做「多 Agent 自主公司」：先找一条单 Agent 轨迹的失败点，只有单一执行者确实卡住时才引入委派，并给每个子任务定义输入、输出、权限和验收器。
+
+### 官方项目入口
+
+| 项目 | 从这里开始 | 要学会的核心 |
+| --- | --- | --- |
+| [smolagents](https://huggingface.co/docs/smolagents/index) | [教程](https://huggingface.co/docs/smolagents/tutorials/overview) | 最小代码 Agent、工具、代码执行边界 |
+| [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview) | [Quickstart](https://docs.langchain.com/oss/python/langgraph/quickstart) | state、节点/边、持久化、人工介入 |
+| [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) | [官方指南](https://developers.openai.com/api/docs/guides/agents) | tools、handoffs、guardrails、tracing |
+| [Google ADK](https://google.github.io/adk-docs/) | [Python quickstart](https://google.github.io/adk-docs/get-started/quickstart/) | Agent 与 workflow、工具、评估 |
+| [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview) | [First Agent](https://learn.microsoft.com/en-us/agent-framework/get-started/your-first-agent) | agents、harness、workflows、session 与 middleware |
+| [Claude Agent SDK](https://docs.anthropic.com/en/docs/claude-code/sdk) | [Python SDK](https://github.com/anthropics/claude-agent-sdk-python) | 把 Claude Code 的工具循环集成到应用 |
+| [Deep Agents](https://github.com/langchain-ai/deepagents) | [官方文档](https://docs.langchain.com/oss/python/deepagents/overview) | 长任务规划、文件系统、子 Agent；高层 Harness，需理解其默认授权与状态行为 |
+
+### 常用基准入口
+
+| 基准 | 主要测什么 | 官方入口 |
+| --- | --- | --- |
+| SWE-bench | 真实 GitHub issue 修复 | [项目与 leaderboard](https://www.swebench.com/) |
+| OSWorld | 跨应用桌面 GUI 操作 | [项目页](https://os-world.github.io/) · [代码](https://github.com/xlang-ai/OSWorld) |
+| WebArena | 自托管网站中的浏览器任务 | [项目页](https://webarena.dev/) · [代码](https://github.com/web-arena-x/webarena) |
+| τ-bench | 多轮工具调用与业务规则遵循 | [代码与任务](https://github.com/sierra-research/tau-bench) |
+| Terminal-Bench | 终端环境中的多步操作 | [项目与 leaderboard](https://www.tbench.ai/) |
+
+---
+
 ## 数据是怎么来的
 
 | 字段 | 来源 | 说明 |
@@ -76,7 +121,7 @@
 ```
 agent-landscape/
 ├── index.html    # 单文件页面，无外部依赖，双击即可在本地打开
-└── data.json     # 数据快照（119 条），字段与页面一致
+└── data.json     # 数据快照（121 条），字段与页面一致
 ```
 
 `index.html` 里没有 CDN、没有构建步骤、没有网络请求，断网也能正常筛选。
@@ -118,6 +163,7 @@ python gen.py        # 输出 index.html
    | `sst/opencode` | `anomalyco/opencode` |
    | `strands-agents/sdk-python` | `strands-agents/harness-sdk` |
    | `volcengine/verl` | `verl-project/verl` |
+   | `microsoft/autogen` / `microsoft/semantic-kernel` | `microsoft/agent-framework`（微软新一代 successor；旧仓库仍可作历史参考） |
 
 ---
 
