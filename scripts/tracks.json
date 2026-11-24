@@ -1,0 +1,77 @@
+[
+ {
+  "cat": "framework",
+  "title": "编排框架 / SDK",
+  "sub": "搭 Agent 的底层骨架"
+ },
+ {
+  "cat": "platform",
+  "title": "低代码平台 / 工作流",
+  "sub": "拖拽或节点式搭建，少写代码"
+ },
+ {
+  "cat": "coding",
+  "title": "编码 Agent",
+  "sub": "写代码、改仓库、跑测试"
+ },
+ {
+  "cat": "auto",
+  "title": "通用自主 Agent",
+  "sub": "给个目标自己拆解执行"
+ },
+ {
+  "cat": "multi",
+  "title": "多智能体协作",
+  "sub": "多个角色分工配合"
+ },
+ {
+  "cat": "browser",
+  "title": "浏览器操作",
+  "sub": "让 Agent 自己上网"
+ },
+ {
+  "cat": "desktop",
+  "title": "桌面 / 电脑操作",
+  "sub": "看屏幕、动鼠标、控本机"
+ },
+ {
+  "cat": "voice",
+  "title": "语音 Agent",
+  "sub": "能听会说的实时对话"
+ },
+ {
+  "cat": "research",
+  "title": "深度研究 / 检索",
+  "sub": "自动调研并产出报告"
+ },
+ {
+  "cat": "knowledge",
+  "title": "知识库 / RAG",
+  "sub": "把私域文档变成 Agent 的上下文"
+ },
+ {
+  "cat": "memory",
+  "title": "记忆层",
+  "sub": "跨会话记住人和事"
+ },
+ {
+  "cat": "protocol",
+  "title": "工具协议 / MCP",
+  "sub": "给 Agent 装手脚的标准接口"
+ },
+ {
+  "cat": "eval",
+  "title": "Agent 可观测 / 评测",
+  "sub": "看它在干什么、跑得好不好"
+ },
+ {
+  "cat": "rl",
+  "title": "Agentic RL / 训练环境",
+  "sub": "训练 Agent 自己的策略，而不是只改提示词"
+ },
+ {
+  "cat": "infra",
+  "title": "Agent 基础设施",
+  "sub": "沙箱、运行时等底座"
+ }
+]
