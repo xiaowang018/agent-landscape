@@ -1,5 +1,27 @@
 [
  {
+  "full_name": "a2aproject/A2A",
+  "url": "https://github.com/a2aproject/A2A",
+  "homepage": "https://a2a-protocol.org/",
+  "desc": "Agent2Agent (A2A) is an open protocol enabling communication and interoperability between opaque agentic applications.",
+  "stars": 26652,
+  "forks": 2716,
+  "lang": "Shell",
+  "license": "Apache-2.0",
+  "topics": [
+   "a2a",
+   "a2a-mcp",
+   "a2a-protocol",
+   "a2a-server",
+   "agents",
+   "generative-ai"
+  ],
+  "pushed_at": "2026-11-20",
+  "created_at": "2025-03",
+  "archived": false,
+  "open_issues": 345
+ },
+ {
   "full_name": "aaif-goose/goose",
   "url": "https://github.com/aaif-goose/goose",
   "homepage": "",
@@ -35,6 +57,50 @@
   "created_at": "2022-12",
   "archived": false,
   "open_issues": 1016
+ },
+ {
+  "full_name": "affaan-m/ECC",
+  "url": "https://github.com/affaan-m/ECC",
+  "homepage": "https://ecc.tools",
+  "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+  "stars": 309604,
+  "forks": 45544,
+  "lang": "JavaScript",
+  "license": "MIT",
+  "topics": [
+   "ai-agents",
+   "anthropic",
+   "claude",
+   "claude-code",
+   "developer-tools",
+   "llm"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2026-01",
+  "archived": false,
+  "open_issues": 199
+ },
+ {
+  "full_name": "ag2ai/ag2",
+  "url": "https://github.com/ag2ai/ag2",
+  "homepage": "https://ag2.ai",
+  "desc": "AG2 (formerly AutoGen): The Open-Source AgentOS.Join us at: https://discord.gg/sNGSwQME3x",
+  "stars": 5084,
+  "forks": 808,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [
+   "a2a",
+   "ag2",
+   "agent-framework",
+   "agentic",
+   "agentic-ai",
+   "ai"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2024-11",
+  "archived": false,
+  "open_issues": 98
  },
  {
   "full_name": "agent0ai/agent-zero",
@@ -395,6 +461,49 @@
   "open_issues": 1819
  },
  {
+  "full_name": "cloudflare/agents",
+  "url": "https://github.com/cloudflare/agents",
+  "homepage": "https://developers.cloudflare.com/agents/",
+  "desc": "Build and deploy AI Agents on Cloudflare ",
+  "stars": 6040,
+  "forks": 861,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "topics": [
+   "agents",
+   "ai",
+   "cloudflare",
+   "durable-objects",
+   "workflows"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2025-01",
+  "archived": false,
+  "open_issues": 218
+ },
+ {
+  "full_name": "ComposioHQ/composio",
+  "url": "https://github.com/ComposioHQ/composio",
+  "homepage": "https://docs.composio.dev",
+  "desc": "Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.",
+  "stars": 31271,
+  "forks": 4977,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "topics": [
+   "agentic-ai",
+   "agents",
+   "ai",
+   "ai-agents",
+   "aiagents",
+   "developer-tools"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2024-02",
+  "archived": false,
+  "open_issues": 161
+ },
+ {
   "full_name": "confident-ai/deepeval",
   "url": "https://github.com/confident-ai/deepeval",
   "homepage": "https://deepeval.com",
@@ -481,6 +590,26 @@
   "open_issues": 1252
  },
  {
+  "full_name": "deepseek-ai/deepseek-harness",
+  "url": "https://github.com/deepseek-ai/deepseek-harness",
+  "homepage": "https://deepseek.com/harness",
+  "desc": "DeepSeek Harness: Everything is a Plugin.",
+  "stars": 286111,
+  "forks": 35625,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "topics": [
+   "ai-agents",
+   "cordis",
+   "dsh",
+   "dsh-plugin"
+  ],
+  "pushed_at": "2026-11-22",
+  "created_at": "2026-08",
+  "archived": false,
+  "open_issues": 0
+ },
+ {
   "full_name": "deepset-ai/haystack",
   "url": "https://github.com/deepset-ai/haystack",
   "homepage": "https://haystack.deepset.ai",
@@ -525,6 +654,50 @@
   "open_issues": 143
  },
  {
+  "full_name": "eyaltoledano/claude-task-master",
+  "url": "https://github.com/eyaltoledano/claude-task-master",
+  "homepage": "https://tryhamster.com",
+  "desc": "An AI-powered task-management system you can drop into Cursor, Lovable, Windsurf, Roo, and others.",
+  "stars": 28531,
+  "forks": 2633,
+  "lang": "JavaScript",
+  "license": "NOASSERTION",
+  "topics": [
+   "ai",
+   "cursor",
+   "cursor-ai",
+   "cursorai",
+   "lovable",
+   "lovable-dev"
+  ],
+  "pushed_at": "2026-04-28",
+  "created_at": "2025-03",
+  "archived": false,
+  "open_issues": 214
+ },
+ {
+  "full_name": "farion1231/cc-switch",
+  "url": "https://github.com/farion1231/cc-switch",
+  "homepage": "https://ccswitch.io",
+  "desc": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more. Only official website: ccswitch.io",
+  "stars": 156671,
+  "forks": 10232,
+  "lang": "Rust",
+  "license": "MIT",
+  "topics": [
+   "ai-tools",
+   "claude-code",
+   "codex",
+   "deepseek-harness",
+   "desktop-app",
+   "grok"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2025-08",
+  "archived": false,
+  "open_issues": 729
+ },
+ {
   "full_name": "FlowiseAI/Flowise",
   "url": "https://github.com/FlowiseAI/Flowise",
   "homepage": "https://flowiseai.com",
@@ -545,6 +718,28 @@
   "created_at": "2023-03",
   "archived": true,
   "open_issues": 1031
+ },
+ {
+  "full_name": "Fosowl/agenticSeek",
+  "url": "https://github.com/Fosowl/agenticSeek",
+  "homepage": "http://agenticseek.tech",
+  "desc": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.",
+  "stars": 27691,
+  "forks": 3111,
+  "lang": "Python",
+  "license": "GPL-3.0",
+  "topics": [
+   "agentic-ai",
+   "agents",
+   "ai",
+   "autonomous-agents",
+   "deepseek-r1",
+   "llm"
+  ],
+  "pushed_at": "2026-11-17",
+  "created_at": "2025-02",
+  "archived": false,
+  "open_issues": 39
  },
  {
   "full_name": "FoundationAgents/MetaGPT",
@@ -581,6 +776,26 @@
   "created_at": "2025-03",
   "archived": false,
   "open_issues": 462
+ },
+ {
+  "full_name": "getzep/graphiti",
+  "url": "https://github.com/getzep/graphiti",
+  "homepage": "https://help.getzep.com/graphiti",
+  "desc": "Build Real-Time Knowledge Graphs for AI Agents",
+  "stars": 33039,
+  "forks": 3401,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [
+   "agents",
+   "graph",
+   "llms",
+   "rag"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2024-08",
+  "archived": false,
+  "open_issues": 579
  },
  {
   "full_name": "github/github-mcp-server",
@@ -644,6 +859,28 @@
   "created_at": "2025-04",
   "archived": false,
   "open_issues": 586
+ },
+ {
+  "full_name": "Graphify-Labs/graphify",
+  "url": "https://github.com/Graphify-Labs/graphify",
+  "homepage": "graphify.com",
+  "desc": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+  "stars": 152560,
+  "forks": 14664,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [
+   "ai-agents",
+   "antigravity",
+   "ast",
+   "claude-code",
+   "code-analysis",
+   "code-search"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2026-04",
+  "archived": false,
+  "open_issues": 1703
  },
  {
   "full_name": "HKUDS/LightRAG",
@@ -747,6 +984,28 @@
   "created_at": "2021-08",
   "archived": false,
   "open_issues": 178
+ },
+ {
+  "full_name": "Kilo-Org/kilocode",
+  "url": "https://github.com/Kilo-Org/kilocode",
+  "homepage": "https://kilo.ai/",
+  "desc": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
+  "stars": 28100,
+  "forks": 3390,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "topics": [
+   "ai",
+   "ai-age",
+   "ai-coding",
+   "ai-developer-tools",
+   "chatgpt",
+   "claude"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2025-03",
+  "archived": false,
+  "open_issues": 966
  },
  {
   "full_name": "langchain-ai/langchain",
@@ -982,6 +1241,28 @@
   "open_issues": 982
  },
  {
+  "full_name": "MemPalace/mempalace",
+  "url": "https://github.com/MemPalace/mempalace",
+  "homepage": "http://mempalaceofficial.com/",
+  "desc": "The best-benchmarked open-source AI memory system. And it's free.",
+  "stars": 60676,
+  "forks": 7654,
+  "lang": "Python",
+  "license": "MIT",
+  "topics": [
+   "ai",
+   "chromadb",
+   "llm",
+   "mcp",
+   "memory",
+   "python"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2026-04",
+  "archived": false,
+  "open_issues": 836
+ },
+ {
   "full_name": "MemTensor/MemOS",
   "url": "https://github.com/MemTensor/MemOS",
   "homepage": "https://memos.openmem.net",
@@ -1203,6 +1484,50 @@
   "open_issues": 18
  },
  {
+  "full_name": "modelscope/ms-agent",
+  "url": "https://github.com/modelscope/ms-agent",
+  "homepage": "https://ms-agent-en.readthedocs.io",
+  "desc": "MS-Agent: a lightweight framework to empower agentic execution of complex tasks",
+  "stars": 4431,
+  "forks": 548,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [
+   "agentic-insight",
+   "agentic-search",
+   "chat-bot",
+   "code-generation",
+   "deep-research",
+   "memory"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2023-08",
+  "archived": false,
+  "open_issues": 80
+ },
+ {
+  "full_name": "morluto/rea",
+  "url": "https://github.com/morluto/rea",
+  "homepage": "https://rea.tools",
+  "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+  "stars": 475682,
+  "forks": 115915,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "topics": [
+   "agent-skills",
+   "ai",
+   "android",
+   "claude-code",
+   "cli",
+   "cpp"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2026-04",
+  "archived": false,
+  "open_issues": 1377
+ },
+ {
   "full_name": "n8n-io/n8n",
   "url": "https://github.com/n8n-io/n8n",
   "homepage": "https://n8n.io",
@@ -1342,6 +1667,58 @@
   "open_issues": 135
  },
  {
+  "full_name": "OpenBMB/PilotDeck",
+  "url": "https://github.com/OpenBMB/PilotDeck",
+  "homepage": "https://pilotdeck.openbmb.cn",
+  "desc": "Task-oriented AI Agent productivity platform",
+  "stars": 5015,
+  "forks": 570,
+  "lang": "TypeScript",
+  "license": "AGPL-3.0",
+  "topics": [],
+  "pushed_at": "2026-11-19",
+  "created_at": "2026-05",
+  "archived": false,
+  "open_issues": 181
+ },
+ {
+  "full_name": "openclaw/openclaw",
+  "url": "https://github.com/openclaw/openclaw",
+  "homepage": "https://openclaw.ai",
+  "desc": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
+  "stars": 395121,
+  "forks": 82969,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "topics": [
+   "ai",
+   "assistant",
+   "crustacean",
+   "molty",
+   "openclaw",
+   "own-your-data"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2025-11",
+  "archived": false,
+  "open_issues": 8968
+ },
+ {
+  "full_name": "openenv/OpenEnv",
+  "url": "https://github.com/openenv/OpenEnv",
+  "homepage": "https://huggingface.co/docs/openenv/index",
+  "desc": "An interface library for RL post training with environments. ",
+  "stars": 2883,
+  "forks": 526,
+  "lang": "Python",
+  "license": "BSD-3-Clause",
+  "topics": [],
+  "pushed_at": "2026-11-23",
+  "created_at": "2025-10",
+  "archived": false,
+  "open_issues": 87
+ },
+ {
   "full_name": "OpenHands/OpenHands",
   "url": "https://github.com/OpenHands/OpenHands",
   "homepage": "https://openhands.dev",
@@ -1379,6 +1756,50 @@
   "open_issues": 0
  },
  {
+  "full_name": "OpenPipe/ART",
+  "url": "https://github.com/OpenPipe/ART",
+  "homepage": "https://art.openpipe.ai",
+  "desc": "Agent Reinforcement Trainer: train multi-step agents for real-world tasks using GRPO. Give your agents on-the-job training. Reinforcement learning for Qwen3.6, GPT-OSS, Llama, and more!",
+  "stars": 10868,
+  "forks": 1010,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [
+   "agent",
+   "agentic-ai",
+   "grpo",
+   "llms",
+   "lora",
+   "qwen"
+  ],
+  "pushed_at": "2026-11-19",
+  "created_at": "2025-03",
+  "archived": false,
+  "open_issues": 180
+ },
+ {
+  "full_name": "Panniantong/Agent-Reach",
+  "url": "https://github.com/Panniantong/Agent-Reach",
+  "homepage": "",
+  "desc": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+  "stars": 114279,
+  "forks": 10258,
+  "lang": "Python",
+  "license": "MIT",
+  "topics": [
+   "agent-infrastructure",
+   "ai-agent",
+   "ai-search",
+   "automation",
+   "bilibili",
+   "claude-code"
+  ],
+  "pushed_at": "2026-11-22",
+  "created_at": "2026-02",
+  "archived": false,
+  "open_issues": 160
+ },
+ {
   "full_name": "pipecat-ai/pipecat",
   "url": "https://github.com/pipecat-ai/pipecat",
   "homepage": "https://pipecat.ai",
@@ -1414,6 +1835,43 @@
   "created_at": "2024-11",
   "archived": false,
   "open_issues": 0
+ },
+ {
+  "full_name": "PrimeIntellect-ai/prime-rl",
+  "url": "https://github.com/PrimeIntellect-ai/prime-rl",
+  "homepage": "",
+  "desc": "Agentic RL Training at Scale",
+  "stars": 2273,
+  "forks": 514,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [],
+  "pushed_at": "2026-11-24",
+  "created_at": "2025-02",
+  "archived": false,
+  "open_issues": 271
+ },
+ {
+  "full_name": "promptfoo/promptfoo",
+  "url": "https://github.com/promptfoo/promptfoo",
+  "homepage": "https://promptfoo.dev",
+  "desc": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
+  "stars": 27596,
+  "forks": 2826,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "topics": [
+   "ci",
+   "ci-cd",
+   "cicd",
+   "evaluation",
+   "evaluation-framework",
+   "llm"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2023-04",
+  "archived": false,
+  "open_issues": 1029
  },
  {
   "full_name": "pydantic/pydantic-ai",
@@ -1534,6 +1992,28 @@
   "open_issues": 1533
  },
  {
+  "full_name": "ruvnet/ruflo",
+  "url": "https://github.com/ruvnet/ruflo",
+  "homepage": "https://cognitum.one/ruPro",
+  "desc": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+  "stars": 82332,
+  "forks": 9704,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "topics": [
+   "agent-memory",
+   "agent-orchestration",
+   "agentic-ai",
+   "agentic-workflow",
+   "ai-agents",
+   "autonomous-agents"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2025-06",
+  "archived": false,
+  "open_issues": 553
+ },
+ {
   "full_name": "Significant-Gravitas/AutoGPT",
   "url": "https://github.com/Significant-Gravitas/AutoGPT",
   "homepage": "https://agpt.co",
@@ -1554,6 +2034,28 @@
   "created_at": "2023-03",
   "archived": false,
   "open_issues": 835
+ },
+ {
+  "full_name": "simstudioai/sim",
+  "url": "https://github.com/simstudioai/sim",
+  "homepage": "https://www.sim.ai",
+  "desc": "Sim is the collaborative workspace to build, deploy, and monitor AI agents and workflows. Used by 100,000+ builders.",
+  "stars": 30194,
+  "forks": 3915,
+  "lang": "TypeScript",
+  "license": "Apache-2.0",
+  "topics": [
+   "agent-workflow",
+   "agentic-workflow",
+   "agents",
+   "ai",
+   "aiagents",
+   "anthropic"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2025-01",
+  "archived": false,
+  "open_issues": 332
  },
  {
   "full_name": "simular-ai/Agent-S",
@@ -1600,6 +2102,28 @@
   "open_issues": 312
  },
  {
+  "full_name": "stablyai/orca",
+  "url": "https://github.com/stablyai/orca",
+  "homepage": "https://orca.dev",
+  "desc": "Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex). Available on desktop, mobile and remote runtime.",
+  "stars": 134603,
+  "forks": 8599,
+  "lang": "TypeScript",
+  "license": "MIT",
+  "topics": [
+   "agent-ide",
+   "ai-agents",
+   "automation",
+   "bot",
+   "claude-code",
+   "codex"
+  ],
+  "pushed_at": "2026-11-24",
+  "created_at": "2026-03",
+  "archived": false,
+  "open_issues": 9436
+ },
+ {
   "full_name": "stanford-oval/storm",
   "url": "https://github.com/stanford-oval/storm",
   "homepage": "http://storm.genie.stanford.edu",
@@ -1620,6 +2144,28 @@
   "created_at": "2024-03",
   "archived": false,
   "open_issues": 121
+ },
+ {
+  "full_name": "steel-dev/steel-browser",
+  "url": "https://github.com/steel-dev/steel-browser",
+  "homepage": "https://steel.dev",
+  "desc": "🔥 Open Source Browser API for AI Agents & Apps. Steel Browser is a batteries-included browser sandbox that lets you automate the web without worrying about infrastructure.",
+  "stars": 8003,
+  "forks": 1018,
+  "lang": "TypeScript",
+  "license": "Apache-2.0",
+  "topics": [
+   "ai",
+   "ai-agents",
+   "ai-tools",
+   "browser-automation",
+   "browser-use",
+   "computer-use"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2024-11",
+  "archived": false,
+  "open_issues": 90
  },
  {
   "full_name": "strands-agents/harness-sdk",
@@ -1666,6 +2212,28 @@
   "open_issues": 68
  },
  {
+  "full_name": "SWE-agent/mini-swe-agent",
+  "url": "https://github.com/SWE-agent/mini-swe-agent",
+  "homepage": "https://mini-swe-agent.com",
+  "desc": "The 100 line AI agent that solves GitHub issues or helps you in your command line. Radically simple, no huge configs, no giant monorepo—but scores >74% on SWE-bench verified!",
+  "stars": 10014,
+  "forks": 1363,
+  "lang": "Python",
+  "license": "MIT",
+  "topics": [
+   "agent",
+   "agentic-ai",
+   "agentic-ai-cli",
+   "ai",
+   "ai-agent",
+   "textual"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2025-06",
+  "archived": false,
+  "open_issues": 154
+ },
+ {
   "full_name": "SWE-agent/SWE-agent",
   "url": "https://github.com/SWE-agent/SWE-agent",
   "homepage": "https://swe-agent.com",
@@ -1686,6 +2254,64 @@
   "created_at": "2024-04",
   "archived": false,
   "open_issues": 221
+ },
+ {
+  "full_name": "TEN-framework/ten-framework",
+  "url": "https://github.com/TEN-framework/ten-framework",
+  "homepage": "https://agent.theten.ai/",
+  "desc": " Open-source framework for conversational voice AI agents",
+  "stars": 11243,
+  "forks": 1380,
+  "lang": "Python",
+  "license": "NOASSERTION",
+  "topics": [
+   "ai",
+   "multi-modal",
+   "real-time",
+   "video",
+   "voice"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2024-06",
+  "archived": false,
+  "open_issues": 270
+ },
+ {
+  "full_name": "Tencent/WeKnora",
+  "url": "https://github.com/Tencent/WeKnora",
+  "homepage": "https://weknora.weixin.qq.com",
+  "desc": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+  "stars": 38090,
+  "forks": 5330,
+  "lang": "Go",
+  "license": "NOASSERTION",
+  "topics": [
+   "agent",
+   "agentic",
+   "ai",
+   "chatbot",
+   "dsh-plugin",
+   "embeddings"
+  ],
+  "pushed_at": "2026-11-23",
+  "created_at": "2025-07",
+  "archived": false,
+  "open_issues": 1160
+ },
+ {
+  "full_name": "THUDM/slime",
+  "url": "https://github.com/THUDM/slime",
+  "homepage": "https://thudm.github.io/slime",
+  "desc": "slime is an LLM training framework for RL Scaling.",
+  "stars": 8862,
+  "forks": 1371,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [],
+  "pushed_at": "2026-11-05",
+  "created_at": "2025-06",
+  "archived": false,
+  "open_issues": 584
  },
  {
   "full_name": "topoteretes/cognee",
@@ -1710,6 +2336,21 @@
   "open_issues": 1125
  },
  {
+  "full_name": "UKGovernmentBEIS/inspect_ai",
+  "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+  "homepage": "https://inspect.aisi.org.uk/",
+  "desc": "Inspect: A framework for large language model evaluations",
+  "stars": 3321,
+  "forks": 965,
+  "lang": "Python",
+  "license": "MIT",
+  "topics": [],
+  "pushed_at": "2026-11-24",
+  "created_at": "2023-11",
+  "archived": false,
+  "open_issues": 520
+ },
+ {
   "full_name": "upstash/context7",
   "url": "https://github.com/upstash/context7",
   "homepage": "https://context7.com",
@@ -1728,6 +2369,21 @@
   "created_at": "2025-03",
   "archived": false,
   "open_issues": 54
+ },
+ {
+  "full_name": "verl-project/verl",
+  "url": "https://github.com/verl-project/verl",
+  "homepage": "https://verl-project.github.io",
+  "desc": "verl/HybridFlow: A Flexible and Efficient RL Post-Training Framework ",
+  "stars": 24325,
+  "forks": 4954,
+  "lang": "Python",
+  "license": "Apache-2.0",
+  "topics": [],
+  "pushed_at": "2026-11-23",
+  "created_at": "2024-10",
+  "archived": false,
+  "open_issues": 1543
  },
  {
   "full_name": "VoltAgent/voltagent",
