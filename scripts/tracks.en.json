@@ -1,0 +1,87 @@
+[
+ {
+  "cat": "framework",
+  "title": "Orchestration frameworks / SDKs",
+  "sub": "The skeleton you build an agent on"
+ },
+ {
+  "cat": "platform",
+  "title": "Low-code platforms / Workflows",
+  "sub": "Drag-and-drop or node-based, less code"
+ },
+ {
+  "cat": "coding",
+  "title": "Coding agents",
+  "sub": "Write code, patch repos, run tests"
+ },
+ {
+  "cat": "auto",
+  "title": "General autonomous agents",
+  "sub": "Give a goal, it decomposes and executes"
+ },
+ {
+  "cat": "multi",
+  "title": "Multi-agent collaboration",
+  "sub": "Roles split the work"
+ },
+ {
+  "cat": "browser",
+  "title": "Browser control",
+  "sub": "Let the agent use the web itself"
+ },
+ {
+  "cat": "desktop",
+  "title": "Desktop / Computer use",
+  "sub": "See the screen, move the mouse, drive the machine"
+ },
+ {
+  "cat": "voice",
+  "title": "Voice agents",
+  "sub": "Real-time speech in and out"
+ },
+ {
+  "cat": "research",
+  "title": "Deep research / Retrieval",
+  "sub": "Research a topic and write the report"
+ },
+ {
+  "cat": "knowledge",
+  "title": "Knowledge base / RAG",
+  "sub": "Turn private documents into agent context"
+ },
+ {
+  "cat": "memory",
+  "title": "Memory layers",
+  "sub": "Remember people and facts across sessions"
+ },
+ {
+  "cat": "protocol",
+  "title": "Tool protocols / MCP",
+  "sub": "A standard interface for hands and feet"
+ },
+ {
+  "cat": "skills",
+  "title": "Skill packs / Workflows",
+  "sub": "Engineering discipline written into the prompt layer"
+ },
+ {
+  "cat": "eval",
+  "title": "Observability / Evaluation",
+  "sub": "See what it did and how well it did it"
+ },
+ {
+  "cat": "rl",
+  "title": "Agentic RL / Training environments",
+  "sub": "Train the agent's own policy, not just its prompt"
+ },
+ {
+  "cat": "infra",
+  "title": "Agent infrastructure",
+  "sub": "Sandboxes, runtimes and other foundations"
+ },
+ {
+  "cat": "learn",
+  "title": "Tutorials / Learning resources",
+  "sub": "Read how others built it before you start"
+ }
+]

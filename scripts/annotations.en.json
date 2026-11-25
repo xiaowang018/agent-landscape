@@ -1,0 +1,687 @@
+{
+ "affaan-m/ecc": {
+  "pitch": "An agent harness tuned for performance",
+  "aud": "Teams that care about harness throughput and observability",
+  "note": "Bundles skills, memory, security and a dev workflow into one optimized runtime; plenty of concepts, so read the docs."
+ },
+ "langchain-ai/langchain": {
+  "pitch": "The de facto foundation for LLM application development",
+  "aud": "Teams that need a huge third-party integration surface",
+  "note": "The biggest ecosystem and the fastest release cadence, at the cost of thick abstractions and frequent breaking changes — don't expect a year without edits."
+ },
+ "microsoft/autogen": {
+  "pitch": "The elder statesman of multi-agent conversations",
+  "aud": "Multi-role collaboration and research experiments",
+  "note": "Rewritten around an event-driven actor core since v0.4; the repo is archived and development moved to microsoft/agent-framework."
+ },
+ "crewaiinc/crewai": {
+  "pitch": "Role-and-task delegation for multi-agent work",
+  "aud": "Anyone who wants an AI team up and running fast",
+  "note": "Closest to how human teams split work and the quickest to start; complex state flow is less flexible than LangGraph."
+ },
+ "run-llama/llama_index": {
+  "pitch": "An agent framework centered on data and RAG",
+  "aud": "Document-heavy, retrieval-heavy products",
+  "note": "Indexing and retrieval are the core strength, and event-driven workflows are now covered too."
+ },
+ "langchain-ai/langgraph": {
+  "pitch": "Graph-based orchestration for stateful, resumable agents",
+  "aud": "Long-running flows with human approval or resume-after-crash",
+  "note": "LangChain's recommended agent track: a clear state-machine model with a medium-to-steep learning curve."
+ },
+ "agno-agi/agno": {
+  "pitch": "A lightweight, high-performance multimodal agent framework",
+  "aud": "Fast startup with little code",
+  "note": "Formerly phidata; ships memory, knowledge, tools and multimodal support, and feels light both in benchmarks and in practice."
+ },
+ "langchain-ai/deepagents": {
+  "pitch": "LangChain's batteries-included harness for long tasks",
+  "aud": "Apps that need planning, file access and sub-agents",
+  "note": "Built-in planning, filesystem and sub-agents; a higher abstraction than LangGraph, so check default behavior and tool permissions first."
+ },
+ "openai/openai-agents-python": {
+  "pitch": "OpenAI's official Agents SDK",
+  "aud": "Projects on OpenAI models that need handoffs, guardrails and tracing",
+  "note": "Handoffs, guardrails and tracing work out of the box; model-agnostic, but best tuned for OpenAI models."
+ },
+ "huggingface/smolagents": {
+  "pitch": "A code agent with a tiny core",
+  "aud": "People who want to understand how agents work inside",
+  "note": "The docs claim roughly a thousand lines of core, with Python code as the action space — ideal for dissection."
+ },
+ "mastra-ai/mastra": {
+  "pitch": "TypeScript-native agents with workflows, RAG and eval in one package",
+  "aud": "Teams shipping a product in TypeScript",
+  "note": "From the Gatsby team: agent, workflow and eval in a single package — a rare complete option in the JS ecosystem."
+ },
+ "microsoft/semantic-kernel": {
+  "pitch": "Microsoft's enterprise SDK for .NET, Python and Java",
+  "aud": ".NET shops or enterprise intranet deployments",
+  "note": "The smoothest path into Azure and AI Foundry; a pure-Python team will find it heavy."
+ },
+ "deepset-ai/haystack": {
+  "pitch": "Production-grade pipeline orchestration for RAG and agents",
+  "aud": "Enterprise search with strictly controlled retrieval chains",
+  "note": "Pipelines are more explicit than LangChain and easier to debug; the community is smaller."
+ },
+ "google/adk-python": {
+  "pitch": "Google's Agent Development Kit",
+  "aud": "Gemini and GCP ecosystems",
+  "note": "Ships A2A support and a deployment toolchain, so the cloud path is complete."
+ },
+ "pydantic/pydantic-ai": {
+  "pitch": "A type-safe agent framework",
+  "aud": "Heavy Python typing with maintainability first",
+  "note": "From the Pydantic team: the most solid structured-output and dependency-injection story, with a strong engineering feel."
+ },
+ "qwenlm/qwen-agent": {
+  "pitch": "Alibaba's official framework for Qwen models",
+  "aud": "Tool calling on Qwen-family models",
+  "note": "Function calling, code interpreter, RAG and MCP all have ready implementations, tightly matched to Qwen."
+ },
+ "voltagent/voltagent": {
+  "pitch": "A TypeScript agent platform with a visual debugger",
+  "aud": "TS teams that want traces on day one",
+  "note": "Framework plus console in one: run it and you can watch every execution trace; the ecosystem is a notch smaller than Mastra's."
+ },
+ "strands-agents/harness-sdk": {
+  "pitch": "AWS's model-driven agent SDK",
+  "aud": "Teams putting agents into production on AWS",
+  "note": "Python and TypeScript, built on the idea that the model picks the tools; Bedrock integration is a bonus."
+ },
+ "anthropics/claude-agent-sdk-python": {
+  "pitch": "Embed Claude Code's tool loop in your own application",
+  "aud": "Developers integrating Claude Code capabilities in Python",
+  "note": "The official Python SDK with an agent loop, tools and permission control; not a multi-model framework — it depends on the Claude ecosystem."
+ },
+ "cloudflare/agents": {
+  "pitch": "Cloudflare's official agent runtime SDK",
+  "aud": "Deployments inside the Cloudflare ecosystem",
+  "note": "Built on Durable Objects, so agents are long-lived and billed by usage; meaningless outside Cloudflare."
+ },
+ "modelscope/ms-agent": {
+  "pitch": "ModelScope's lightweight agent framework",
+  "aud": "Agents in the Chinese model ecosystem",
+  "note": "Runnable examples for code generation, deep research and agentic RL, close to the ModelScope model hub; docs and community are mostly Chinese."
+ },
+ "n8n-io/n8n": {
+  "pitch": "Node-based automation with built-in AI agent nodes",
+  "aud": "Teams with many integrations wiring business processes",
+  "note": "An automation platform that grew agent features and connects 400+ services — better at getting work done than a pure agent framework."
+ },
+ "langgenius/dify": {
+  "pitch": "Visual LLM app building plus self-hosting",
+  "aud": "Teams that need an internal AI app live fast",
+  "note": "The most balanced open-source platform: workflows, knowledge base, agents and observability, with friendly Chinese docs."
+ },
+ "langflow-ai/langflow": {
+  "pitch": "Visual orchestration with one-click export to API or MCP",
+  "aud": "Taking a low-code prototype to a production endpoint",
+  "note": "Export it and use it as a service; the front end feels more modern than Flowise."
+ },
+ "flowiseai/flowise": {
+  "pitch": "Drag-and-drop orchestration of LangChain flows",
+  "aud": "Non-programmers validating an idea",
+  "note": "The lowest entry barrier, but complex logic hits the visual ceiling quickly; the repo is archived."
+ },
+ "simstudioai/sim": {
+  "pitch": "A collaborative canvas for agent workflows",
+  "aud": "Drag, deploy and monitor in one place",
+  "note": "Visual orchestration that deploys and monitors directly — more product-shaped than Langflow; Apache-2.0 and clean."
+ },
+ "activepieces/activepieces": {
+  "pitch": "A self-hosted open-source Zapier with AI",
+  "aud": "Budget-sensitive automation that must stay on-prem",
+  "note": "Positioned as iPaaS, with agents as one piece of the puzzle."
+ },
+ "coze-dev/coze-studio": {
+  "pitch": "ByteDance's open-source Coze: visual agents and apps",
+  "aud": "Teams that want to self-host a low-code agent platform",
+  "note": "Plugins, workflows, knowledge base and publishing channels are all present — the most complete Chinese option; many components, so Docker orchestration takes patience."
+ },
+ "morluto/rea": {
+  "pitch": "Reverse engineering with agents, from app behavior down to native binaries",
+  "aud": "Security researchers and reverse engineers",
+  "note": "The most-starred repo on the list (476k): a narrow niche with surprising heat; check the compliance boundary before applying it in real work."
+ },
+ "deepseek-ai/deepseek-harness": {
+  "pitch": "DeepSeek's agent harness where everything is a plugin",
+  "aud": "Advanced users who want to customize the workflow deeply",
+  "note": "The official harness makes tools, skills and memory fully pluggable; it moves fast, and the docs lag behind the code."
+ },
+ "anomalyco/opencode": {
+  "pitch": "The hottest open-source terminal coding agent",
+  "aud": "Developers escaping closed-source CLIs",
+  "note": "MIT licensed and model-provider agnostic, so you can swap freely; more stars than most closed competitors, at the cost of a fast-changing interface."
+ },
+ "anthropics/claude-code": {
+  "pitch": "The benchmark terminal coding agent",
+  "aud": "Daily coding, refactoring and test runs",
+  "note": "This repo mainly hosts docs and issues; closed-source distribution, but currently the strongest overall experience."
+ },
+ "farion1231/cc-switch": {
+  "pitch": "One desktop panel to rule every terminal coding agent",
+  "aud": "People running several CLI agents at once",
+  "note": "A single entry point for Claude Code, Codex, OpenCode and DeepSeek Harness accounts and sessions; it writes no code itself — it is the switchboard."
+ },
+ "openai/codex": {
+  "pitch": "OpenAI's official terminal coding agent",
+  "aud": "Developers already on a ChatGPT plan",
+  "note": "Written in Rust, with solid sandboxing and approval flows and the tightest integration with GPT models."
+ },
+ "stablyai/orca": {
+  "pitch": "Run a fleet of coding agents on your own subscriptions",
+  "aud": "Teams that want several coding agents in parallel",
+  "note": "Reuses your existing CLI subscriptions and spreads tasks across a fleet of bots; scheduling is strong, while per-task quality depends on the agent underneath."
+ },
+ "google-gemini/gemini-cli": {
+  "pitch": "Google's terminal agent with a generous free tier",
+  "aud": "Low-cost entry into terminal agents",
+  "note": "The million-token context is the advantage — good for reading large repos."
+ },
+ "openhands/openhands": {
+  "pitch": "An open-source software engineering agent that finishes dev tasks on its own",
+  "aud": "People who want an open-source Claude Code alternative",
+  "note": "Works inside a sandbox to patch repos, run commands and tests; one of the strongest open-source entries on SWE-bench-style tasks."
+ },
+ "cline/cline": {
+  "pitch": "An autonomous coding agent inside VS Code that reads files and runs commands",
+  "aud": "VS Code users who want to approve every step visually",
+  "note": "A plugin with wide adoption, flexible with any provider's API key."
+ },
+ "aaif-goose/goose": {
+  "pitch": "A local, extensible on-machine agent",
+  "aud": "Automation that runs on your own machine",
+  "note": "Open-sourced by Block with a mature extension model; leans toward local automation rather than pure coding."
+ },
+ "antonosika/gpt-engineer": {
+  "pitch": "Generate an entire codebase from natural language",
+  "aud": "Fast scaffolding and understanding code-generation ideas",
+  "note": "An early star whose ideas traveled far; iteration has slowed."
+ },
+ "aider-ai/aider": {
+  "pitch": "Git-native pair programming in the terminal",
+  "aud": "Senior developers who live in a shell",
+  "note": "Every edit becomes a commit you can roll back, and models swap freely; steady."
+ },
+ "continuedev/continue": {
+  "pitch": "A customizable in-IDE assistant with an agent mode",
+  "aud": "Teams connecting their own or on-prem models",
+  "note": "The most flexible custom-model and context-provider setup — a good fit for intranets."
+ },
+ "qwenlm/qwen-code": {
+  "pitch": "Alibaba's official terminal coding agent",
+  "aud": "Teams running terminal agents on domestic models",
+  "note": "Forked from Gemini CLI and retuned; Qwen models offer generous context and it is friendly to networks in China."
+ },
+ "charmbracelet/crush": {
+  "pitch": "A terminal coding agent in Go with the best TUI feel",
+  "aud": "People who like lightweight single-binary TUIs",
+  "note": "From the Charm team, carrying the bubbletea aesthetic; a small plugin ecosystem, but the experience wins."
+ },
+ "eyaltoledano/claude-task-master": {
+  "pitch": "A task breakdown system for Cursor and Claude Code",
+  "aud": "Long requirements handled inside the IDE",
+  "note": "Turns a PRD into a task DAG and hands it to a coding agent item by item; updates have slowed over the past six months, so watch version compatibility."
+ },
+ "kilo-org/kilocode": {
+  "pitch": "An all-in-one agentic engineering platform in VS Code",
+  "aud": "IDE users who want orchestration plus plan mode",
+  "note": "A beefed-up Cline lineage with orchestration and plan mode; more enterprise-flavored since the Anaconda acquisition."
+ },
+ "roocodeinc/roo-code": {
+  "pitch": "A Cline fork that switches modes for architecture, coding and debugging",
+  "aud": "Developers who like role-based prompts",
+  "note": "Multiple modes give different tasks different system prompts; the repo is archived."
+ },
+ "swe-agent/swe-agent": {
+  "pitch": "The academic reference implementation of a software engineering agent",
+  "aud": "Benchmark work and papers",
+  "note": "Where the Agent-Computer Interface idea came from; productization was never the goal."
+ },
+ "swe-agent/mini-swe-agent": {
+  "pitch": "A minimal coding agent in 100 lines",
+  "aud": "People who want to read the loop and actually get it",
+  "note": "The SWE-agent team points newcomers here first; it runs SWE-bench and the source takes an afternoon to read."
+ },
+ "openclaw/openclaw": {
+  "pitch": "A personal agent runtime that calls itself 'the AI that actually does the work'",
+  "aud": "Anyone wanting a cross-platform always-on personal agent",
+  "note": "Second most-starred overall (395k): a local-first gateway with 20+ messaging channels; head-to-head with Hermes, and the ecosystem is racing."
+ },
+ "nousresearch/hermes-agent": {
+  "pitch": "An autonomous agent that grows its own skills and remembers you across sessions",
+  "aud": "Agents that live in a terminal or IM and work over time",
+  "note": "Accumulates and iterates skills, with persistent memory, sub-agents and cron; top of the heat chart, but the open-issue backlog is large."
+ },
+ "significant-gravitas/autogpt": {
+  "pitch": "The project that set off the autonomous agent wave",
+  "aud": "Understanding agent history and prototyping automation",
+  "note": "Now repositioned as an agent-building platform; historically enormous star count, but real usage is below its peak."
+ },
+ "foundationagents/openmanus": {
+  "pitch": "An open-source general agent (a Manus replica)",
+  "aud": "Building your own general task agent",
+  "note": "High community heat and fast iteration; engineering completeness is still catching up — good for tinkering, not for delivery."
+ },
+ "hkuds/nanobot": {
+  "pitch": "A lightweight personal agent that works once installed",
+  "aud": "Keeping a small always-on agent on your own machine",
+  "note": "From HKUDS: small but complete, with tools, memory and scheduled tasks; engineering maturity still trails Hermes."
+ },
+ "reworkd/agentgpt": {
+  "pitch": "Set a goal in the browser and watch it decompose and run",
+  "aud": "Demos and first-time exploration",
+  "note": "An old teaching project; archived and no longer updated, kept as a teaching reference."
+ },
+ "fosowl/agenticseek": {
+  "pitch": "A fully local Manus alternative",
+  "aud": "Keeping data off the network",
+  "note": "Local models only and privacy first; the ceiling is your local model, so don't compare it with cloud flagships."
+ },
+ "agent0ai/agent-zero": {
+  "pitch": "A general agent with a web UI, a terminal and memory",
+  "aud": "Seeing an agent that 'uses a computer' out of the box",
+  "note": "Clear architecture and very playable; production use needs your own isolation and permission model."
+ },
+ "openbmb/pilotdeck": {
+  "pitch": "OpenBMB's task-oriented agent workbench",
+  "aud": "Workspace-level isolation and memory evolution",
+  "note": "Isolates context and memory per WorkSpace and is positioned as a productivity platform; AGPL-3.0, so read the terms before commercial use."
+ },
+ "ruvnet/ruflo": {
+  "pitch": "A veteran harness for multi-agent swarms",
+  "aud": "Playing with swarm topologies",
+  "note": "Calls itself the original agent harness, with many topology options; the community debates whether it is a toy or a production tool — load-test it yourself first."
+ },
+ "foundationagents/metagpt": {
+  "pitch": "Turn one sentence into a software company with roles",
+  "aud": "Research on multi-agent collaboration and prototype generation",
+  "note": "From a Chinese team; its SOP-style collaboration influenced many later projects."
+ },
+ "agentscope-ai/agentscope": {
+  "pitch": "Alibaba ModelScope's multi-agent platform",
+  "aud": "Multi-agent orchestration and distributed deployment",
+  "note": "Emphasizes message passing and fault tolerance with friendly Chinese docs; originally designed for large-scale multi-agent simulation."
+ },
+ "openbmb/chatdev": {
+  "pitch": "A virtual software company with multiple roles",
+  "aud": "Research projects and teaching demos",
+  "note": "The paper's companion implementation; results depend on the model, and engineering polish is average."
+ },
+ "camel-ai/camel": {
+  "pitch": "Multi-agent social simulation and synthetic data generation",
+  "aud": "Research and generating agent training data",
+  "note": "Academic and highly abstracted — not meant for shipping business products."
+ },
+ "ag2ai/ag2": {
+  "pitch": "An AgentOS forked from the AutoGen community",
+  "aud": "Existing AutoGen users who want the community edition",
+  "note": "The community took over after Microsoft moved to Agent Framework; migrating existing AutoGen projects needs the official migration guide."
+ },
+ "browser-use/browser-use": {
+  "pitch": "Let an agent drive a browser like a person",
+  "aud": "Web flow automation, scraping and form filling",
+  "note": "The lowest-integration-cost browser agent library, compatible with the Playwright ecosystem."
+ },
+ "microsoft/playwright-mcp": {
+  "pitch": "Standard browser hands and feet for agents (MCP)",
+  "aud": "Existing agents that need browser capability",
+  "note": "Officially maintained and stable, native to MCP clients."
+ },
+ "browserbase/stagehand": {
+  "pitch": "Turn web pages into programmable APIs for agents",
+  "aud": "Front-end teams doing repeatable web automation",
+  "note": "Adds natural-language actions and caching on top of Playwright, far more stable on repeat runs than pure LLM approaches."
+ },
+ "skyvern-ai/skyvern": {
+  "pitch": "Browser workflow automation with vision plus LLMs",
+  "aud": "Replacing enterprise RPA and batch form flows",
+  "note": "A near-product service with a UI that is more robust to page redesigns than selector-based tools."
+ },
+ "nanobrowser/nanobrowser": {
+  "pitch": "A multi-agent browser assistant inside a Chrome extension",
+  "aud": "Cases where you don't want to deploy a service",
+  "note": "Runs entirely in the front end with your own key; light to try, capabilities limited by the extension sandbox."
+ },
+ "steel-dev/steel-browser": {
+  "pitch": "A self-hostable browser API built for agents",
+  "aud": "Teams that won't hand browser sessions to a cloud service",
+  "note": "Sessions, proxies, file uploads and fingerprinting are all wrapped, so one container is enough; the real cost is operating your own Chrome cluster."
+ },
+ "openinterpreter/openinterpreter": {
+  "pitch": "Natural language driving local code execution and operations",
+  "aud": "Local batch jobs, file and data processing",
+  "note": "Enormous privileges — use it in a controlled environment; the project's pace has slowed."
+ },
+ "bytedance/ui-tars-desktop": {
+  "pitch": "ByteDance's GUI agent that looks at the screen and clicks",
+  "aud": "Desktop app automation and cross-app flows",
+  "note": "A pure-vision approach that doesn't need the DOM, so it generalizes further than browser-only tools; the repo is archived, kept for reference."
+ },
+ "microsoft/omniparser": {
+  "pitch": "A visual parser that turns screenshots into clickable elements",
+  "aud": "Building your own GUI agent that needs screen understanding",
+  "note": "A building block for the pure-vision route, usually paired with a VLM; it isn't an agent — it gives agents eyes."
+ },
+ "web-infra-dev/midscene": {
+  "pitch": "Natural-language-driven UI automation",
+  "aud": "Front-end teams doing E2E and AI automation",
+  "note": "From a Chinese team with good Chinese docs, tightly integrated with Playwright and Puppeteer."
+ },
+ "simular-ai/agent-s": {
+  "pitch": "An open-source SOTA implementation of a computer-use agent",
+  "aud": "Researching the ceiling of computer-use agents",
+  "note": "The paper's companion code, with benchmark results among the best in open source; getting it running means wiring models and environments."
+ },
+ "microsoft/magentic-ui": {
+  "pitch": "A human-in-the-loop 'browser plus local files' agent",
+  "aud": "Researching interactive human-in-the-loop design",
+  "note": "From Microsoft Research (MagenticLite), built so every step can be taken over and corrected; a research prototype rather than a production tool."
+ },
+ "pipecat-ai/pipecat": {
+  "pitch": "A pipeline framework for real-time voice agents",
+  "aud": "Building voice conversation products",
+  "note": "Chains STT, LLM and TTS into a real-time pipeline with controllable latency; you bring the models."
+ },
+ "livekit/agents": {
+  "pitch": "LiveKit's real-time voice agent framework",
+  "aud": "Teams that already have a LiveKit audio/video stack",
+  "note": "A solid WebRTC foundation with mature interruption and echo handling; less valuable outside the LiveKit ecosystem."
+ },
+ "ten-framework/ten-framework": {
+  "pitch": "A real-time multimodal conversation framework (formerly TEN Agent)",
+  "aud": "Low-latency voice and digital humans",
+  "note": "Orchestrates audio streams, vision, LLM and TTS as one graph, focused on real-time interruption; Apache-2.0 with additional terms — read the LICENSE before commercial use."
+ },
+ "panniantong/agent-reach": {
+  "pitch": "Give agents eyes on the whole internet",
+  "aud": "Sentiment and research agents",
+  "note": "A unified read and search interface for Twitter, Reddit, YouTube, GitHub and Bilibili; source availability moves with platform policy."
+ },
+ "bytedance/deer-flow": {
+  "pitch": "ByteDance's deep research framework with human-in-the-loop",
+  "aud": "Deep research report pipelines",
+  "note": "Pluggable search, crawling and report modules with decent coverage of Chinese-language scenarios."
+ },
+ "stanford-oval/storm": {
+  "pitch": "Generate sourced long-form writing like a Wikipedia article",
+  "aud": "Long reports and literature reviews",
+  "note": "From Stanford: outline first, then retrieve section by section, with strong structure."
+ },
+ "assafelovic/gpt-researcher": {
+  "pitch": "Automated multi-source research with citations",
+  "aud": "Industry, competitor and technical research",
+  "note": "Quick to start with usable output; depth depends heavily on the model and the search sources."
+ },
+ "microsoft/rd-agent": {
+  "pitch": "Microsoft's R&D automation agent",
+  "aud": "Automating experiments and tuning loops",
+  "note": "Closes the loop of hypothesis, code, experiment and review, aimed at data science; the integration cost is high."
+ },
+ "langchain-ai/open_deep_research": {
+  "pitch": "LangChain's open-source deep research implementation",
+  "aud": "Building a research agent of your own",
+  "note": "Built on LangGraph with a clear, hackable structure; the repo is archived, kept as a structural reference."
+ },
+ "graphify-labs/graphify": {
+  "pitch": "Turn an entire codebase into a queryable knowledge graph",
+  "aud": "Giving agents structured code context",
+  "note": "Graphs code, docs, SQL schemas, configs and PDFs together, with an agent-facing query interface; large repos take a while to graph."
+ },
+ "infiniflow/ragflow": {
+  "pitch": "A RAG engine built for deep document understanding",
+  "aud": "Chinese documents and complex layouts",
+  "note": "Table and scanned-document parsing is the strength; ships a UI and has many deployments in China."
+ },
+ "mintplex-labs/anything-llm": {
+  "pitch": "A ready-to-run private ChatGPT with a document library",
+  "aud": "Individuals and small teams building a knowledge assistant",
+  "note": "Deploys in about ten minutes; sufficient and restrained — don't expect complex orchestration."
+ },
+ "hkuds/lightrag": {
+  "pitch": "Lightweight graph-enhanced RAG",
+  "aud": "Graph-style retrieval without a heavyweight stack",
+  "note": "Uses graph structure to cover the relational blind spot of vector search, at lower cost than GraphRAG."
+ },
+ "khoj-ai/khoj": {
+  "pitch": "A self-hosted personal second brain",
+  "aud": "Building your own personal knowledge assistant",
+  "note": "Documents, email and web pages all flow in, with local model support; no commits in months, so the pace has dropped."
+ },
+ "tencent/weknora": {
+  "pitch": "Tencent's open-source document understanding and retrieval platform",
+  "aud": "Turning a pile of PDFs and Word files into a Q&A knowledge base",
+  "note": "A complete chain from parsing to chunking to multi-path recall to cited answers — a Go service, not a toy. MIT, but third-party components carry their own terms."
+ },
+ "microsoft/graphrag": {
+  "pitch": "Knowledge-graph RAG (GraphRAG)",
+  "aud": "Global questions and cross-document relationship reasoning",
+  "note": "Graph construction is expensive in tokens; suited to high-value corpora."
+ },
+ "onyx-dot-app/onyx": {
+  "pitch": "An enterprise knowledge Q&A platform (formerly Danswer)",
+  "aud": "Intranet knowledge bases with Q&A",
+  "note": "Many connectors and a complete permission model, good for internal deployment; the component stack is heavy."
+ },
+ "mem0ai/mem0": {
+  "pitch": "A long-term memory layer you bolt onto an agent",
+  "aud": "Multi-turn personalization and cross-session memory",
+  "note": "Both hosted and self-hosted, and the most widely deployed memory layer."
+ },
+ "mempalace/mempalace": {
+  "pitch": "A memory system that claims the best benchmark scores",
+  "aud": "Quantified requirements on memory quality",
+  "note": "Leads with benchmarks and offers several backends; 'best-benchmarked' is self-reported — reproduce it before trusting it."
+ },
+ "topoteretes/cognee": {
+  "pitch": "Turn documents into graph memory for agents",
+  "aud": "Long-horizon memory plus knowledge graphs",
+  "note": "ETL-style graph building with memory you can query and edit; engineering-heavy, with quite a few settings."
+ },
+ "getzep/graphiti": {
+  "pitch": "A real-time knowledge graph for agents with a timeline",
+  "aud": "Memory that needs to know who changed what, and when",
+  "note": "Zep's memory engine: entity relations plus temporal validity, so it can answer 'is this still true?' rather than only 'what was said'. Graphiti is the engine, Zep the hosted service."
+ },
+ "supermemoryai/supermemory": {
+  "pitch": "A high-speed memory and context engine with a hosted API",
+  "aud": "Product teams that want a memory API now",
+  "note": "Delivered as a service, so integration is easy; the self-hosted version trails the SaaS one."
+ },
+ "letta-ai/letta": {
+  "pitch": "A stateful agent service that manages its own memory (formerly MemGPT)",
+  "aud": "Agents that need a long-term persona and memory",
+  "note": "Treats memory like an operating system — an elegant idea, with relatively high resource cost."
+ },
+ "memtensor/memos": {
+  "pitch": "A memory operating system for agents",
+  "aud": "Research or customization at the memory layer",
+  "note": "From a Shanghai Jiao Tong University team, with detailed scheduling and lifecycle management; academic, so you wire it up yourself."
+ },
+ "modelcontextprotocol/servers": {
+  "pitch": "The official MCP reference server collection",
+  "aud": "Connecting agents to tools and data sources",
+  "note": "MCP is now a de facto standard, and this is the official source of example implementations and best practices."
+ },
+ "upstash/context7": {
+  "pitch": "An MCP service that feeds agents current documentation",
+  "aud": "Anyone tired of stale model knowledge",
+  "note": "Pulls versioned docs by library name and works in Cursor or Claude Code right away; indexing depends on a third-party host."
+ },
+ "chromedevtools/chrome-devtools-mcp": {
+  "pitch": "Let agents drive Chrome DevTools directly",
+  "aud": "Agents that inspect performance, network and console",
+  "note": "Officially maintained, adding a runtime view beyond raw DOM manipulation — handy for front-end debugging."
+ },
+ "github/github-mcp-server": {
+  "pitch": "GitHub's official MCP server",
+  "aud": "Agents managing issues, PRs and code search",
+  "note": "Official, with permissions bound to the token; GitHub Enterprise needs extra configuration."
+ },
+ "composiohq/composio": {
+  "pitch": "A tool hub with 1000+ integrations for agents",
+  "aud": "Connecting agents to the SaaS ecosystem",
+  "note": "A hosted tool marketplace plus managed auth, so you skip OAuth plumbing; the trade-off is dependence on their cloud."
+ },
+ "prefecthq/fastmcp": {
+  "pitch": "Write an MCP server in a few lines of Python",
+  "aud": "Exposing internal systems to agents",
+  "note": "Decorator style, and currently the least painful way to write MCP services."
+ },
+ "a2aproject/a2a": {
+  "pitch": "An agent-to-agent protocol started by Google, now under the Linux Foundation",
+  "aud": "Connecting agents across vendors and organizations",
+  "note": "Covers the half MCP doesn't: discovery, task delegation and streaming progress between agents; the repo is specification-first, with reference code."
+ },
+ "modelcontextprotocol/python-sdk": {
+  "pitch": "The official Python SDK for writing MCP servers",
+  "aud": "Connecting internal systems to agents",
+  "note": "The most authoritative implementation of the protocol itself; pair it with FastMCP for convenience. Protocol only — no agent logic."
+ },
+ "mcp-use/mcp-use": {
+  "pitch": "A full-stack MCP framework for MCP apps and servers",
+  "aud": "Building an MCP app with a UI",
+  "note": "Bundles an MCP server and a front end into one project, good for interactive tools; public examples are still few."
+ },
+ "langfuse/langfuse": {
+  "pitch": "A veteran platform for agent observability and evaluation",
+  "aud": "Putting traces and evals on an agent",
+  "note": "Self-hosting friendly, with traces, datasets and scoring in one place; many features, so expect some ramp-up."
+ },
+ "promptfoo/promptfoo": {
+  "pitch": "Write prompt, agent and RAG tests as config and run them in CI",
+  "aud": "Teams that want evals in CI",
+  "note": "Declarative YAML assertions plus red-team scanning, easier than hand-written regression scripts; it is a test framework rather than an observability platform — complementary to Langfuse."
+ },
+ "confident-ai/deepeval": {
+  "pitch": "An evaluation framework for unit-testing LLMs and agents",
+  "aud": "Getting evals into CI",
+  "note": "pytest style with common metrics built in; complex multi-turn scenarios need your own evaluators."
+ },
+ "arize-ai/phoenix": {
+  "pitch": "Arize's observability and evaluation UI",
+  "aud": "Comparing RAG and agent tuning runs",
+  "note": "Start it locally to inspect traces and experiment comparisons; the cloud edition has more."
+ },
+ "agentops-ai/agentops": {
+  "pitch": "An agent monitoring SDK you add in a few lines",
+  "aud": "Seeing run traces cheaply first",
+  "note": "The fastest to integrate, less deep than Langfuse; releases have slowed over the past six months."
+ },
+ "ukgovernmentbeis/inspect_ai": {
+  "pitch": "The UK AI Safety Institute's evaluation framework",
+  "aud": "Reproducible and auditable evaluation",
+  "note": "Evaluation as versioned task sets, with a sandbox and full logs — common in government and compliance work; less convenient than commercial platforms, but reproducible."
+ },
+ "verl-project/verl": {
+  "pitch": "The mainstream foundation for agentic RL training (HybridFlow)",
+  "aud": "Algorithm teams training their own agent policies",
+  "note": "A single-controller, multi-role parallel RL post-training framework; most agentic RL reproductions start here, and the barrier is distributed training rather than the API."
+ },
+ "openpipe/art": {
+  "pitch": "An agent RL trainer that turns multi-step tasks into training samples",
+  "aud": "Replacing a fixed pipeline with a cheap small model",
+  "note": "GRPO plus a trainable tool-calling loop, aimed at matching big models on narrow tasks with small models plus RL; the real cost is building data, not training."
+ },
+ "thudm/slime": {
+  "pitch": "Tsinghua's RL scaling framework",
+  "aud": "Researchers running long-trajectory agentic RL",
+  "note": "RL for very long trajectories and multi-turn tool calls: rollout on SGLang, training on Megatron; the docs read like a paper, so be ready to read code."
+ },
+ "openenv/openenv": {
+  "pitch": "An environment interface standard for RL post-training",
+  "aud": "Interchangeable training environments",
+  "note": "Abstracts environments behind a uniform reset/step/reward interface so training code doesn't change when environments do; very early, with no ecosystem yet."
+ },
+ "primeintellect-ai/prime-rl": {
+  "pitch": "An agentic RL stack on decentralized compute",
+  "aud": "Pooling compute across machines to train agents",
+  "note": "Asynchronous RL with distributed rollout, aimed at bringing idle compute into training; operational complexity is well above single-machine setups."
+ },
+ "e2b-dev/e2b": {
+  "pitch": "A secure cloud sandbox for agents",
+  "aud": "Products that execute AI-generated code",
+  "note": "Firecracker microVM isolation; a hard requirement for the infrastructure behind coding agents."
+ },
+ "mattpocock/skills": {
+  "pitch": "Agree on what you're building before you write code",
+  "aud": "Fuzzy requirements and long-lived projects",
+  "note": "Small composable skills, headlined by /grill-me: the agent asks one question at a time until every design branch is unambiguous. The author argues explicitly against big frameworks governing the process — control stays with the human."
+ },
+ "obra/superpowers": {
+  "pitch": "A full set of engineering discipline for coding agents",
+  "aud": "Agents that should deliver through a fixed process",
+  "note": "Fifteen skills in a fixed order: brainstorm, plan, isolate with a worktree, TDD, sub-agent execution, per-task review, wrap-up. The docs state this is mandatory, not advisory."
+ },
+ "addyosmani/agent-skills": {
+  "pitch": "The classic SDLC split into six commands",
+  "aud": "Teams going to production that need quality gates",
+  "note": "From /spec to /ship, covering define, plan, build, verify, review and release, with about 25 skills and four review personas; every skill ships an 'excuses table' that pre-rebuts lines like 'too simple to test'."
+ },
+ "backnotprop/pstack": {
+  "pitch": "Prove it actually runs before calling it done",
+  "aud": "Hard-to-reproduce bugs, data migrations, overnight autonomous runs",
+  "note": "A mirror of Lauren Tan's (Cursor) workflow, upstream at cursor/plugins; /poteto-mode picks from 22 playbooks with no planning skill, weighting reproduction, forensics and multi-model review."
+ },
+ "datawhalechina/hello-agents": {
+  "pitch": "Build an agent from scratch, in Chinese",
+  "aud": "People who want the principles before the tooling",
+  "note": "Companion code for the book: from the ReAct loop to multi-agent systems and training, every chapter runnable and clearly explained in Chinese."
+ },
+ "microsoft/ai-agents-for-beginners": {
+  "pitch": "Eighteen official lessons, in order",
+  "aud": "Anyone who wants a path that doesn't get lost",
+  "note": "Microsoft's 18 lessons, from tool calling to multi-agent systems and production; each has a notebook and exercises. In English, and runnable."
+ },
+ "shareai-lab/learn-claude-code": {
+  "pitch": "Write a mini Claude Code yourself",
+  "aud": "Seeing inside the agent loop",
+  "note": "The core takeaway is that Bash is enough: a very small reimplementation of the harness's tool loop, so the real code no longer feels like a maze."
+ },
+ "hesreallyhim/awesome-claude-code": {
+  "pitch": "A resource list for the Claude Code ecosystem",
+  "aud": "People who already use it and want ready-made configs",
+  "note": "Commands, hooks, workflows and plugins by category, community-submitted and updated almost daily — an inspiration library, not a tutorial."
+ },
+ "patchy631/ai-engineering-hub": {
+  "pitch": "Hands-on notebooks from RAG to agents",
+  "aud": "Readers who can read code and want to run it",
+  "note": "An engineering-leaning tutorial collection that follows new frameworks (RAG, multi-agent, local deployment); complete code, terse explanation."
+ },
+ "datawhalechina/llm-universe": {
+  "pitch": "The first course in LLM application development",
+  "aud": "Anyone who hasn't built an LLM app yet",
+  "note": "A beginner course covering API calls, prompts, RAG and evaluation — the foundation before agents."
+ },
+ "nirdiamant/agents-towards-production": {
+  "pitch": "What a demo needs before it can ship",
+  "aud": "Demos that work until they hit production",
+  "note": "Breaks productionization into topics — observability, evaluation, memory, deployment, cost — each with a runnable notebook, focused on architecture decisions."
+ },
+ "adongwanai/agentguide": {
+  "pitch": "A systematic roadmap for agent development, in Chinese",
+  "aud": "Anyone who wants a map to follow",
+  "note": "A long Chinese piece covering harness design, context engineering, RAG and MCP, with clear opinions — good as a spine to read alongside code."
+ },
+ "wangrongsheng/awesome-llm-resources": {
+  "pitch": "A master index of Chinese LLM resources",
+  "aud": "Looking things up by direction",
+  "note": "Organized by multimodal, agents, coding assistance and training/inference, with Chinese annotations; the widest coverage, with uneven quality."
+ },
+ "liyupi/ai-guide": {
+  "pitch": "A big Chinese catalog of AI tools and playbooks",
+  "aud": "Newcomers who want to play first",
+  "note": "A resource collection plus a vibe-coding intro, covering tool selection, prompts and deployment; plenty of screenshots and steps, limited depth."
+ },
+ "wethinkin/aigc-interview-book": {
+  "pitch": "An interview question bank for AIGC and agent roles",
+  "aud": "Preparing a resume or an interview",
+  "note": "Chapters on AIGC, LLMs, agents and embodied AI, with answers — also usable as a checklist for finding gaps."
+ },
+ "windy3f3f3f3f/how-claude-code-works": {
+  "pitch": "Take Claude Code apart to see how it works",
+  "aud": "People past the tutorials who want engineering detail",
+  "note": "Walks through architecture, the agent loop, context management and the tool system layer by layer, in Chinese; reading it makes similar products much faster to grasp. Updates are slow."
+ }
+}

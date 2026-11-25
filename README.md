@@ -3,6 +3,9 @@
 把 GitHub 上真正在用的 Agent 项目按赛道梳理成一张可以搜索、筛选、排序的清单，用来解决一个具体问题：**想搭一个 Agent，到底该从哪个项目开始看。**
 
 **在线浏览 → https://xiaowang018.github.io/agent-landscape/**
+**English edition → https://xiaowang018.github.io/agent-landscape/index-en.html** · [README.en.md](README.en.md)
+
+两版页面共用同一份数据与交互逻辑，右上角可互相切换，筛选状态会带过去。
 
 收录 **137 个仓库 / 17 个赛道 / 累计 846 万星标**。每个项目都标注了中文定位、适用人群、上手门槛和维护状态，而不是只丢一个 star 数排名。页面末尾另设「科研前沿」区块，收录 18 篇 2025–2026 年会改变 Agent 系统设计与评测结论的论文与基准（不计入上面的仓库统计）。本轮新增第 17 个赛道「教程 / 学习资料」，收录 12 份能跟着走的课程、清单、源码剖析与面试题集；加上第 16 个赛道「技能包 / 工作流」和「Agent 学习路线」：从官方课程和框架教程入门，接着做项目，再用公开基准验证，不把课程证书或榜单分数当成工程能力。
 
@@ -139,11 +142,12 @@
 
 | 字段 | 来源 | 说明 |
 | --- | --- | --- |
-| 星标、Fork、语言、许可证、最后提交时间、创建时间 | GitHub REST API `/repos/{owner}/{repo}` | 实时抓取，非人工录入 |
+│ 星标、Fork、语言、许可证、最后提交时间、是否归档、创建时间 | GitHub REST API `/repos/{owner}/{repo}` | 实时抓取，非人工录入 |
 | 分类、中文定位、适用人群、点评、上手门槛 | 人工标注 | 主观判断，可讨论 |
 
-维护状态按最后提交时间自动判定：
+维护状态按 GitHub 数据自动判定，归档优先于提交日期（刚归档的仓库最后一次提交也可能很近）：
 
+- **已归档** —— 仓库被 owner 归档，只读停更（不建议作为新项目选型）
 - **活跃** —— 45 天内有提交
 - **维护中** —— 210 天内有提交
 - **沉寂** —— 超过 210 天无提交（这类不建议作为新项目选型）
@@ -158,19 +162,30 @@
 
 ```
 agent-landscape/
-├── index.html                  # 产物：单文件页面，无外部依赖，双击即可本地打开
+├── index.html                  # 中文页面，产物
+├── index-en.html               # 英文页面，产物
 ├── data.json                   # 机器抓的元数据（137 条），由 fetch.py 写
+├── README.md                   # 中文说明
+├── README.en.md                # 英文说明
 └── scripts/
-    ├── fetch.py                # 抓 GitHub API，刷新 data.json
+    ├── fetch.py                # 抓 GitHub API，刷新 data.json 和 snapshot.json
     ├── annotations.json        # 人工标注（中文定位、适合谁、点评、门槛、赛道）
-    ├── tracks.json             # 17 个赛道的顺序、标题与副标题
-    ├── template.html           # 页面模板，样式与交互都在这里
-    └── build.py                # 合并三者，生成 index.html
+    ├── annotations.en.json     # 英文标注覆盖层，只含定位 / 适合谁 / 点评
+    ├── tracks.json             # 17 个赛道的顺序、标题与副标题（中文）
+    ├── tracks.en.json          # 赛道的英文标题与副标题
+    ├── i18n.json               # 界面文案（统计标签、卡片字段、JS 提示）中英对照
+    ├── snapshot.json           # 数据快照日期，fetch.py 每次写入后更新，build.py 读它算状态
+    ├── template.html           # 中文页面模板
+    ├── template.en.html        # 英文页面模板
+    ├── partials/
+    │   ├── style.css           # 两版共用的样式
+    │   └── app.js              # 两版共用的搜索 / 筛选 / 排序逻辑，文案从 i18n.json 注入
+    └── build.py                # 合并三者，生成两个页面
 ```
 
 `index.html` 是纯静态单文件：没有 CDN、没有构建步骤、运行时也不发网络请求，断网也能正常筛选。**但它现在是由脚本生成的，不要直接改** —— 改了会在下次 `build.py` 时被覆盖，要改就改 `scripts/` 下的源文件。
 
-`build.py` 会做一致性校验：`data.json` 里每个仓库都必须在 `annotations.json` 里有标注，反之亦然；赛道必须在 `tracks.json` 里登记；门槛只能是易/中/难。任何一条不满足就报错退出，不生成半张卡。
+`build.py` 会做一致性校验：`data.json` 里每个仓库都必须在 `annotations.json` 里有标注，反之亦然；英文版必须覆盖全部 137 条（缺一条就报错，避免中英混排）；赛道必须在 `tracks.json` / `tracks.en.json` 里登记且顺序一致；门槛只能是易/中/难。任何一条不满足就报错退出，不生成半张卡。
 
 ---
 
@@ -184,11 +199,12 @@ GITHUB_TOKEN=ghp_xxx python scripts/fetch.py --check   # 先看会变什么
 GITHUB_TOKEN=ghp_xxx python scripts/fetch.py           # 确认后写入 data.json
 
 # 2. 补中文标注（新增仓库必须在这步加，否则 build 会报错拦住）
-#    编辑 scripts/annotations.json；新赛道改 scripts/tracks.json
+#    编辑 scripts/annotations.json；英文版同步补 scripts/annotations.en.json；新赛道改 tracks.json / tracks.en.json
 
 # 3. 生成页面
-python scripts/build.py           # 写 index.html
-python scripts/build.py --check   # 只校验不写文件
+python scripts/build.py               # 同时写 index.html 与 index-en.html
+python scripts/build.py --lang en     # 只重建英文版
+python scripts/build.py --check       # 只校验不写文件
 ```
 
 不带 `GITHUB_TOKEN` 也能跑，但未认证配额只有 **60 次/小时**，而且 504 超时同样计次 —— 137 个仓库需要跑三四轮。带 token 是 5000 次/小时，一次就够。

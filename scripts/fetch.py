@@ -10,6 +10,7 @@
 只更新「机器能抓的字段」，不碰 scripts/annotations.json 里的中文标注。
 抓不到的仓库不会从 data.json 里删掉，只在最后汇总里列出来，避免一次网络抖动毁掉数据。
 """
+import datetime
 import json
 import os
 import re
@@ -18,11 +19,12 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data.json"
+SNAPSHOT = ROOT / "scripts/snapshot.json"
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
 
@@ -57,9 +59,12 @@ def get_json(url):
             with urllib.request.urlopen(_req(url), timeout=25) as r:
                 return json.loads(r.read().decode("utf-8")), None
         except urllib.error.HTTPError as e:
-            if e.code in (403, 429) and attempt == 0:
+            retry_after = e.headers.get("Retry-After")
+            remaining = e.headers.get("X-RateLimit-Remaining")
+            limited = e.code == 429 or (e.code == 403 and (remaining == "0" or retry_after))
+            if limited and attempt == 0:
                 reset = e.headers.get("X-RateLimit-Reset")
-                wait = 60
+                wait = int(retry_after) if retry_after and retry_after.isdigit() else 60
                 if reset and reset.isdigit():
                     wait = max(5, min(90, int(reset) - int(time.time()) + 1))
                 print(f"    限流，等 {wait}s 后重试…")
@@ -110,15 +115,18 @@ def fetch_one(full_name):
             return out, None
 
     if err and "404" in err:
-        q = urllib.parse.quote(f"repo:{full_name}")
-        found, err3 = get_json(f"{API}/search/repositories?q={q}")
+        # repo:owner/name 只查完整旧地址，改名后必然查不到；按仓库名反查才能找回 owner 变更。
+        repo_name = full_name.rsplit("/", 1)[-1]
+        q = urllib.parse.quote(f"{repo_name} in:name")
+        found, err3 = get_json(f"{API}/search/repositories?q={q}&sort=stars&order=desc&per_page=10")
         items = (found or {}).get("items") or []
-        if items:
-            out = shape(items[0])
+        exact = [r for r in items if (r.get("name") or "").lower() == repo_name.lower()]
+        if exact:
+            out = shape(exact[0])
             if out["full_name"].lower() != full_name.lower():
                 out["aliased_from"] = full_name
             return out, None
-        return None, f"404（search 也没找到）"
+        return None, f"404（按仓库名 search 也没找到；若是仓库本身也改名，请补 ALIAS）"
     return None, err
 
 
@@ -127,7 +135,10 @@ def main():
     check_only = "--check" in args
     add = None
     if "--add" in args:
-        add = args[args.index("--add") + 1]
+        pos = args.index("--add")
+        if pos + 1 >= len(args) or not re.fullmatch(r"[^/\s]+/[^/\s]+", args[pos + 1]):
+            sys.exit("用法：python scripts/fetch.py --add owner/repo")
+        add = args[pos + 1]
 
     old = json.loads(DATA.read_text(encoding="utf-8")) if DATA.exists() else []
     order = [x["full_name"] for x in old]
@@ -143,7 +154,7 @@ def main():
     results, problems = {}, []
     with ThreadPoolExecutor(max_workers=1 if not TOKEN else 6) as pool:
         futures = {pool.submit(fetch_one, fn): fn for fn in order}
-        for i, fut in enumerate(futures, 1):
+        for i, fut in enumerate(as_completed(futures), 1):
             fn = futures[fut]
             meta, err = fut.result()
             if meta:
@@ -173,6 +184,17 @@ def main():
             changes.append(f"  + 新增 {new['full_name']}  ★ {new['stars']:,}")
         merged.append(new)
 
+    seen = {}
+    duplicates = []
+    for item in merged:
+        key = item["full_name"].lower()
+        if key in seen:
+            duplicates.append(f"{seen[key]} / {item['full_name']}")
+        seen[key] = item["full_name"]
+    if duplicates:
+        print("\n".join("  " + d for d in duplicates))
+        sys.exit(f"\n改名后有 {len(duplicates)} 组重复仓库，未写入；请先从 data.json 与标注里移除旧条目。")
+
     print(f"\n抓到 {len(results)}/{len(order)} 个仓库，用时 {time.time() - t0:.0f}s")
     if changes:
         print(f"变化 {len(changes)} 处：")
@@ -189,7 +211,9 @@ def main():
         print("\n--check：未写入 data.json")
         return
     DATA.write_text(json.dumps(merged, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"\n已写入 data.json（{len(merged)} 条）。下一步：补标注 → python scripts/build.py")
+    today = datetime.date.today().isoformat()
+    SNAPSHOT.write_text(json.dumps({"date": today}, indent=1) + "\n", encoding="utf-8")
+    print(f"\n已写入 data.json（{len(merged)} 条）与 snapshot.json（{today}）。下一步：补标注 → python scripts/build.py")
 
 
 if __name__ == "__main__":
