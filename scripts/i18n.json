@@ -1,0 +1,106 @@
+{
+ "zh": {
+  "numStyle": "zh",
+  "stats": {
+   "repos": "收录项目",
+   "stars": "累计星标",
+   "tracks": "赛道分类",
+   "active": "近 45 天有提交"
+  },
+  "card": {
+   "fit": "适合",
+   "diff": "门槛",
+   "fork": "Fork",
+   "since": "创建于",
+   "starsTitle": "stars"
+  },
+  "status": {
+   "active": "活跃",
+   "mid": "维护中",
+   "off": "沉寂",
+   "archived": "已归档"
+  },
+  "diff": {
+   "easy": {
+    "label": "易",
+    "note": "装完能跑"
+   },
+   "medium": {
+    "label": "中",
+    "note": "要改代码"
+   },
+   "hard": {
+    "label": "难",
+    "note": "要懂架构"
+   }
+  },
+  "lic": {
+   "unknown": "许可未识别",
+   "unknownTip": "GitHub 未识别许可证，商用前请查看仓库 LICENSE",
+   "none": "未声明许可",
+   "noneTip": "仓库未声明许可证，并不代表可以自由使用"
+  },
+  "js": {
+   "all": "共 <b>{n}</b> 个项目 · {t} 个赛道",
+   "some": "筛出 <b>{n}</b> / {total} 个项目",
+   "tag": "标签 "
+  },
+  "chipAll": "全部",
+  "langAll": "全部语言",
+  "group": {
+   "items": "个项目"
+  }
+ },
+ "en": {
+  "numStyle": "en",
+  "stats": {
+   "repos": "Projects",
+   "stars": "Total stars",
+   "tracks": "Tracks",
+   "active": "Pushed in last 45 days"
+  },
+  "card": {
+   "fit": "Best for",
+   "diff": "Effort",
+   "fork": "Forks",
+   "since": "Created",
+   "starsTitle": "stars"
+  },
+  "status": {
+   "active": "Active",
+   "mid": "Maintained",
+   "off": "Dormant",
+   "archived": "Archived"
+  },
+  "diff": {
+   "easy": {
+    "label": "Easy",
+    "note": "runs out of the box"
+   },
+   "medium": {
+    "label": "Medium",
+    "note": "needs code changes"
+   },
+   "hard": {
+    "label": "Hard",
+    "note": "needs architecture knowledge"
+   }
+  },
+  "lic": {
+   "unknown": "License unverified",
+   "unknownTip": "GitHub could not identify a license; read the repository LICENSE before commercial use",
+   "none": "No license",
+   "noneTip": "No license declared, which does not mean it is free to use"
+  },
+  "js": {
+   "all": "<b>{n}</b> projects · {t} tracks",
+   "some": "<b>{n}</b> of {total} projects shown",
+   "tag": "tag "
+  },
+  "chipAll": "All",
+  "langAll": "All languages",
+  "group": {
+   "items": "projects"
+  }
+ }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agent Landscape on GitHub · {{DATE}}</title>
+<style>
+{{STYLE}}</style>
+</head>
+<body>
+<div class="toolbar">
+  <div class="tb-in">
+    <input id="q" type="search" placeholder="Search name / positioning / scenario, e.g. browser, RAG, multi-agent…">
+    <select id="lang">{{LANGS}}</select>
+    <select id="sort">
+      <option value="stars">Sort by stars</option>
+      <option value="upd">Sort by last push</option>
+    </select>
+    <select id="diff">
+      <option value="">Any effort</option>
+      <option value="easy">Easy · runs out of the box</option>
+      <option value="medium">Medium · needs code changes</option>
+      <option value="hard">Hard · needs architecture knowledge</option>
+    </select>
+    <button class="tgl" id="act" aria-pressed="false" title="Only show projects with a push in the last 45 days">Active only<i></i></button>
+    <button id="reset">Reset</button>
+  </div>
+  <div class="chips">{{CHIPS}}</div>
+</div>
+<div class="count-line"><span id="cnt"></span><span class="hint">Press <kbd>/</kbd> to search · <kbd>Esc</kbd> to clear</span></div>
+
+<div class="wrap">
+<header>
+  <div class="head">
+    <div class="kicker">GitHub Agent Landscape · {{DATE}}</div>
+    <a class="langsw" id="langLink" data-base="index.html" href="index.html" hreflang="zh-CN" lang="zh-CN">中文</a>
+  </div>
+  <h1>Every Agent project on GitHub, <em>on one page</em></h1>
+  <p class="lede">From orchestration frameworks to finished agents that write code, drive a browser or run deep research — plus the tutorials worth reading before you start. {{N_REPOS}} projects across {{N_TRACKS}} tracks. Stars, language, license and maintenance status come from the official GitHub API; the positioning and advice are hand-written annotations.</p>
+  <div class="stats">
+{{STATS}}
+  </div>
+</header>
+
+{{GROUPS}}
+<div class="empty" id="empty">No matching projects.<button type="button" id="empty-reset">Clear all filters</button>Try a different keyword.</div>
+
+<section class="pick">
+  <h2>Quick picker: start from your constraints</h2>
+  <p class="sub">Don't start from the most popular project. Start from what you are actually constrained by.</p>
+  <div class="pick-row">
+    <div class="pick-item"><div class="pick-q">Ship an AI app for the business within two weeks</div>
+      <div class="pick-a"><b>Dify</b> or <b>n8n</b>: build it visually and self-host. Don't write your own framework.</div></div>
+    <div class="pick-item"><div class="pick-q">Complex multi-step flows that can pause and wait for human approval</div>
+      <div class="pick-a"><b>LangGraph</b> first; for multi-role collaboration look at <b>AutoGen</b>, for a .NET enterprise stack at <b>Semantic Kernel</b>.</div></div>
+    <div class="pick-item"><div class="pick-q">You just want to write code faster yourself</div>
+      <div class="pick-a"><b>Claude Code</b> / <b>Codex</b> in the terminal, <b>Cline</b> / <b>Continue</b> inside the IDE.</div></div>
+    <div class="pick-item"><div class="pick-q">The agent needs to click through web pages on its own</div>
+      <div class="pick-a"><b>browser-use</b> is the fastest to integrate; if you already have an agent, add <b>playwright-mcp</b>.</div></div>
+    <div class="pick-item"><div class="pick-q">Too many company documents, and support or internal Q&A keeps getting it wrong</div>
+      <div class="pick-a"><b>RAGFlow</b> for hard documents, <b>LlamaIndex</b> if you want to own the retrieval chain.</div></div>
+    <div class="pick-item"><div class="pick-q">You're about to execute model-generated code and want to avoid a disaster</div>
+      <div class="pick-a">An <b>E2B</b> sandbox plus an allow-listed network. Never run it bare on the host.</div></div>
+    <div class="pick-item"><div class="pick-q">Quantify quality before launch, and see what it did after launch</div>
+      <div class="pick-a"><b>DeepEval</b> puts evals in CI, <b>Langfuse</b> shows end-to-end traces; if you only want traces first, <b>AgentOps</b>.</div></div>
+    <div class="pick-item"><div class="pick-q">A real-time voice agent that can be interrupted, with low latency</div>
+      <div class="pick-a"><b>Pipecat</b> to wire the STT/LLM/TTS pipeline yourself; if you already have WebRTC, <b>LiveKit Agents</b>.</div></div>
+    <div class="pick-item"><div class="pick-q">The agent should remember a user's preferences across sessions</div>
+      <div class="pick-a"><b>Mem0</b> / <b>supermemory</b> are the fastest APIs; for graph reasoning see <b>cognee</b>, for memory scheduling research see <b>MemOS</b>.</div></div>
+    <div class="pick-item"><div class="pick-q">Turn a working flow into a small model and stop paying per-token</div>
+      <div class="pick-a">Training stack: <b>verl</b> (widest ecosystem) or <b>slime</b> (long trajectories); to try GRPO quickly, <b>ART</b>; align environments on <b>OpenEnv</b>.</div></div>
+  </div>
+</section>
+
+<section class="pick" id="learning">
+  <h2>Learning path: from the first loop to reliable evaluation</h2>
+  <p class="sub">Go in order. Links point to the course publisher, the framework maintainer or the official benchmark page.</p>
+  <div class="pick-row">
+    <div class="pick-item"><div class="pick-q"><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">1. Decide whether you need an agent at all: Building effective agents</a> <span style="color:var(--muted);font-weight:400">· Anthropic</span></div>
+      <div class="pick-a">First separate a fixed workflow from an agent where the model chooses the next step; then learn prompt chaining, routing, parallelization, orchestrator-workers and evaluator-optimizer. Exercise: draw both a workflow and an agent loop for one task, then justify the simplest one that suffices.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://huggingface.co/learn/agents-course/en/unit1/introduction" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">2. Build your first tool agent: AI Agents Course</a> <span style="color:var(--muted);font-weight:400">· Hugging Face</span></div>
+      <div class="pick-a">Learn tool calling and the agent loop through Think → Act → Observe, then build and publish Alfred with smolagents. Beginner-friendly, with exercises and unit quizzes.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">3. State, recovery and human-in-the-loop: AI Agents in LangGraph</a> <span style="color:var(--muted);font-weight:400">· DeepLearning.AI / LangChain</span></div>
+      <div class="pick-a">About 1h47m: write the agent by hand, then rebuild it in LangGraph, covering persistence, streaming and human intervention. Exercise: a research flow that resumes after an interruption and requires approval for critical actions.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://developers.openai.com/api/docs/guides/agents" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">4. Compare the official stacks side by side</a> <span style="color:var(--muted);font-weight:400">· OpenAI Agents SDK · Google ADK · Microsoft Agent Framework</span></div>
+      <div class="pick-a">Compare tools, handoffs, sessions, workflows, guardrails and tracing; build the same small task with each official quickstart instead of picking a framework from a tutorial screenshot.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://www.swebench.com/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">5. Validate with external benchmarks, not the agent grading itself</a> <span style="color:var(--muted);font-weight:400">· SWE-bench · OSWorld · WebArena · τ-bench · Terminal-Bench</span></div>
+      <div class="pick-a">Pick the benchmark that matches the task: coding, desktop, browser, tool interaction or terminal. Run a single sample first and record environment, model, tools, full trajectory, success rate, retries, latency and cost; only compare leaderboard numbers when the configuration matches.</div></div>
+  </div>
+  <p class="sub" style="margin-top:14px;line-height:1.7">Practice projects: (1) a minimal tool agent (schema, timeouts, step limits); (2) a resumable research agent (search, citations, drafting, fact-checking); (3) a small coding agent validated by tests it cannot edit. Locate the concrete failure of a single agent before reaching for multiple agents.</p>
+</section>
+
+<section class="pick" id="research">
+  <h2>Research front: papers and benchmarks (2025–2026)</h2>
+  <p class="sub">Work from universities and research labs that changes how agents are designed or evaluated; click a title for the original.</p>
+  <div class="pick-row">
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2602.12430" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Agent Skills for Large Language Models</a> <span style="color:var(--muted);font-weight:400">· Multi-institution survey</span></div>
+      <div class="pick-a">Skills became the main line of 2026 agent architecture: the SKILL.md spec, progressive loading, and how they complement MCP. Also the first systematic look at skill security — 26.1% of community skills carry vulnerabilities.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://www.beri.net/learning/agentic-tool-use-in-llms-survey" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Agentic Tool Use in Large Language Models</a> <span style="color:var(--muted);font-weight:400">· HIT Shenzhen · TikTok</span></div>
+      <div class="pick-a">Reads tool-use research as three eras — prompting, supervised tool learning, RL tool policies — with a three-tier benchmark map spanning BFCL, SWE-bench, OSWorld and τ-bench.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://www.beri.net/learning/survey-on-evaluation-of-llm-based-agents-acl-2026" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">A Survey on Evaluation of LLM-based Agents</a> <span style="color:var(--muted);font-weight:400">· Hebrew University · IBM Research · Yale (ACL 2026 Findings)</span></div>
+      <div class="pick-a">The evaluation landscape from single-turn scores to trajectory-level assessment, with a capability comparison of Langfuse, Arize, LangSmith and other eval frameworks.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://agentmarketcap.ai/blog/2026/04/24/arxiv-2504-19678-agent-benchmark-taxonomy-8-domains" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">From LLM Reasoning to Autonomous AI Agents</a> <span style="color:var(--muted);font-weight:400">· Multi-institution survey</span></div>
+      <div class="pick-a">A taxonomy of 60+ benchmarks across 8 capability domains: one model scores 87% on SWE-bench and 44% on GAIA, so picking an agent from a single number goes wrong.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2606.01351" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Recognize Your Orchestrator: the scheduler is the bottleneck</a> <span style="color:var(--muted);font-weight:400">· Nanjing University NLP · State Key Lab for Novel Software Technology (ICML 2026)</span></div>
+      <div class="pick-a">Failure attribution across Deep Research, Agent Coder, GUI Browser and Agentic RAG: the orchestrator carries 63.8% of failures on average, executors only 32.4%. Also finds a "reasoning trap" — the longer it thinks, the less room it leaves for observing external signals.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2603.09619" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Context Engineering: From Prompts to Corporate Multi-Agent Architecture</a> <span style="color:var(--muted);font-weight:400">· arXiv 2603.09619 (single-author preprint, 2026-03)</span></div>
+      <div class="pick-a">Treats context as the agent's operating system and proposes five quality criteria — relevance, sufficiency, isolation, economy, traceability — then stacks intent and specification on top into a four-level maturity pyramid. The author calls it a framework, not evidence; use it as vocabulary rather than conclusions.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2607.10891" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">SETA: environments at scale for terminal agents</a> <span style="color:var(--muted);font-weight:400">· CAMEL-AI · Imperial · UCL · Oxford · KAUST · Stanford · SambaNova (arXiv 2607.10891)</span></div>
+      <div class="pick-a">SETA-Synth and SETA-Evol share one verification mechanism and produce 4,500+ verifiable terminal environments, the largest open terminal RL environment set; Qwen3-8B with GRPO reaches 12% on Terminal-Bench 2.0, the best among RL models of that size.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2609.04128" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Environment Evolution: environments should get harder with the model</a> <span style="color:var(--muted);font-weight:400">· Tencent Hunyuan (arXiv 2609.04128)</span></div>
+      <div class="pick-a">Environments synthesized from scratch are already too easy for frontier models and give no learning signal; raising difficulty off-policy generation by generation yields +14.4 and +18.0 points for Qwen3.6-27B/35B-A3B on Terminal-Bench 2.1.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2610.29426" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">BIRD-RL: agentic RL in stateful data environments</a> <span style="color:var(--muted);font-weight:400">· arXiv 2610.29426</span></div>
+      <div class="pick-a">Tool-centric environments don't fit stateful tasks like SQL debugging: one database per trajectory is too expensive, a shared one contaminates. A trajectory-scoped persistent execution facility reuses database copies, lifting space efficiency 12.8×, with 7B/14B models at 44.4% / 48.0% success.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2608.10646" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">ASCon: a unified representation for multi-agent failure attribution</a> <span style="color:var(--muted);font-weight:400">· arXiv 2608.10646</span></div>
+      <div class="pick-a">Who failed, at which step, and in what failure mode share the same trajectory evidence, yet each used to train its own model. Direction-aware graph attention improves faulty-agent identification by 5.83, faulty-step identification by 10.63 and failure-mode Macro-F1 by 14.73.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://aclanthology.org/2026.acl-long.2001.pdf" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">C-World: an environment creator for computer-use agents</a> <span style="color:var(--muted);font-weight:400">· UC San Diego (ACL 2026)</span></div>
+      <div class="pick-a">Creates training and evaluation environments on demand: 5,571 tools, 204 real applications, injectable faults; fine-tuning on 1,170 trajectories beats a 119k-sample baseline.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://aclanthology.org/2026.acl-long.337.pdf" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">AGENCYBENCH: a million-token benchmark of autonomous agents in real scenarios</a> <span style="color:var(--muted);font-weight:400">· SJTU · GAIR · Shanghai Innovation Institute (ACL 2026)</span></div>
+      <div class="pick-a">Long-horizon real tasks: about 1M tokens, 90 tool calls and several hours per task; closed models average 48.4%, open models 32.1%.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://sechub.in/view/3260300" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">AgentGym2: de-idealized evaluation in the real world</a> <span style="color:var(--muted);font-weight:400">· ACL 2026</span></div>
+      <div class="pick-a">Deliberately injects noise, underspecified instructions and a tool-discovery phase; all 15 frontier models struggle.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2603.13428" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">EvoClaw: evaluating agents on continuous software evolution</a> <span style="color:var(--muted);font-weight:400">· USC · Princeton (ICML 2026)</span></div>
+      <div class="pick-a">Rebuilds open-source commit history into an executable milestone DAG: above 80% on standalone tasks, but at most 38% in continuous evolution.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2606.04874" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Agent Planning Benchmark (APB)</a> <span style="color:var(--muted);font-weight:400">· arXiv 2606.04874</span></div>
+      <div class="pick-a">Tests planning on its own, including broken tools and unsolvable tasks: producing a plausible plan does not mean recognizing that the plan cannot run.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://kevinf.site/daily-2026-07-01-ai-research-briefing.html" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Agentic Abstention: does the agent know when to stop?</a> <span style="color:var(--muted);font-weight:400">· Hugging Face Daily Papers (2026-06)</span></div>
+      <div class="pick-a">Models "keep going, stop or abstain" as a sequential decision problem — long-horizon agents usually fail not at one wrong step but by not stopping.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2607.15660" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">ToolVerse: environments for agentic RL</a> <span style="color:var(--muted);font-weight:400">· arXiv 2607.15660</span></div>
+      <div class="pick-a">Extends agentic RL to nearly 400 real MCP environments and about 4,500 tools: the training bottleneck is shifting from algorithms to environments and verifiers.</div></div>
+    <div class="pick-item"><div class="pick-q"><a href="https://arxiv.org/abs/2604.20006" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Memora: forgetting-aware memory</a> <span style="color:var(--muted);font-weight:400">· arXiv 2604.20006</span></div>
+      <div class="pick-a">Memory's first-class question moves from "can it remember" to "when should it forget": the FAMA metric explicitly penalizes using stale memories, and several memory agents fall for it.</div></div>
+  </div>
+</section>
+
+<footer>
+  <p>Source: GitHub REST API (/repos, read live), snapshot taken {{DATE}}. Star counts are a snapshot and keep changing.</p>
+  <p>"Effort" is a subjective rating: Easy = runs out of the box, Medium = read the docs and change code, Hard = you need to understand its architecture or research background; in the Tutorials / Learning resources track it means reading effort (Easy = no prerequisites, Hard = needs theory). High stars don't make a project right for you — check the license (Apache-2.0 / MIT / AGPL) line by line before commercial use.</p>
+</footer>
+</div>
+
+<script>
+window.__T = {{I18N}};
+</script>
+<script>
+{{APP_JS}}</script>
+</body>
+</html>
