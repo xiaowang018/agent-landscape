@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GitHub Agent 项目全景图 · 2026-11-24</title>
+<title>GitHub Agent 项目全景图 · {{DATE}}</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -258,8 +258,8 @@ footer p+p{margin-top:7px}
 </section>
 
 <footer>
-  <p>数据来源：GitHub REST API（/repos 实时读取），抓取时间 2026-11-24。星数为抓取时快照，会持续变化。</p>
-  <p>「门槛」是主观评估：易＝装完能跑，中＝需读文档改代码，难＝需要理解其架构或研究背景。星数高不等于适合你，许可证（Apache-2.0 / MIT / AGPL）在商用前务必逐条核对。</p>
+  <p>数据来源：GitHub REST API（/repos 实时读取），抓取时间 {{DATE}}。星数为抓取时快照，会持续变化。</p>
+  <p>「门槛」是主观评估：易＝装完能跑，中＝需读文档改代码，难＝需要理解其架构或研究背景；「教程 / 学习资料」赛道按阅读门槛理解（易＝零基础可读，难＝需要原理背景）。星数高不等于适合你，许可证（Apache-2.0 / MIT / AGPL）在商用前务必逐条核对。</p>
 </footer>
 </div>
 
@@ -296,9 +296,10 @@ cards.forEach(c => {
 
 const esc = s => s.replace(/[&<>]/g, m => ({'&': '&amp;', '<': '&lt;', '>': '&gt;'}[m]));
 
-function highlight(el, raw, kw){
-  if(!kw || !raw){ el.textContent = raw; return; }
-  const re = new RegExp(kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+function highlight(el, raw, kws){
+  if(!kws.length || !raw){ el.textContent = raw; return; }
+  const pat = kws.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+  const re = new RegExp(pat, 'gi');
   let out = '', last = 0, m;
   while((m = re.exec(raw)) !== null){
     out += esc(raw.slice(last, m.index)) + '<mark>' + esc(m[0]) + '</mark>';
@@ -309,14 +310,15 @@ function highlight(el, raw, kw){
 }
 
 // 只在「可见文字里没有命中」时才提示是哪个人工标签把这条捞出来的
-function markTags(c, kw){
+function markTags(c, kws){
   const top = c.querySelector('.card-top');
   let badge = top.querySelector('.tag-hit');
-  const visibleHit = kw && (text.get(c).pText + text.get(c).nText + text.get(c).rText + text.get(c).fText)
-    .toLowerCase().includes(kw);
+  const t = text.get(c);
+  const visible = (t.pText + t.nText + t.rText + t.fText).toLowerCase();
+  const visibleHit = kws.length && kws.every(k => visible.includes(k));
   const tags = (c.dataset.topics || '').split(' ').filter(Boolean);
-  const hit = kw ? tags.filter(t => t.toLowerCase().includes(kw)) : [];
-  if(kw && !visibleHit && hit.length){
+  const hit = kws.length ? tags.filter(t => kws.some(k => t.toLowerCase().includes(k))) : [];
+  if(kws.length && !visibleHit && hit.length){
     if(!badge){ badge = document.createElement('span'); badge.className = 'tag-hit'; top.appendChild(badge); }
     badge.textContent = '标签 ' + hit.slice(0, 2).join(' / ');
   } else if(badge){
@@ -328,7 +330,8 @@ function isOn(){ return actBtn.getAttribute('aria-pressed') === 'true'; }
 
 function apply(){
   const raw = q.value.trim();
-  const kw = raw.toLowerCase();
+  // 多关键词：空格切分，每个词都要命中（AND）
+  const kws = raw.toLowerCase().split(/\s+/).filter(Boolean);
   const lg = langSel.value, df = diffSel.value, actOnly = isOn();
   let shown = 0;
 
@@ -338,21 +341,24 @@ function apply(){
           && (!lg || c.dataset.lang === lg)
           && (!df || c.dataset.diff === df)
           && (!actOnly || c.dataset.act === '1');
-    if(ok && kw) ok = (c.dataset.name + ' ' + (c.dataset.topics || '')).includes(kw);
+    if(ok && kws.length){
+      const hay = c.dataset.name + ' ' + (c.dataset.topics || '');
+      ok = kws.every(k => hay.includes(k));
+    }
     c.style.display = ok ? '' : 'none';
     if(ok){
       shown++;
-      highlight(t.p, t.pText, raw);
-      highlight(t.n, t.nText, raw);
-      highlight(t.r, t.rText, raw);
-      highlight(t.f, t.fText, raw);
-      markTags(c, kw);
+      highlight(t.p, t.pText, kws);
+      highlight(t.n, t.nText, kws);
+      highlight(t.r, t.rText, kws);
+      highlight(t.f, t.fText, kws);
+      markTags(c, kws);
     } else {
       t.p.textContent = t.pText;
       t.n.textContent = t.nText;
       t.r.textContent = t.rText;
       t.f.textContent = t.fText;
-      markTags(c, '');
+      markTags(c, []);
     }
   });
 
@@ -379,14 +385,15 @@ function apply(){
     ? `共 <b>${cards.length}</b> 个项目 · ${groups.length} 个赛道`
     : `筛出 <b>${shown}</b> / ${cards.length} 个项目`;
 
-  const filtered = shown !== cards.length;
-  resetBtn.classList.toggle('on', filtered);
-  syncHash(filtered);
+  // 只要任一控件离开默认状态（含只改排序），「重置」就该出现
+  const dirty = curCat !== 'all' || !!raw || !!lg || !!df || actOnly || sortSel.value !== 'stars';
+  resetBtn.classList.toggle('on', dirty);
+  syncHash();
 }
 
 // 筛选状态写进地址栏，刷新和转发都能还原
 let hashTimer;
-function syncHash(filtered){
+function syncHash(){
   clearTimeout(hashTimer);
   hashTimer = setTimeout(() => {
     const p = new URLSearchParams();

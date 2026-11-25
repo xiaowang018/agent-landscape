@@ -139,11 +139,12 @@
 
 | 字段 | 来源 | 说明 |
 | --- | --- | --- |
-| 星标、Fork、语言、许可证、最后提交时间、创建时间 | GitHub REST API `/repos/{owner}/{repo}` | 实时抓取，非人工录入 |
+│ 星标、Fork、语言、许可证、最后提交时间、是否归档、创建时间 | GitHub REST API `/repos/{owner}/{repo}` | 实时抓取，非人工录入 |
 | 分类、中文定位、适用人群、点评、上手门槛 | 人工标注 | 主观判断，可讨论 |
 
-维护状态按最后提交时间自动判定：
+维护状态按 GitHub 数据自动判定，归档优先于提交日期（刚归档的仓库最后一次提交也可能很近）：
 
+- **已归档** —— 仓库被 owner 归档，只读停更（不建议作为新项目选型）
 - **活跃** —— 45 天内有提交
 - **维护中** —— 210 天内有提交
 - **沉寂** —— 超过 210 天无提交（这类不建议作为新项目选型）
@@ -161,9 +162,10 @@ agent-landscape/
 ├── index.html                  # 产物：单文件页面，无外部依赖，双击即可本地打开
 ├── data.json                   # 机器抓的元数据（137 条），由 fetch.py 写
 └── scripts/
-    ├── fetch.py                # 抓 GitHub API，刷新 data.json
+    ├── fetch.py                # 抓 GitHub API，刷新 data.json 和 snapshot.json
     ├── annotations.json        # 人工标注（中文定位、适合谁、点评、门槛、赛道）
     ├── tracks.json             # 17 个赛道的顺序、标题与副标题
+    ├── snapshot.json           # 数据快照日期，fetch.py 每次写入后更新，build.py 读它算状态
     ├── template.html           # 页面模板，样式与交互都在这里
     └── build.py                # 合并三者，生成 index.html
 ```
